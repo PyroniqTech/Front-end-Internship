@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventure - Speakers</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+  
+       
+        <nav class="bg-white shadow-md sticky top-0 z-50">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center py-4">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="images/Logo(white).jpeg" alt="Eventure Logo" class="h-10" loading="lazy">
+                        <span class="text-2xl font-bold text-blue-600 hidden sm:block">Eventure</span>
+                    </a>
+                    
+                
+                    <div class="hidden md:flex space-x-8">
+                        <a href="index.html" class="text-gray-600 hover:text-blue-600 transition duration-300">Home</a>
+                        <a href="speakers.html" class="text-blue-600 font-medium border-b-2 border-blue-600 pb-1">Speakers</a>
+                        <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition duration-300">Contact</a>
+                    </div>
+                    
+                   
+                    <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+                
+              
+                <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-200">
+                    <a href="index.html" class="block py-3 text-gray-600 hover:text-blue-600 transition duration-300 pl-4">Home</a>
+                    <a href="speakers.html" class="block py-3 text-blue-600 font-medium border-l-4 border-blue-600 pl-4">Speakers</a>
+                    <a href="contact.html" class="block py-3 text-gray-600 hover:text-blue-600 transition duration-300 pl-4">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+  
+    <section class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Speakers</h1>
+            <p class="text-xl opacity-90 max-w-2xl mx-auto">Learn from industry leaders, innovators, and pioneers who are shaping the future of technology</p>
+        </div>
+    </section>
+
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-64 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center relative">
+                        <img src="images/speaker1.jpg" alt="Sarah Johnson - AI Research Director" class="h-48 w-48 rounded-full object-cover border-4 border-white shadow-lg" loading="lazy">
+                        <div class="absolute bottom-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            AI Expert
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Sarah Johnson</h3>
+                        <p class="text-blue-600 font-semibold mb-3">AI Research Director at Tech Innovations</p>
+                        <p class="text-gray-700 mb-4 text-sm leading-relaxed">Sarah leads groundbreaking research in ethical AI development and has published over 50 papers on machine learning applications. Her work focuses on creating responsible AI systems.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-clock mr-1"></i> Day 1 - 10:00 AM</span>
+                            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-medium">Keynote</span>
+                        </div>
+                    </div>
+                </div>
+                
+              
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-64 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center relative">
+                        <img src="images/speaker2.jpg" alt="Michael Chen - Cybersecurity Expert" class="h-48 w-48 rounded-full object-cover border-4 border-white shadow-lg" loading="lazy">
+                        <div class="absolute bottom-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            Security
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Michael Chen</h3>
+                        <p class="text-green-600 font-semibold mb-3">Cybersecurity Expert at Secure Systems</p>
+                        <p class="text-gray-700 mb-4 text-sm leading-relaxed">Michael specializes in network security and has helped Fortune 500 companies protect against sophisticated cyber threats. He holds multiple security certifications.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-clock mr-1"></i> Day 1 - 2:00 PM</span>
+                            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs font-medium">Workshop</span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-64 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center relative">
+                        <img src="images/speaker3.jpg" alt="Elena Rodriguez - Blockchain Developer" class="h-48 w-48 rounded-full object-cover border-4 border-white shadow-lg" loading="lazy">
+                        <div class="absolute bottom-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            Blockchain
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Elena Rodriguez</h3>
+                        <p class="text-purple-600 font-semibold mb-3">Blockchain Developer at ChainTech</p>
+                        <p class="text-gray-700 mb-4 text-sm leading-relaxed">Elena is pioneering new applications of blockchain technology in supply chain management and digital identity solutions with real-world implementations.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-clock mr-1"></i> Day 2 - 11:00 AM</span>
+                            <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs font-medium">Panel</span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-64 bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center relative">
+                        <img src="images/speaker4.jpg" alt="David Wilson - Cloud Architect" class="h-48 w-48 rounded-full object-cover border-4 border-white shadow-lg" loading="lazy">
+                        <div class="absolute bottom-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            Cloud
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">David Wilson</h3>
+                        <p class="text-yellow-600 font-semibold mb-3">Cloud Architect at Data Systems Inc.</p>
+                        <p class="text-gray-700 mb-4 text-sm leading-relaxed">David designs scalable cloud infrastructure solutions for enterprise clients across multiple industries, focusing on performance and cost optimization.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-clock mr-1"></i> Day 2 - 3:00 PM</span>
+                            <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs font-medium">Talk</span>
+                        </div>
+                    </div>
+                </div>
+                
+               
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-64 bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center relative">
+                        <img src="images/speaker5.jpg" alt="Jennifer Lee - UX Research Lead" class="h-48 w-48 rounded-full object-cover border-4 border-white shadow-lg" loading="lazy">
+                        <div class="absolute bottom-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            UX Design
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Jennifer Lee</h3>
+                        <p class="text-red-600 font-semibold mb-3">UX Research Lead at Design Forward</p>
+                        <p class="text-gray-700 mb-4 text-sm leading-relaxed">Jennifer specializes in user-centered design methodologies and has improved digital experiences for millions of users across various platforms and applications.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-clock mr-1"></i> Day 3 - 10:30 AM</span>
+                            <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">Workshop</span>
+                        </div>
+                    </div>
+                </div>
+                
+             
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-64 bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center relative">
+                        <img src="images/speaker6.jpg" alt="Robert Martinez - Data Scientist" class="h-48 w-48 rounded-full object-cover border-4 border-white shadow-lg" loading="lazy">
+                        <div class="absolute bottom-4 right-4 bg-indigo-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            Data Science
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Robert Martinez</h3>
+                        <p class="text-indigo-600 font-semibold mb-3">Data Scientist at Analytics Pro</p>
+                        <p class="text-gray-700 mb-4 text-sm leading-relaxed">Robert develops predictive models and data visualization tools that help businesses make data-driven decisions with actionable insights and clear metrics.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-clock mr-1"></i> Day 3 - 1:00 PM</span>
+                            <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded text-xs font-medium">Case Study</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-2/5 bg-gradient-to-br from-blue-600 to-purple-700 text-white p-8">
+                        <h2 class="text-2xl font-bold mb-4">Register Now</h2>
+                        <p class="mb-6 opacity-90">Secure your spot at the most anticipated tech event of the year. Limited seats available!</p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar-check text-blue-300 mr-3 text-lg"></i>
+                                <span>3 Days of Content</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-users text-blue-300 mr-3 text-lg"></i>
+                                <span>Networking Opportunities</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-utensils text-blue-300 mr-3 text-lg"></i>
+                                <span>Catered Lunch & Refreshments</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-certificate text-blue-300 mr-3 text-lg"></i>
+                                <span>Certificate of Participation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-3/5 p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Event Registration</h3>
+                        
+                        <form id="booking-form" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">Full Name *</label>
+                                    <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300" placeholder="Enter your full name" required>
+                                    <div id="name-error" class="text-red-500 text-sm mt-1 hidden"></div>
+                                </div>
+                                
+                                <div>
+                                    <label for="email" class="block text-gray-700 font-medium mb-2">Email Address *</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300" placeholder="your.email@example.com" required>
+                                    <div id="email-error" class="text-red-500 text-sm mt-1 hidden"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300" placeholder="+1 (555) 123-4567" required>
+                                    <div id="phone-error" class="text-red-500 text-sm mt-1 hidden"></div>
+                                </div>
+                                
+                                <div>
+                                    <label for="company" class="block text-gray-700 font-medium mb-2">Company</label>
+                                    <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300" placeholder="Your company name">
+                                </div>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="event-date" class="block text-gray-700 font-medium mb-2">Preferred Event Date *</label>
+                                    <select id="event-date" name="event-date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300" required>
+                                        <option value="">Select a date</option>
+                                        <option value="oct15">October 15, 2023 (Day 1)</option>
+                                        <option value="oct16">October 16, 2023 (Day 2)</option>
+                                        <option value="oct17">October 17, 2023 (Day 3)</option>
+                                        <option value="all-days">All Three Days</option>
+                                    </select>
+                                    <div id="date-error" class="text-red-500 text-sm mt-1 hidden"></div>
+                                </div>
+                                
+                                <div>
+                                    <label for="seats" class="block text-gray-700 font-medium mb-2">Number of Seats *</label>
+                                    <input type="number" id="seats" name="seats" min="1" max="10" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300" placeholder="1" required>
+                                    <div id="seats-error" class="text-red-500 text-sm mt-1 hidden"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="special-requirements" class="block text-gray-700 font-medium mb-2">Special Requirements</label>
+                                <textarea id="special-requirements" name="special-requirements" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300" placeholder="Any dietary restrictions or accessibility needs..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-lg">
+                                <i class="fas fa-paper-plane mr-2"></i>Complete Registration
+                            </button>
+                            
+                            <p class="text-gray-500 text-sm text-center">
+                                By registering, you agree to our <a href="#" class="text-blue-600 hover:underline">Terms of Service</a> and <a href="#" class="text-blue-600 hover:underline">Privacy Policy</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="images/Logo(white).jpeg" alt="Eventure Logo" class="h-12 mb-4" loading="lazy">
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Connecting innovators and thought leaders in technology. Three days of inspiration, learning, and networking.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="speakers.html" class="text-gray-400 hover:text-white transition duration-300">Speakers</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Schedule</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Event Info</h4>
+                    <div class="text-gray-400 space-y-2 text-sm">
+                        <p><i class="fas fa-calendar-alt mr-2"></i>October 15-17, 2025</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>San Francisco, CA</p>
+                        <p><i class="fas fa-clock mr-2"></i>9:00 AM - 6:00 PM Daily</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/eventure" target="_blank" class="bg-gray-700 text-white p-3 rounded-full hover:bg-blue-600 transition duration-300 transform hover:scale-110">
+                            <i class="fab fa-facebook-f text-lg md:text-xl"></i>
+                        </a>
+                        <a href="https://www.twitter.com/eventure" target="_blank" class="bg-gray-700 text-white p-3 rounded-full hover:bg-blue-400 transition duration-300 transform hover:scale-110">
+                            <i class="fab fa-twitter text-lg md:text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/eventure" target="_blank" class="bg-gray-700 text-white p-3 rounded-full hover:bg-pink-600 transition duration-300 transform hover:scale-110">
+                            <i class="fab fa-instagram text-lg md:text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/eventure" target="_blank" class="bg-gray-700 text-white p-3 rounded-full hover:bg-blue-800 transition duration-300 transform hover:scale-110">
+                            <i class="fab fa-linkedin-in text-lg md:text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Eventure. All rights reserved. | Designed with <i class="fas fa-heart text-red-500"></i> for eventure</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

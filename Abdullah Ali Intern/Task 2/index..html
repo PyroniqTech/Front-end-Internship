@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shopys — Product Landing</title>
+  <style>
+    
+    :root{
+      --bg:#0f1113;
+      --card:#16181a;
+      --muted:#9aa0a6;
+      --accent-1:#2fe6d6; /* cyan */
+      --accent-2:#9be84f; /* lime */
+      --accent-3:#ff9b3d; /* orange */
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --max-width:1100px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family: Inter, "Segoe UI", Roboto, system-ui, -apple-system, Arial;
+      background: linear-gradient(180deg,#0b0c0d 0%, #0f1113 60%);
+      color:#eef2f3;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.4;
+      padding-bottom:40px;
+    }
+
+    a{color:inherit;text-decoration:none}
+
+    .container{
+      max-width:var(--max-width);
+      margin:0 auto;
+      padding:28px;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding:18px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .brand img{
+      height:56px;
+      width:auto;
+      display:block;
+      border-radius:8px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    }
+    .brand h1{
+      font-size:20px;
+      letter-spacing:0.4px;
+      font-weight:600;
+    }
+    nav{
+      display:flex;
+      align-items:center;
+      gap:18px;
+    }
+    nav a{
+      color:var(--muted);
+      padding:8px 12px;
+      border-radius:8px;
+      transition: color .18s, background .18s, transform .12s;
+      font-weight:500;
+      font-size:15px;
+    }
+    nav a:hover{ color: #fff; background: rgba(255,255,255,0.02); transform: translateY(-1px); }
+
+    .cta-inline{
+      background: linear-gradient(90deg,var(--accent-1), var(--accent-2), var(--accent-3));
+      color:#051014;
+      padding:8px 14px;
+      border-radius:10px;
+      font-weight:700;
+      box-shadow: 0 6px 24px rgba(255,160,70,0.08);
+    }
+
+    .hamburger{
+      display:none;
+      width:46px;
+      height:40px;
+      border-radius:10px;
+      background:transparent;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+    }
+    .hamburger .bar{
+      width:20px;height:2px;background:#cfd5d9;margin:3px 0;border-radius:2px;
+      transition:all .18s;
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns:1fr 420px;
+      gap:28px;
+      align-items:center;
+      margin:28px 0 40px;
+    }
+
+    .hero-left{
+      padding:22px;
+    }
+    .kicker{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      background:linear-gradient(90deg, rgba(47,230,214,0.12), rgba(155,232,79,0.08));
+      color:var(--accent-1);
+      font-weight:600;
+      font-size:13px;
+      margin-bottom:12px;
+    }
+    .title{
+      font-size:34px;
+      line-height:1.06;
+      margin-bottom:12px;
+      background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+    .subtitle{
+      color:var(--muted);
+      max-width:56ch;
+      margin-bottom:18px;
+    }
+
+    .hero-actions{display:flex;gap:12px;align-items:center}
+    .btn{
+      padding:12px 16px;
+      border-radius:12px;
+      background:var(--glass);
+      color:#fff;
+      border:1px solid rgba(255,255,255,0.03);
+      cursor:pointer;
+      font-weight:700;
+      letter-spacing:0.2px;
+    }
+    .btn.primary{
+      background: linear-gradient(90deg,var(--accent-1), var(--accent-3));
+      color:#051014;
+      border:none;
+      box-shadow: 0 12px 30px rgba(255,150,60,0.08);
+    }
+
+    .hero-right{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      border-radius:18px;
+      padding:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+    .product-visual{
+      width:100%;
+      max-width:360px;
+      border-radius:12px;
+      overflow:hidden;
+      background: linear-gradient(180deg,#0b0c0d,#111315);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+    }
+    .product-visual img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:10px;
+      object-fit:cover;
+    }
+
+    .features{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin:30px 0;
+    }
+    .feature{
+      background:var(--card);
+      border-radius:12px;
+      padding:16px;
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+    .f-icon{
+      min-width:54px;
+      height:54px;
+      border-radius:12px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      color:var(--accent-1);
+      font-weight:800;
+      font-size:20px;
+    }
+    .f-body h4{ margin-bottom:6px }
+    .f-body p{ color:var(--muted); font-size:14px }
+
+    .pricing{
+      display:flex;
+      gap:18px;
+      align-items:stretch;
+      margin:28px 0;
+    }
+    .price-card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      padding:20px;
+      border-radius:14px;
+      width:320px;
+      box-shadow: 0 16px 36px rgba(0,0,0,0.55);
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .price-card .price{
+      font-size:28px;font-weight:800;color:#fff;margin-bottom:10px;
+      display:flex;align-items:center;gap:10px;
+    }
+    .price-card small{ color:var(--muted) }
+
+    .price-card ul{ margin:12px 0 16px; color:var(--muted); padding-left:18px }
+    .price-card ul li{ margin:8px 0 }
+
+    .reviews{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+      margin:22px 0 34px;
+    }
+    .review{
+      background:var(--card);
+      padding:14px;
+      border-radius:12px;
+      box-shadow:0 8px 18px rgba(0,0,0,0.5);
+    }
+    .stars{ color: #ffd76b; margin-bottom:8px }
+
+    .faq{
+      margin:18px 0 28px;
+    }
+    .qa{
+      background:var(--card);
+      margin-bottom:10px;
+      border-radius:10px;
+      overflow:hidden;
+    }
+    .qa button{
+      width:100%;
+      background:transparent;
+      border:none;
+      text-align:left;
+      padding:14px;
+      display:flex;
+      justify-content:space-between;
+      color:#e8eef0;
+      font-weight:600;
+      cursor:pointer;
+      gap:12px;
+    }
+    .qa .answer{
+      padding:12px 14px 18px;
+      color:var(--muted);
+      border-top:1px solid rgba(255,255,255,0.02);
+      display:none;
+    }
+    .qa.open .answer{ display:block }
+
+    footer{
+      margin-top:36px;
+      border-top:1px solid rgba(255,255,255,0.02);
+      padding-top:20px;
+      color:var(--muted);
+    }
+    .socials a{ margin-right:12px; color:var(--muted) }
+    .socials a:hover{ color:var(--accent-3) }
+
+    .section-title{ font-size:18px; margin-bottom:10px; color:var(--muted); }
+    .muted{ color:var(--muted) }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width:1000px){
+      .hero{ grid-template-columns:1fr 360px; }
+      .features{ grid-template-columns:repeat(2,1fr) }
+      .reviews{ grid-template-columns:repeat(2,1fr) }
+      .pricing{ flex-direction:column; align-items:flex-start }
+      nav{ gap:12px }
+    }
+    @media (max-width:720px){
+      .container{ padding:20px }
+      .hero{ grid-template-columns:1fr; text-align:left }
+      .hero-right{ order: -1; margin-bottom:16px }
+      .features{ grid-template-columns:1fr }
+      .reviews{ grid-template-columns:1fr }
+      .hamburger{ display:flex }
+      nav{ display:none }
+      .brand h1{ display:none } 
+    }
+    .micro{ font-size:13px;color:var(--muted) }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="brand" aria-hidden="false">
+        <img src="Shopsy1.jpg" alt="Shopys Logo">
+        <h1>Shopys</h1>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#pricing" class="cta-inline">Buy Now</a>
+      </nav>
+
+      <button class="hamburger" aria-label="Toggle navigation" onclick="toggleMobileNav()">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero" aria-labelledby="product-title">
+      <div class="hero-left">
+        <div class="kicker">New · Limited</div>
+        <h2 id="product-title" class="title">Shopys X1 — Sound, Reimagined</h2>
+        <p class="subtitle">Premium wireless headphones engineered for clarity, long battery life, and a studio-grade listening experience. Lightweight, foldable and with adaptive noise cancellation for every environment.</p>
+
+        <div class="hero-actions">
+          <button class="btn primary" onclick="buyNow()">Buy Now — Rs. 12,999</button>
+          <button class="btn" onclick="learnMore()">Learn More</button>
+        </div>
+
+        <div style="margin-top:18px" class="micro">Free delivery · 30-day returns · 1-year warranty</div>
+      </div>
+
+      <div class="hero-right" aria-hidden="false">
+        <div class="product-visual" role="img" aria-label="Placeholder product image">
+          <img src="https://imgs.search.brave.com/pnC0Yk5mbkXTs0ZWTHPgMRvIbsBVZ1iRNVMPM270bF0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9ub2lz/ZS1jYW5jZWxsaW5n/LWhlYWRwaG9uZXMt/ZGFyay1iYWNrZ3Jv/dW5kLXNob3djYXNp/bmctc2xlZWstZGVz/aWduLW1vZGVybi10/ZWNobm9sb2d5LTM0/Nzk1MTAwMC5qcGc" alt="Product placeholder">
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features">
+      <div class="section-title">Features</div>
+      <div class="features" role="list">
+        <div class="feature" role="listitem">
+          <div class="f-icon">🎧</div>
+          <div class="f-body">
+            <h4>Studio-grade Sound</h4>
+            <p>Custom-tuned drivers for a balanced, immersive audio signature.</p>
+          </div>
+        </div>
+
+        <div class="feature" role="listitem">
+          <div class="f-icon">🔋</div>
+          <div class="f-body">
+            <h4>48hr Battery</h4>
+            <p>Long-lasting playback with quick-charge support for on-the-go.</p>
+          </div>
+        </div>
+
+        <div class="feature" role="listitem">
+          <div class="f-icon">🛡️</div>
+          <div class="f-body">
+            <h4>Active Noise Cancellation</h4>
+            <p>Adaptive ANC reduces unwanted noise while preserving clarity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" aria-label="Pricing & purchase">
+      <div class="section-title">Pricing</div>
+      <div class="pricing">
+        <div class="price-card" role="region" aria-labelledby="price-title">
+          <div id="price-title" class="price">Rs. <span style="font-size:36px">12,999</span></div>
+          <small class="muted">One-time purchase</small>
+          <ul>
+            <li>Free delivery</li>
+            <li>30-day returns</li>
+            <li>1-year warranty</li>
+          </ul>
+          <button class="btn primary" onclick="buyNow()">Buy Now</button>
+        </div>
+
+        <div style="flex:1;">
+          <p class="muted">Why Shopys X1?</p>
+          <p class="muted">Designed for creators and everyday listeners who want a premium, comfortable, and reliable headphone that travels well and performs even better.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" aria-label="Customer reviews">
+      <div class="section-title">What customers say</div>
+      <div class="reviews">
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p><strong>Ali R.</strong> — "Incredible sound and battery life. ANC works like a charm."</p>
+        </div>
+        <div class="review">
+          <div class="stars">★★★★☆</div>
+          <p><strong>Sara K.</strong> — "Super comfy. Wish the charging was USB-C instead of micro-USB."</p>
+        </div>
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p><strong>Mateo P.</strong> — "Best headphones I've owned under 15k. Great value."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" aria-label="Frequently asked questions">
+      <div class="section-title">FAQ</div>
+
+      <div class="qa" id="q1">
+        <button aria-expanded="false" aria-controls="a1" onclick="toggleFAQ('q1')">
+          What is the warranty period?
+          <span class="micro">+</span>
+        </button>
+        <div id="a1" class="answer">All Shopys X1 come with a 1-year limited warranty covering manufacturing defects.</div>
+      </div>
+
+      <div class="qa" id="q2">
+        <button aria-expanded="false" aria-controls="a2" onclick="toggleFAQ('q2')">
+          How long does battery last?
+          <span class="micro">+</span>
+        </button>
+        <div id="a2" class="answer">Up to 48 hours on a full charge (no ANC). Approximately 30-36 hours with ANC enabled.</div>
+      </div>
+
+      <div class="qa" id="q3">
+        <button aria-expanded="false" aria-controls="a3" onclick="toggleFAQ('q3')">
+          Can I return the product if I don't like it?
+          <span class="micro">+</span>
+        </button>
+        <div id="a3" class="answer">Yes — we offer a 30-day return policy. Terms apply for opened/used items; contact support for details.</div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap">
+        <div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <img src="Shopsy1.jpg" alt="Shopys Logo" style="height:44px;border-radius:8px">
+            <div>
+              <div style="font-weight:700">Shopys</div>
+              <div class="muted micro">support@shopys.example · +92 300 1234567</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="socials" aria-label="social links">
+          <a href="#" aria-label="facebook">Facebook</a>
+          <a href="#" aria-label="instagram">Instagram</a>
+          <a href="#" aria-label="twitter">Twitter</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function toggleMobileNav(){
+      const nav = document.querySelector('nav');
+      if(nav.style.display === 'flex'){
+        nav.style.display = '';
+      } else {
+        nav.style.display = 'flex';
+        nav.style.flexDirection = 'column';
+      }
+    }
+
+    function buyNow(){
+      alert('Thank you! The checkout flow is not implemented in this demo.');
+    }
+    function learnMore(){
+      const el = document.querySelector('#features');
+      el.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+
+    function toggleFAQ(id){
+      const el = document.getElementById(id);
+      const btn = el.querySelector('button');
+      const isOpen = el.classList.contains('open');
+
+      document.querySelectorAll('.qa.open').forEach(item => {
+        if(item.id !== id){
+          item.classList.remove('open');
+          const b = item.querySelector('button');
+          if(b) b.setAttribute('aria-expanded','false');
+        }
+      });
+
+      if(isOpen){
+        el.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+      } else {
+        el.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+      }
+    }
+
+    document.addEventListener('keydown', function(e){
+      if((e.key === 'Enter' || e.key === ' ') && document.activeElement && document.activeElement.matches('.qa button')){
+        e.preventDefault();
+        document.activeElement.click();
+      }
+    });
+  </script>
+</body>
+</html>
+

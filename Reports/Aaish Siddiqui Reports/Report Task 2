@@ -1,0 +1,31 @@
+1. Performance
+Aaish Siddiqui created a complete product landing page in a single HTML file with all sections: Header, Hero, Features, Pricing, Reviews, FAQ, and Footer. Responsive design works across devices. Navigation links, Buy Now button, and FAQ accordion function correctly. Styling is consistent with brand colors (goldenrod, orange, black).
+
+2. Mistakes / Issues
+
+Page title set as “Hot Pot Landing Page” instead of “Shopys.”
+
+Reviews section minimal (only 2 reviews, missing proper cards with star ratings).
+
+Alt text generic and body text color reduces readability.
+
+Footer social links are plain text, not clickable.
+
+Signs of auto-generation, no code comments.
+
+
+3. Guidelines & Improvements
+
+Fix brand name/title to “Shopys.”
+
+Expand Reviews with styled cards and ratings.
+
+Add descriptive alt text and improve readability.
+
+Convert footer links to anchors with hover effects.
+
+Improve heading hierarchy and spacing for professional look.
+
+
+✅ Task 2 Evaluation – Shopys Landing Page (Aaish Siddiqui)
+Well-structured and functional landing page, but needs refinement in branding, reviews, accessibility, and code quality for professional polish.

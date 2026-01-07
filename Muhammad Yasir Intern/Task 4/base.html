@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploria - Welcome</title>
+    <meta name="description" content="Welcome to Exploria - Your gateway to unforgettable travel experiences">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+
+<body class="bg-gray-50">
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="base.html" class="flex items-center">
+                <img src="images/Logo(black).jpg" alt="Exploria Logo" class="h-10 w-auto">
+                <span class="ml-2 text-xl font-bold text-blue-600">Exploria</span>
+            </a>
+
+            <div class="hidden md:flex space-x-6">
+                <a href="base.html" class="text-blue-600 font-medium">Welcome</a>
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+                <a href="destinations.html" class="text-gray-600 hover:text-blue-600 transition">Destinations</a>
+                <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+            </div>
+
+            <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="base.html" class="block py-2 text-blue-600 font-medium">Welcome</a>
+            <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-600 transition">Home</a>
+            <a href="destinations.html" class="block py-2 text-gray-600 hover:text-blue-600 transition">Destinations</a>
+            <a href="contact.html" class="block py-2 text-gray-600 hover:text-blue-600 transition">Contact</a>
+        </div>
+    </header>
+
+    <main>
+    <section class="relative h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
+        style="background-image: url('images/hero-bg-travel1.jpg');">
+        <div class="absolute inset-0 bg-light bg-opacity-40"></div>
+        <div class="relative z-10 text-center text-white px-4">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Explore the World with Us</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Discover amazing destinations and create unforgettable
+                memories</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="index.html"
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">
+                    Explore Home
+                </a>
+                <a href="destinations.html"
+                    class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">
+                    View Destinations
+                </a>
+                <a href="contact.html"
+                    class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+    </main>
+
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <p class="text-lg font-semibold">Exploria Travel Agency</p>
+                    <p class="text-gray-400">Address: <a href="123 Travel Street, Adventure City" class="hover:text-white">123 Travel Street, Adventure City</a></p>
+                    <p class="text-gray-400">Phone: <a href="tel:+15551234567" class="hover:text-white">+1 (555) 123-4567</a></p>
+                    <p class="text-gray-400">Email: <a href="mailto:info@exploria.com" class="hover:text-white">info@exploria.com</a><p>
+                </div>
+
+                <div class="flex space-x-6">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit our Facebook page"
+                        class="text-gray-400 hover:text-white transition transform hover:scale-110">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit our YouTube channel"
+                        class="text-gray-400 hover:text-white transition transform hover:scale-110">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit our Instagram page"
+                        class="text-gray-400 hover:text-white transition transform hover:scale-110">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 Exploria. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

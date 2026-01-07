@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventure</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#01161e',
+                        'secondary': '#124559',
+                        'accent': '#598392',
+                        'light': '#aec3b0',
+                        'background': '#eff6e0'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media (max-width: 768px) {
+            .hero-section {
+                background-attachment: scroll;
+            }
+        }
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-background text-primary">
+ 
+    <nav class="bg-secondary shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center">
+                        <img src="images/logo.jpg" loading="lazy" alt="Eventure Logo" class="w-10 h-10 rounded-full mr-3 bg-accent object-cover" />
+                        <span class="text-light font-bold text-xl">EVENTURE</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-light hover:text-accent px-3 py-2 rounded-md font-medium">Home</a>
+                    <a href="speakers.html" class="text-light hover:text-accent px-3 py-2 rounded-md font-medium">Speakers</a>
+                    <a href="contact.html" class="text-light hover:text-accent px-3 py-2 rounded-md font-medium">Contact</a>
+                    <a href="speakers.html#booking" class="bg-accent hover:bg-primary text-light px-4 py-2 rounded-md font-medium transition">Register</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-light hover:text-accent focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+       
+        <div id="mobile-menu" class="md:hidden hidden bg-secondary">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="text-light hover:text-accent block px-3 py-2 rounded-md font-medium">Home</a>
+                <a href="speakers.html" class="text-light hover:text-accent block px-3 py-2 rounded-md font-medium">Speakers</a>
+                <a href="contact.html" class="text-light hover:text-accent block px-3 py-2 rounded-md font-medium">Contact</a>
+                <a href="speakers.html#booking" class="bg-accent hover:bg-primary text-light block px-3 py-2 rounded-md font-medium">Register</a>
+            </div>
+        </div>
+    </nav>
+
+  
+    <section id="home" class="relative text-light py-20 md:py-32 hero-section">
+        <div class="absolute inset-0 bg-primary opacity-80"></div>
+        <div class="relative max-w-7xl mx-auto px-4 text-center z-10">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Eventure Summit 2025</h1>
+            <p class="text-xl md:text-2xl mb-8 text-light">Transforming Business in the Digital Age</p>
+            <p class="text-2xl md:text-3xl font-semibold mb-10">October 15-17, 2025 | New York City</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="speakers.html#booking" class="bg-accent hover:bg-light hover:text-primary text-light font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">Register Now</a>
+                <a href="#speakers" class="border-2 border-light hover:bg-light hover:text-primary text-light font-bold py-3 px-8 rounded-lg transition duration-300">View Speakers</a>
+            </div>
+        </div>
+    </section>
+
+   
+    <section id="about" class="py-16 bg-light">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">About The Event</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <p class="text-lg mb-6">
+                        The Eventure Business Summit brings together industry leaders, innovators, and entrepreneurs to discuss the future of business in our rapidly evolving digital landscape.
+                    </p>
+                    <p class="text-lg mb-6">
+                        This three-day event features keynote presentations, panel discussions, and networking opportunities designed to help you stay ahead of the curve.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Insights from top industry leaders</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Networking with like-minded professionals</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Practical workshops and case studies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mr-2 mt-1"></i>
+                            <span>Exclusive access to industry reports</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-bold mb-4 text-secondary">Event Highlights</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="bg-accent text-light rounded-full p-3 mr-4">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Date & Time</h4>
+                                <p>October 15-17, 2026 | 9:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-accent text-light rounded-full p-3 mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Location</h4>
+                                <p>New York Convention Center, NYC</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-accent text-light rounded-full p-3 mr-4">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Attendees</h4>
+                                <p>1000+ Business Professionals</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+    <section id="speakers" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-secondary">Featured Speakers</h2>
+            <p class="text-center text-lg mb-12 max-w-3xl mx-auto">Learn from industry pioneers and thought leaders who are shaping the future of business and technology.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="speaker-card bg-light rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-accent overflow-hidden">
+                        <img src="images/speaker1.jpg" loading="lazy" alt="Sarah Johnson" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-secondary">Sarah Johnson</h3>
+                        <p class="text-accent font-medium mb-4">CEO, Tech Innovations Inc.</p>
+                        <p class="mb-4">Leading digital transformation expert with 15+ years of experience helping Fortune 500 companies adapt to technological changes.</p>
+                        <div class="flex space-x-3">
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Digital Transformation</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Leadership</span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="speaker-card bg-light rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-accent overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" loading="lazy" alt="Michael Chen" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-secondary">Michael Chen</h3>
+                        <p class="text-accent font-medium mb-4">VP of Strategy, Global Finance Corp</p>
+                        <p class="mb-4">Financial strategist and author specializing in sustainable business models and impact investing in emerging markets.</p>
+                        <div class="flex space-x-3">
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Finance</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Sustainability</span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="speaker-card bg-light rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-accent overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80" loading="lazy" alt="Elena Rodriguez" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-secondary">Elena Rodriguez</h3>
+                        <p class="text-accent font-medium mb-4">Founder, Future Market Analytics</p>
+                        <p class="mb-4">Data scientist and entrepreneur revolutionizing how businesses leverage AI and predictive analytics for market insights.</p>
+                        <div class="flex space-x-3">
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">AI & Analytics</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Entrepreneurship</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="speakers.html" class="bg-secondary hover:bg-primary text-light font-bold py-3 px-8 rounded-lg transition duration-300 inline-block">
+                    View All Speakers & Register
+                </a>
+            </div>
+        </div>
+    </section>
+
+   
+    <footer class="bg-primary text-light py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4">Eventure</h3>
+                    <p class="mb-6 max-w-md">Join industry leaders at the premier business event of the year. Discover new strategies, network with peers, and transform your business.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/ukeventures/" target="_blank" class="bg-secondary hover:bg-accent text-light w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://x.com/eventureinc" target="_blank" class="bg-secondary hover:bg-accent text-light w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://uk.linkedin.com/company/eventurenet" target="_blank" class="bg-secondary hover:bg-accent text-light w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/eventure/" target="_blank" class="bg-secondary hover:bg-accent text-light w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-accent transition">Home</a></li>
+                        <li><a href="speakers.html" class="hover:text-accent transition">Speakers</a></li>
+                        <li><a href="contact.html" class="hover:text-accent transition">Contact</a></li>
+                        <li><a href="speakers.html#booking" class="hover:text-accent transition">Register</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-2 mt-1"></i>
+                            <span>123 Business Ave, NYC 10001</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mr-2 mt-1"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mr-2 mt-1"></i>
+                            <span>info@eventure.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-secondary mt-12 pt-8 text-center">
+                <p>&copy; 2025 Eventure. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

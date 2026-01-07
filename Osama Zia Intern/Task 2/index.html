@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 👕 Shopsy | Landing Page</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(180deg, #fefefe, #f6f7fb);
+      color: #333;
+    }
+
+    
+    header {
+      background: linear-gradient(90deg, #0d0d0d, #1c1c1c);
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.3);
+    }
+    header img { 
+      width: 70px; 
+      height: 70px; 
+      margin-right: 15px; 
+      border-radius: 50%; 
+      border: 3px solid #fff;
+      object-fit: cover;
+    }
+    header h1 { 
+      font-size: 1.6rem; 
+      display: flex; 
+      align-items: center; 
+      font-weight: 600; 
+      letter-spacing: 1px; 
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color .3s, transform .3s;
+    }
+    nav a:hover { color: #ffcc70; transform: translateY(-2px); }
+    
+    
+    nav .btn {
+      padding: 6px 14px; 
+      font-size: 0.85rem;
+      margin-left: 20px;
+      border-radius: 20px;
+    }
+
+  
+    .hero {
+      text-align: center;
+      padding: 5rem 1rem;
+      background: linear-gradient(135deg, #ff416c, #ff4b2b, #ff6a00);
+      color: #fff;
+    }
+    .hero img {
+      max-width: 280px;
+      margin-bottom: 1.5rem;
+      border-radius: 50%; 
+      border: 5px solid #fff;
+      filter: drop-shadow(0 6px 12px rgba(0,0,0,.4));
+      transition: transform .3s;
+    }
+    .hero img:hover { transform: scale(1.08) rotate(-2deg); }
+    .hero h2 { font-size: 2.8rem; margin-bottom: .5rem; font-weight: 700; }
+    
+    .hero p {
+      font-size: 1.25rem;
+      opacity: .95;
+      max-width: 650px;
+      margin: auto;
+      font-weight: 400;
+    }
+
+    .btn {
+      background: #fff;
+      color: #ff4b2b;
+      border: none;
+      padding: 14px 28px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 1.05rem;
+      font-weight: bold;
+      border-radius: 40px;
+      transition: all .3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .btn:hover {
+      background: #ff4b2b;
+      color: #fff;
+      transform: scale(1.07);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    
+    .features { padding: 3.5rem 1rem; background: #fff; text-align: center; }
+    .features h2 { margin-bottom: 2rem; font-size: 2.2rem; font-weight: 700; color: #222; }
+    .feature-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 1.8rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .feature-box {
+      background: linear-gradient(135deg,#fafafa,#f0f0f0);
+      padding: 2rem;
+      border-radius: 18px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+      font-weight: 500;
+      transition: transform .3s, box-shadow .3s;
+      font-size: 1.1rem;
+    }
+    .feature-box:hover {
+      transform: translateY(-7px) scale(1.03);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    }
+
+    /* ===== PRICING ===== */
+    .pricing { padding: 3.5rem 1rem; background: linear-gradient(135deg, #fdfdfd, #f4f4f4); text-align: center; }
+    .pricing h2 { margin-bottom: 1.5rem; font-size: 2.2rem; font-weight: bold; }
+    .pricing-card {
+      max-width: 420px;
+      margin: auto;
+      background: #fff;
+      padding: 2.2rem;
+      border-radius: 18px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .pricing-card:hover { transform: scale(1.05); box-shadow: 0 8px 20px rgba(0,0,0,0.25); }
+    .pricing-card h3 { margin-bottom: .8rem; font-size: 1.5rem; }
+    .pricing-card p { margin: .5rem 0; font-size: 1.4rem; font-weight: 600; color: #ff4b2b; }
+
+    
+    .reviews { padding: 3.5rem 1rem; background: #fff; text-align: center; }
+    .reviews h2 { margin-bottom: 1.5rem; font-size: 2rem; font-weight: bold; }
+    .review-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .review {
+      background: linear-gradient(135deg,#fafafa,#fefefe);
+      padding: 1.2rem;
+      border-radius: 14px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+      transition: transform .3s;
+    }
+    .review:hover { transform: translateY(-5px); }
+    .stars { color: gold; margin-bottom: .5rem; font-size: 1.1rem; }
+
+
+    .faq { padding: 3.5rem 1rem; background: linear-gradient(135deg, #f9f9f9, #f0f0f0); text-align: center; }
+    .faq h2 { margin-bottom: 1.5rem; font-size: 2rem; }
+    .faq-box { max-width: 800px; margin: auto; text-align: left; }
+    .faq-item {
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: box-shadow .3s, transform .3s;
+    }
+    .faq-item:hover { box-shadow: 0 3px 10px rgba(0,0,0,0.12); transform: translateY(-2px); }
+    .faq-question {
+      background: #eee;
+      padding: 14px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background .3s;
+    }
+    .faq-question:hover { background: #ddd; }
+    .faq-answer { display: none; padding: 14px; background: #fff; }
+
+  
+    footer {
+      background: linear-gradient(90deg, #1c1c1c, #000);
+      color: #fff;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      margin-top: 2rem;
+      box-shadow: 0 -3px 12px rgba(0,0,0,0.25);
+    }
+    footer p { margin: 6px 0; font-size: 0.95rem; }
+    footer a {
+      color: #ffcc70;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color .3s;
+    }
+    footer a:hover { color: #fff; }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <img src="logo.png" loading="lazy" alt="Logo">Shopsy</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#reviews">Reviews</a>
+      <button class="btn" onclick="buyNow()">Buy Now</button>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <img src="http://media.istockphoto.com/id/1300124478/vector/blank-black-t-shirt-vector-for-template.jpg?s=1024x1024&w=is&k=20&c=vNWmC2F94txd8CSGKm1YzxhhRtYxEpEKdr07TOuccfQ=" alt="T-Shirt">
+    <h2>Designed to Define You</h2>
+    <p>
+      Experience comfort like never before — crafted from organic cotton, tailored for a modern fit, 
+      and styled to make every moment effortlessly bold. Perfect for work, casual hangouts, or wherever life takes you.
+    </p>
+    <button class="btn" onclick="buyNow()">Buy Now</button>
+  </section>
+
+  <section class="features" id="features">
+    <h2>The Shopsy Advantage</h2>
+    <div class="feature-boxes">
+      <div class="feature-box">👕 100% Organic Cotton</div>
+      <div class="feature-box">🌿 Eco-Friendly Fabric</div>
+      <div class="feature-box">💧 Breathable & Soft</div>
+      <div class="feature-box">🎨 Stylish & Trendy</div>
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <h2>Special Price</h2>
+    <div class="pricing-card">
+      <h3> Shopsy </h3>
+      <p>Only <strong>$25</strong></p>
+      <button class="btn" onclick="buyNow()">Buy Now</button>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <h2>Trusted by Our Customers</h2>
+    <div class="review-cards">
+      <div class="review">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>Super soft and fits perfectly. Love it!</p>
+        <small>- Ayan</small>
+      </div>
+      <div class="review">
+        <div class="stars">⭐⭐⭐⭐</div>
+        <p>Great quality, will order again.</p>
+        <small>- Yasir</small>
+      </div>
+      <div class="review">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>The best T-shirt I’ve bought this year!</p>
+        <small>- Hamza</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-box">
+      <div class="faq-item">
+        <div class="faq-question">What sizes are available?</div>
+        <div class="faq-answer">We offer sizes from Small to XXL.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Is it machine washable?</div>
+        <div class="faq-answer">Yes, wash cold and tumble dry low.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Do you ship worldwide?</div>
+        <div class="faq-answer">Yes, international shipping is available.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>📧 info@shopsy.com | 📞 +92 330 2198952</p>
+    <p>
+      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+    </p>
+    <p>© 2025 Shopsy. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function buyNow() {
+      alert("Thank you for choosing Shopsy! Redirecting to checkout...");
+    }
+
+    const questions = document.querySelectorAll('.faq-question');
+    questions.forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        answer.style.display = answer.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>
+

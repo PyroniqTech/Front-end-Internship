@@ -1,0 +1,28 @@
+Strength
+
+Strong modular React architecture with clear separation (modules, services, hooks, barrel exports).
+
+Modern, correct tech stack and proper project setup (Vite, React Router, Axios, ESLint).
+
+Good routing foundation, service-layer pattern, custom hooks approach, and solid documentation.
+
+Scalable structure suitable for team development.
+
+
+Mistakes / Issues
+
+Majority of core modules are missing or placeholders (Products, Cart, Orders, Drugs, Profile, Payments).
+
+Shared components and utilities largely missing (Button, Loader, Navbar, validators, formatPrice, etc.).
+
+Core infrastructure incomplete (http.js, appConfig.js, incomplete routes).
+
+Services and hooks mostly stubs with no real logic, state, or error handling.
+
+Naming inconsistencies and typos (Inventory folder case, ChatWithPharmicist).
+
+Overall implementation is ~25–30% despite full structural planning.
+
+
+Final Remark
+Aaish, Abdullah, Yasir, and Osama demonstrate strong understanding of modular React architecture and professional project structuring. However, execution is significantly behind planning. The project is not production-ready due to missing modules, incomplete services/hooks, and absent core infrastructure. This reflects poor management and incomplete delivery rather than weak technical capability. With proper implementation effort, they can turn this into a strong project; in its current form, it remains an incomplete skeleton.

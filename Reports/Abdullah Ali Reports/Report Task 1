@@ -1,0 +1,34 @@
+1. Performance
+
+Abdullah Ali completed the Classic Bites restaurant menu structure with logo, navigation links, and menu button.
+
+He applied responsive design principles and attempted to match the theme colors with the logo.
+
+The overall structure showed a good understanding of HTML/CSS basics and the importance of responsiveness.
+
+Successfully integrated a menu button (☰) for smaller screens, showing initiative to cover mobile design.
+
+2. Mistakes / Issues
+
+Navigation menu button misalignment: The button was not positioned properly on the right side of the header.
+
+Over-reliance on AI: Observed that AI-generated code snippets were used without full adjustments.
+
+Excessive comments: The code contained many unnecessary comments, reducing readability and professionalism.
+
+Layout errors: Desktop and mobile views were not consistent until corrections were made.
+
+3. Guidelines & Areas of Improvement
+
+Code Cleanliness: Remove extra/unnecessary comments to make the file neat and professional.
+
+Manual Understanding: AI tools can assist, but always cross-check and refine the code to ensure it fully meets task requirements.
+
+Positioning & Alignment: Pay closer attention to Flexbox/Grid layouts to avoid alignment issues in headers and menus.
+
+Theme Consistency: Stick strictly to the given logo and theme colors without adding unnecessary variations.
+
+Testing Across Devices: Always test both desktop and mobile views to ensure responsive behavior works as intended.
+
+✅ Task 1 Evaluation – Classic Bites (Abdullah Ali)
+Abdullah Ali successfully completed Task 1 – Classic Bites Landing Page with a responsive structure and basic design elements. It is concluded that improvements are needed in code cleanliness, alignment, and reducing over-reliance on AI, with more focus on testing and theme consistency in future tasks.

@@ -1,0 +1,112 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="check upcoming events of our organization" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+<title>Lumeo | Check Events</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="assets/css/main.css" />
+
+<div id="app" class="container mx-auto px-6 py-12"></div>
+<script defer src="assets/js/main.js"></script>
+
+<section class="bg-gray-100 py-12">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl font-semibold text-gray-800 mb-8 text-center">
+      Contact US
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8">
+      <!-- Contact Details -->
+      <div class="space-y-4 mt-6">
+        <p class="text-gray-700">
+          <strong>Email:</strong> info@realestatefirm.com
+        </p>
+        <p class="text-gray-700"><strong>Phone:</strong> +123 456 7890</p>
+        <p class="text-gray-700">
+          <strong>LinkedIn:</strong>
+          <a
+            href="https://linkedin.com/in/realestatefirm"
+            class="text-blue-600 hover:underline"
+            >linkedin.com/in/realestatefirm</a
+          >
+        </p>
+        <p class="text-gray-700">
+          <strong>Facebook:</strong>
+          <a
+            href="https://facebook.com/realestatefirm"
+            class="text-blue-600 hover:underline"
+            >facebook.com/realestatefirm</a
+          >
+        </p>
+        <p class="text-gray-700">
+          <strong>Address:</strong> 123 Main St, City, Country
+        </p>
+      </div>
+
+      <!-- Contact Form -->
+      <form class="bg-white p-6 rounded-lg shadow-lg space-y-4">
+        <div>
+          <label class="block text-gray-700 font-medium mb-2" for="name"
+            >Name</label
+          >
+          <input
+            type="text"
+            id="name"
+            placeholder="Your full name"
+            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+        </div>
+
+        <div>
+          <label class="block text-gray-700 font-medium mb-2" for="email"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            placeholder="Your email address"
+            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+        </div>
+
+        <div>
+          <label class="block text-gray-700 font-medium mb-2" for="subject"
+            >Subject</label
+          >
+          <input
+            type="text"
+            id="subject"
+            placeholder="Buying, Selling, or Inquiry"
+            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+        </div>
+
+        <div>
+          <label class="block text-gray-700 font-medium mb-2" for="message"
+            >Message</label
+          >
+          <textarea
+            id="message"
+            rows="5"
+            placeholder="Describe your property needs or questions"
+            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="bg-blue-600 text-white font-semibold px-6 py-2 rounded hover:bg-blue-700 transition duration-300"
+        >
+          Send Inquiry
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

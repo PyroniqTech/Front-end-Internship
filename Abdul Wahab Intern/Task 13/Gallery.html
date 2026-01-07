@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingoude Company Gallery</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+</head>
+<body>
+<div class="bg-color"> 	
+	<div class="header">
+	    <a href="index.html"><div class="logo">Ingoude Company</div></a>
+
+	    <nav class="menu">
+	        <a href="aboutus.html">About Us</a>
+	        <a href="Gallery.html">Gallery</a>
+	        <a href="setting.html">Setting</a>
+	        <a href="contact.html">Contact</a>
+	    </nav>
+
+	    <div class="search-box">
+	    	<i class="fa-solid fa-magnifying-glass"></i>
+	        <button>Search</button>
+	    </div>
+		    <ul class="menu dropdown" id="menu">
+			    <li><a href="aboutus.html">About Us</a></li>
+			    <li><a href="Gallery.html">Gallery</a></li>
+			    <li><a href="setting.html">Setting</a></li>
+			    <li><a href="contact.html">Contact</a></li>
+			  </ul>
+	    <div class="hamburger" id="hamburger">&#9776;</div>
+	</div>
+		<div class="hero-section">
+		<div class="col-3">
+			<div>
+				<h1 class="aboutus-Heading-2">Our Mission</h1>
+			</div>
+			<div class="mission-item">
+					<div class="number">01</div>
+				<div>
+					<p class="aboutus-p">We strive to create timeless and functional interiors that enhance everyday living.</p>
+				</div>
+			</div>
+			<div class="mission-item">
+				<div class="number">02</div>
+				<div>
+					<p class="aboutus-p">Transforming ordinary spaces into inspiring environments through creativity and innovation.</p>
+				</div>
+			</div>
+			<div class="mission-item">
+				<div class="number">03</div>
+				<div>
+					<p class="aboutus-p">Delivering personalized design solutions tailored to each client’s lifestyle and vision.</p>
+				</div>
+			</div>
+				
+		</div>
+		<div class="col-2">
+			<div class="gallery">
+		    <div class="img1"><img src="assets/images/image-1.jpg" alt="Image 1"></div>
+		    <div class="img2"><img src="assets/images/image-2.jpg" alt="Image 2"></div>
+		    <div class="img3"><img src="assets/images/image-3.jpg" alt="Image 3"></div>
+		    <div class="img4"><img src="assets/images/image-4.jpg" alt="Image 4"></div>
+		</div>
+		</div>
+	</div>
+	<div class="slider-div">
+		<div>
+				<h1 class="aboutus-Heading-2 t-center">Gallery</h1>
+			</div>
+<div class="main-slider">
+  <div><img src="assets/images/2025-11-20 192741.jpg"></div>
+  <div><img src="assets/images/185541.jpg"></div>
+  <div><img src="assets/images/185716.jpg"></div>
+  <div><img src="assets/images/hero-sec.jpg"></div>
+  <div><img src="assets/images/image-2.jpg"></div>
+</div>
+
+<div class="thumb-slider">
+  <div><img src="assets/images/2025-11-20 192741.jpg"></div>
+  <div><img src="assets/images/185541.jpg"></div>
+  <div><img src="assets/images/185716.jpg"></div>
+  <div><img src="assets/images/hero-sec.jpg"></div>
+  <div><img src="assets/images/image-2.jpg"></div>
+  <div><img src="assets/images/image-2.jpg"></div>
+  <div><img src="assets/images/image-2.jpg"></div>
+  <div><img src="assets/images/image-2.jpg"></div>
+</div>
+
+	</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('menu');
+
+  hamburger.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+
+  $('.main-slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: true,
+  fade: true,
+  asNavFor: '.thumb-slider'
+});
+
+$('.thumb-slider').slick({
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  asNavFor: '.main-slider',
+  dots: false,
+  centerMode: false,
+  focusOnSelect: true
+});
+
+</script>
+</body>
+</html>

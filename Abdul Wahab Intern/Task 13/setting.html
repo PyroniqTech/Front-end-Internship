@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Page</title>
+      <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="body">
+    <div class="header">
+        <a href="index.html"><div class="logo">Ingoude Company</div></a>
+
+        <nav class="menu">
+            <a href="aboutus.html">About Us</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="setting.html">Setting</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <button>Search</button>
+        </div>
+            <ul class="menu dropdown" id="menu">
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="setting.html">Setting</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+    </div>
+<div class="container">
+    <h2 class="title">Website Settings</h2>
+
+    <div class="setting-item">
+        <label class="label">Dark Mode</label>
+        <label class="switch">
+            <input type="checkbox" class="toggle-input" id="darkModeToggle">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="setting-item">
+        <label class="label">Notifications</label>
+        <label class="switch">
+            <input type="checkbox" class="toggle-input" id="notificationToggle">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="setting-item">
+        <label class="label">Language</label>
+        <select class="dropdown" id="languageSelect">
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="ur">Urdu</option>
+        </select>
+    </div>
+
+    <button class="save-btn" id="saveBtn">Save Settings</button>
+
+    <p class="msg" id="msg"></p>
+</div>
+
+<script src="script.js"></script>
+<script>
+    document.getElementById("saveBtn").addEventListener("click", () => {
+
+    const darkMode = document.getElementById("darkModeToggle").checked;
+    const notifications = document.getElementById("notificationToggle").checked;
+    const language = document.getElementById("languageSelect").value;
+
+    localStorage.setItem("darkMode", darkMode);
+    localStorage.setItem("notifications", notifications);
+    localStorage.setItem("language", language);
+
+    document.getElementById("msg").innerText = "Settings Saved!";
+});
+
+
+      const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('menu');
+
+  hamburger.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+
+</script>
+</body>
+</html>
+ 

@@ -1,0 +1,27 @@
+Strengths
+
+Structure & Separation:
+HTML and JS are separated correctly. structure is clean and understandable, css file incomplete and empty.
+Reusability Attempt:
+Header and footer reuse via base.html shows intent toward modularity.
+
+Mistakes/Issues
+
+Best Practices:
+No semantic tags like <main>.
+Modularity & Scalability:
+Header/footer injection is fragile and not scalable.
+Breaks easily in production or static hosting scenarios.
+Basic SEO:
+Missing meta viewport and meta description.
+Generic page titles.
+Incorrect heading hierarchy (h2 without h1).
+No accessibility considerations.
+Documentation:
+README is incomplete and not professional.
+
+Final Remark
+
+Osama Zia’s project meets only the basic structure requirement.
+Claims of best practices, scalability, and SEO are not fulfilled.
+This is a beginner-level implementation and should not be presented as a polished or production-ready portfolio.

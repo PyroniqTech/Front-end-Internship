@@ -1,0 +1,90 @@
+*Strengths*
+
+TailwindCSS via CDN → lightweight, fast styling (no custom CSS needed).
+
+Lazy loading (loading="lazy") applied on images → boosts performance.
+
+Simple DOM & grid layouts → responsive and quick rendering.
+
+Form validation (required fields, email check, seat check).
+
+User-friendly alerts + form reset after submission.
+
+Mobile menu toggle (hidden class) works smoothly.
+
+
+*Issues & Mistakes*
+
+*HTML (index.html / contact.html / speakers.html)*
+
+Font Awesome missing integrity & crossorigin attributes → security gap.
+
+Duplicate padding/text-size classes → bloated code.
+
+Hero image uses fixed height → hurts responsiveness.
+
+Generic alt text & typos (“Ecomerce” → “E-commerce”).
+
+Inconsistent capitalization of speaker names.
+
+Form fields lack user-friendly error/success feedback.
+
+<title> tags not SEO-friendly.
+
+
+*JavaScript (script.js)*
+
+Multiple DOMContentLoaded listeners → can be merged.
+
+Duplicate IDs (name, email) in both forms → risk of wrong data capture.
+
+Weak email regex → fails on modern TLDs.
+
+No phone number validation.
+
+Uses only alerts → outdated UX.
+
+Mobile menu toggle lacks outside click/escape close support.
+
+
+*🔧 Improvements*
+
+*1. Semantic & SEO*
+
+Use <header>, <main>, <section>, <footer>, <article>.
+
+Wrap addresses in <address> tag.
+
+*2. Performance*
+
+Convert images to WebP/AVIF.
+
+Preload critical assets (logo, hero image).
+
+Remove duplicate Tailwind classes.
+
+*3. Accessibility*
+
+Add ARIA roles/labels.
+
+Use descriptive alt text (e.g., “Photo of Waqar Zaka – Blockchain Expert”).
+
+*4. Forms"
+
+Inline error/success messages instead of alert().
+
+Stronger regex for email & phone validation.
+
+Thank-you confirmation message on booking form.
+
+*5. JavaScript*
+
+Merge event listeners into one.
+
+Scope queries per form using form.querySelector().
+
+Add outside-click/escape close for mobile menu.
+
+*Final Remarks*
+
+Overall, Aaish Siddiqui has done a solid job building Eventure with TailwindCSS, responsive grids, and working form validation. However, the project needs semantic structure, better validation, security fixes, and modern UX improvements to reach professional standards.

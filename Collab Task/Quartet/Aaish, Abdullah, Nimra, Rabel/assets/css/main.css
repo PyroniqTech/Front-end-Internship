@@ -1,0 +1,169 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Poppins", sans-serif;
+  background-color: #f3f4f6;
+  scroll-behavior: smooth;
+}
+
+#about-lumeo {
+  color: gray;
+}
+
+#team-card {
+  transition: all 0.3s ease;
+}
+
+section {
+  padding: 1rem 1rem;
+}
+
+
+.hamburger-line {
+  transition: all 0.3s ease;
+}
+
+.menu-open .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-open .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-open .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.nav-link {
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+.social-icon {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #3b82f6;
+}
+
+.active-page {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .desktop-nav {
+    display: none !important;
+  }
+}
+
+
+/* INDEX PAGE CSS */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 80vh;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hero-content p {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .hero-content button {
+    font-size: 0.9rem;
+    width: fit-content;
+    height: fit-content;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .hero-content button {
+    font-size: 0.7rem;
+    width: fit-content;
+    height: fit-content;
+
+  }
+}
+
+/* TESTOMONIAL PAGE CSS */
+#testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* For small devices: 1 per row */
+@media (max-width: 640px) {
+  #testimonial-container>div {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* For medium screens: 2 per row */
+@media (min-width: 641px) and (max-width: 1024px) {
+  #testimonial-container>div {
+    width: 45%;
+  }
+}
+
+/* For large screens: 3 per row */
+@media (min-width: 1025px) {
+  #testimonial-container>div {
+    width: 30%;
+  }
+}
+
+/* SERVICE PAGE CSS */
+
+@media (max-width: 640px) {
+  .service-card img {
+    height: 160px;
+  }
+
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+  }
+}

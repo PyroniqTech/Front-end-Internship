@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Exploria Travel Agency</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-50">
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <a href="base.html" class="flex items-center space-x-2">
+            <img
+              src="images/logo.jpg"
+              alt="Exploria Logo"
+              class="h-10 w-10 rounded-full"
+            />
+            <span class="text-xl font-bold text-blue-600">EXPLORIA</span>
+          </a>
+
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="base.html"
+              class="text-gray-700 hover:text-blue-600 font-medium"
+              >Welcome</a
+            >
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-blue-600 font-medium"
+              >Home</a
+            >
+            <a
+              href="destinations.html"
+              class="text-gray-700 hover:text-blue-600 font-medium"
+              >Destinations</a
+            >
+            <a href="contact.html" class="text-blue-600 font-medium">Contact</a>
+          </div>
+
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="text-gray-700 hover:text-blue-600 focus:outline-none"
+            >
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+          <a
+            href="base.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
+            >Welcome</a
+          >
+          <a
+            href="index.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
+            >Home</a
+          >
+          <a
+            href="destinations.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
+            >Destinations</a
+          >
+          <a href="contact.html" class="block py-2 text-blue-600">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <h1
+          class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12"
+        >
+          Contact Us
+        </h1>
+
+        <div class="flex flex-col lg:flex-row gap-12">
+          <div class="lg:w-1/2">
+            <div class="bg-white p-8 rounded-lg shadow-md">
+              <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                Send Us a Message
+              </h2>
+              <form id="contact-form">
+                <div class="mb-4">
+                  <label
+                    for="contact-name"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Full Name</label
+                  >
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                  />
+                  <span
+                    id="contact-name-error"
+                    class="text-red-500 text-sm hidden"
+                    >Please enter your name</span
+                  >
+                </div>
+
+                <div class="mb-4">
+                  <label
+                    for="contact-email"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                  />
+                  <span
+                    id="contact-email-error"
+                    class="text-red-500 text-sm hidden"
+                    >Please enter a valid email address</span
+                  >
+                </div>
+
+                <div class="mb-6">
+                  <label
+                    for="message"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                  ></textarea>
+                  <span id="message-error" class="text-red-500 text-sm hidden"
+                    >Please enter your message</span
+                  >
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="lg:w-1/2">
+            <div class="bg-white p-8 rounded-lg shadow-md h-full">
+              <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                Get In Touch
+              </h2>
+
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div class="bg-blue-100 p-3 rounded-full mr-4">
+                    <i class="fas fa-map-marker-alt text-blue-600"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                      Address
+                    </h3>
+                    <p class="text-gray-600">
+                      123 Travel Street, Adventure City, AC 12345
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="bg-blue-100 p-3 rounded-full mr-4">
+                    <i class="fas fa-phone text-blue-600"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                      Phone
+                    </h3>
+                    <p class="text-gray-600">+1 (555) 123-4567</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="bg-blue-100 p-3 rounded-full mr-4">
+                    <i class="fas fa-envelope text-blue-600"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                      Email
+                    </h3>
+                    <p class="text-gray-600">info@exploria.com</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="bg-blue-100 p-3 rounded-full mr-4">
+                    <i class="fas fa-clock text-blue-600"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                      Business Hours
+                    </h3>
+                    <p class="text-gray-600">
+                      Monday - Friday: 9:00 AM - 6:00 PM
+                    </p>
+                    <p class="text-gray-600">Saturday: 10:00 AM - 4:00 PM</p>
+                    <p class="text-gray-600">Sunday: Closed</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">
+                  Follow Us
+                </h3>
+                <div class="flex space-x-4">
+                  <a
+                    href="https://www.facebook.com/exploria.pk/"
+                    target="_blank"
+                    aria-label="Visit our Facebook"
+                    class="bg-gray-100 hover:bg-blue-600 hover:text-white p-3 rounded-full transition duration-300"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a
+                    href="http://www.youtube.com/@exploriaTours"
+                    target="_blank"
+                    aria-label="Visit our YouTube"
+                    class="bg-gray-100 hover:bg-red-500 hover:text-white p-3 rounded-full transition duration-300"
+                  >
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/exploria.pk/#"
+                    target="_blank"
+                    aria-label="Visit our Instagram"
+                    class="bg-gray-100 hover:bg-pink-500 hover:text-white p-3 rounded-full transition duration-300"
+                  >
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a
+                    href="https://x.com/travelwithExpo"
+                    target="_blank"
+                    aria-label="Visit our Twitter"
+                    class="bg-gray-100 hover:bg-blue-400 hover:text-white p-3 rounded-full transition duration-300"
+                  >
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="flex space-x-6 mb-4 md:mb-0">
+            <a
+              href="https://www.facebook.com/exploria.pk/"
+              target="_blank"
+              aria-label="Visit our Facebook"
+              class="text-white hover:text-blue-400 transition duration-300"
+            >
+              <i class="fab fa-facebook-f text-xl"></i>
+            </a>
+            <a
+              href="http://www.youtube.com/@exploriaTours"
+              target="_blank"
+              aria-label="Visit our YouTube"
+              class="text-white hover:text-red-500 transition duration-300"
+            >
+              <i class="fab fa-youtube text-xl"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/exploria.pk/#"
+              target="_blank"
+              aria-label="Visit our Instagram"
+              class="text-white hover:text-pink-500 transition duration-300"
+            >
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+          </div>
+
+          <div class="text-center md:text-right">
+            <p class="mb-2">123 Travel Street, Adventure City, AC 12345</p>
+            <p>&copy; 2025 Exploria Travel Agency. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("hidden");
+        });
+
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          document.querySelectorAll(".text-red-500").forEach((el) => {
+            el.classList.add("hidden");
+          });
+
+          let isValid = true;
+
+          const name = document.getElementById("contact-name").value.trim();
+          if (name === "") {
+            document
+              .getElementById("contact-name-error")
+              .classList.remove("hidden");
+            isValid = false;
+          }
+
+          const email = document.getElementById("contact-email").value.trim();
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            document
+              .getElementById("contact-email-error")
+              .classList.remove("hidden");
+            isValid = false;
+          }
+
+          const message = document.getElementById("message").value.trim();
+          if (message === "") {
+            document.getElementById("message-error").classList.remove("hidden");
+            isValid = false;
+          }
+
+          if (isValid) {
+            alert("Message Sent Successfully!");
+            this.reset();
+          }
+        });
+    </script>
+  </body>
+</html>

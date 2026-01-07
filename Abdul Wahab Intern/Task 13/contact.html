@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Facilities</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div class="bg-image">  
+    <div class="header">
+        <a href="index.html"><div class="logo">Ingoude Company</div></a>
+
+        <nav class="menu">
+            <a href="aboutus.html">About Us</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="setting.html">Setting</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <button>Search</button>
+        </div>
+            <ul class="menu dropdown" id="menu">
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="setting.html">Setting</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+    </div>
+    <div class="hero-section">
+        <div class="col-1">
+            <div>
+                <h1 class="aboutus-Heading">Contact Us</h1>
+            </div>
+            <div>
+                <form>
+                    <div>
+                       <p class="aboutus-p">Our planning process is built on clarity, precision, and a practical understanding of how each space should function. We start by identifying the client's need, mapping out the flow of the area, and defining the structural and aesthetic requirements, Every step is organized </p> 
+                       <div class="form">
+                           <label> Email<input type="Email" name="Email" placeholder="Email"> </label>
+                           <p class="aboutus-p">Our planning process is built on clarity, precision, and a practical understanding of how each space should function. We start by identifying the client's need, </p> 
+                           <label> Website<input type="Email" name="Email" placeholder="Website"> </label>
+                           <p class="aboutus-p">Our planning process is built on clarity, precision, and a practical understanding of how each space should function. We start by identifying the client's need, mapping </p> 
+                       </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="Contact-us-bg">
+                <img class="mob-img" src="assets/images/004015.jpg">
+                <img class="img-4" src="assets/images/004521.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('menu');
+
+  hamburger.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+</script>
+</body>
+</html>

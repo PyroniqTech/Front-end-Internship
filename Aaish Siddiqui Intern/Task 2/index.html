@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hot Pot Landing Page</title>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    
+    header {
+      background: #1a1f1a;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap; 
+  
+    }
+
+    .logo {
+      height: 100px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav li {
+      margin-left: 15px;
+    }
+
+    nav a {
+      color: orange;
+      margin-right: 20px;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    nav a:hover { color: greenyellow; }
+
+    
+    .hero {
+      padding: 50px 20px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .briefing {
+      max-width: 600px;
+      color: #898989;
+      font-weight: 300;
+      font-size: 1rem;
+    }
+
+    .hero-h2 {
+      color: burlywood;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .hero img {
+      max-width: 460px;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .btn {
+      background: goldenrod;
+      color: #fff;
+      border: none;
+      border-radius: 35px;
+      padding: 11px 26px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    
+    .features, .pricing, .reviews, .faq, footer {
+      padding: 40px 20px;
+      text-align: center;
+    
+      
+    }
+
+    .features div, .reviews div {
+      background: #f9f9f9;
+      display: inline-block;
+      color: #898989;
+      margin: 10px;
+      padding: 20px;
+      border-radius: 9px;
+      
+    }
+
+    .pricing .price-card {
+      background: #f9f9f9;
+      color:#b88e25;
+      width: 240px;
+      padding: 20px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+
+    .faq {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .faq-item {
+    margin-bottom: 15px;
+  }
+
+  .faq-item button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background: #f9f9f9;
+    border-radius: 40px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .faq-item button:hover {
+    background: #e6e6e6;
+  }
+
+  .faq-item div {
+    display: none;
+    padding: 12px;
+    background: #fff;
+    border-radius: 0 0 15px 15px;
+    margin-top: 5px;
+    box-shadow: inset 0px 2px 5px rgba(0,0,0,0.05);
+  }
+
+  .icon {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+    footer {
+      background:#1a1f1a;
+      color:orange;
+    }
+
+
+    
+    @media (max-width: 992px) {
+      .hero {
+        flex-direction: column; 
+        text-align: center;
+      }
+      .hero-h2 {
+        font-size: 1.8rem;
+      }
+      .briefing {
+        font-size: 0.95rem;
+        max-width: 100%;
+      }
+      nav a {
+        font-size: 0.7rem;
+      }
+    }
+
+  
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .logo {
+        height: 80px;
+        margin-bottom: 10px;
+      }
+      nav ul {
+        justify-content: center;
+        
+      }
+      .hero {
+        padding: 30px 15px;
+      }
+      .hero-h2 {
+        font-size: 1.5rem;
+      }
+      .briefing {
+        font-size: 0.85rem;
+        line-height: 1.4;
+      }
+      .hero img {
+        max-width: 90%;
+        margin-top: 15px;
+      }
+      .btn {
+        padding: 9px 20px;
+        font-size: 0.9rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <img class="logo" src="logo.jpg" alt="logo">
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#buy">Buy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <section class="hero" id="home">
+    <div>
+      <h2 class="hero-h2">Keep Your Rotis Hot & Fresh</h2>
+      <p class="briefing">Our premium Hot Pot is designed to keep your chapati warm and fresh for hours. Crafted with high-quality stainless steel and a durable golden finish with white inner lining, it combines elegance with functionality. The insulated design maintains heat while preventing sogginess, making it perfect for daily family use or special occasions.</p>
+      <button class="btn" onclick="buyNow()">Buy Now</button>
+    </div>
+    <img src="hotpot.jpg" alt="Hot Pot Image">
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <h2 style="color: goldenrod; font-size:xx-large;">Features</h2>
+    <div>
+      <h3>💎 Long-lasting Warmth</h3>
+      <p>Keeps your rotis hot for hours with double insulation.</p>
+    </div>
+    <div>
+      <h3> 💎 Durable Material</h3>
+      <p>Made from high-quality stainless steel for long life.</p>
+    </div>
+    <div>
+      <h3>💎 Elegant Design</h3>
+      <p>Stylish look suitable for any dining table.</p>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing" id="buy">
+    <h2 style="color: goldenrod; ">Pricing</h2>
+    <div class="price-card">
+      <h3>Hot Pot</h3>
+      <p><strong>$25</strong></p>
+      <button class="btn" onclick="buyNow()">Buy Now</button>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="reviews" id="reviews">
+    <h2 style="color: goldenrod;">Customer Reviews</h2>
+    <div>
+      <p>⭐⭐⭐⭐⭐</p>
+      <p>“Keeps rotis hot for dinner, amazing product!” - james</p>
+    </div>
+    <div>
+      <p>⭐⭐⭐⭐</p>
+      <p>“Very durable and looks great on the table.” - Andy</p>
+    </div>
+  </section>
+
+
+<section class="faq">
+  <h2 style="color: goldenrod; margin-bottom:30px;">FAQS</h2>
+  
+  <div class="faq-item">
+    <button onclick="toggleFAQ(this)">
+      How long does it keep rotis hot? 
+      <span class="icon">+</span>
+    </button>
+    <div>Up to 4-6 hours depending on the environment.</div>
+  </div>
+
+  <div class="faq-item">
+    <button onclick="toggleFAQ(this)">
+      What material is it made of? 
+      <span class="icon">+</span>
+    </button>
+    <div>Stainless steel with food-grade plastic lid.</div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer style="text-align:center; margin-top:40px;">
+  <p>Contact us: support@hotpot.com</p>
+  <p>Follow us: Facebook | Instagram | Twitter</p>
+</footer>
+
+<script>
+  
+  function buyNow() {
+    alert("Thank you for choosing Hot Pot! Redirecting to checkout...");
+  }
+
+  function toggleFAQ(button) {
+    const content = button.nextElementSibling;
+    const icon = button.querySelector(".icon");
+    
+    if (content.style.display === "block") {
+      content.style.display = "none";
+      icon.textContent = "+";
+    } else {
+      content.style.display = "block";
+      icon.textContent = "-";
+    }
+  }
+  </script>
+</body>
+</html>

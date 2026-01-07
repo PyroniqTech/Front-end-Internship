@@ -1,0 +1,285 @@
+:root {
+  --primary: #000;
+  --secondary: #ffc107;
+  --accent: #6c757d;
+  --light: #f8f9fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+#hero {
+  background: linear-gradient(135deg, #0c0c0c 0%, #2d2d2d 100%);
+  color: white;
+  position: relative;
+}
+
+.hero-bg {
+  background: radial-gradient(
+    circle at 30% 50%,
+    rgba(255, 193, 7, 0.1) 0%,
+    transparent 50%
+  );
+  z-index: 0;
+}
+
+.hero-visual {
+  height: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.floating-card {
+  width: 200px;
+  height: 250px;
+  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+  border: 1px solid rgba(255, 193, 7, 0.2);
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.floating-card:hover {
+  transform: translateY(-10px) rotateY(10deg);
+}
+
+.card-1 {
+  top: 20%;
+  left: 10%;
+  z-index: 3;
+}
+
+.card-2 {
+  top: 40%;
+  left: 40%;
+  z-index: 2;
+  width: 220px;
+  height: 270px;
+}
+
+.card-3 {
+  top: 15%;
+  right: 10%;
+  z-index: 1;
+}
+
+/* Product Section */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.product-img {
+  height: 250px;
+  background: #f8f9fa;
+}
+
+.product-3d {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, #e0e0e0, #f5f5f5);
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.product-card:hover .product-3d {
+  transform: rotateY(15deg) rotateX(5deg);
+}
+
+.product-1 {
+  background: linear-gradient(145deg, #6a11cb 0%, #2575fc 100%);
+}
+
+.product-2 {
+  background: linear-gradient(145deg, #ff9a9e 0%, #fad0c4 100%);
+}
+
+.product-3 {
+  background: linear-gradient(145deg, #42e695 0%, #3bb2b8 100%);
+}
+
+/* About Section */
+.about-visual {
+  height: 500px;
+  width: 100%;
+  position: relative;
+}
+
+.about-img-1 {
+  width: 70%;
+  height: 70%;
+  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  z-index: 2;
+}
+
+.about-img-2 {
+  width: 60%;
+  height: 60%;
+  background: linear-gradient(145deg, #ffc107, #ff8f00);
+  bottom: 10%;
+  right: 5%;
+  z-index: 1;
+}
+
+.gallery-item {
+  height: 300px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.1);
+}
+
+.gallery-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.img-1 {
+  background: linear-gradient(145deg, #6a11cb 0%, #2575fc 100%);
+}
+
+.img-2 {
+  background: linear-gradient(145deg, #ff9a9e 0%, #fad0c4 100%);
+}
+
+.img-3 {
+  background: linear-gradient(145deg, #42e695 0%, #3bb2b8 100%);
+}
+
+.img-4 {
+  background: linear-gradient(145deg, #fad0c4 0%, #ffd1ff 100%);
+}
+
+.img-5 {
+  background: linear-gradient(145deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+.img-6 {
+  background: linear-gradient(145deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background: var(--secondary) !important;
+  transform: translateY(-3px);
+}
+
+.form-control {
+  border: 1px solid #e0e0e0;
+  padding: 1rem 0.75rem;
+}
+
+.form-control:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+}
+
+.form-floating > label {
+  padding: 1rem 0.75rem;
+}
+
+/* Navbar */
+.navbar {
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.95) !important;
+  backdrop-filter: blur(10px);
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--secondary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .display-3 {
+    font-size: 2.5rem;
+  }
+
+  .display-4 {
+    font-size: 2rem;
+  }
+
+  .hero-visual {
+    height: 300px;
+  }
+
+  .floating-card {
+    width: 120px;
+    height: 160px;
+  }
+
+  .card-2 {
+    width: 140px;
+    height: 180px;
+  }
+
+  .about-visual {
+    height: 300px;
+  }
+}

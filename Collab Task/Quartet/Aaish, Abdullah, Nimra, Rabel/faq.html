@@ -1,0 +1,117 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Find answers to Frequently ask Questions">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title> Lumeo | FAQS - Ask Questions </title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="assets/css/main.css">
+
+<div id="app" class="container mx-auto px-6 py-12"></div>
+<script defer src="assets/js/main.js"></script>
+
+<script>
+  loadPage("base.html", `
+ <section class="p-2 text-center ">
+  <h1 class="md:text-3xl text-2xl text-blue-800 font-bold p-2">Frequently Ask Questions (FAQS)</h1>
+  <p class="lg:max-w-3xl mx-auto p-2 font-serif" id="about-lumeo">
+    Got questions?  Our experts have compiled answers to the most common queries to help you make confident real estate decisions
+    </p>
+  <hr class="my-7 border-t-2 border-gray-300 lg:max-w-3xl md:max-w-2xl max-w-xl mx-auto">
+</section>
+
+<section class="faq flex flex-col items-center space-y-4 mb-4">
+
+  <div class="bg-gray-50 rounded-xl shadow-md w-full max-w-3xl p-4">
+    <button onclick="faqs_Toggle(this)" class="w-full flex justify-between items-center text-left text-sm md:text-xl font-medium text-gray-800 hover:text-blue-700 transition">
+      <p class="font-bold">What services does Lumeo offer?</p>
+      <span class="icon text-2xl text-blue-700 font-bold">+</span>
+    </button>
+    <div class="hidden mt-2 text-gray-600 md:text-base text-sm leading-relaxed">
+       Lumeo provides complete real estate solutions — including property buying, selling, investment consultancy, and project development services.
+    </div>
+  </div>
+
+  <div class="bg-gray-50 rounded-xl shadow-md w-full max-w-3xl p-4">
+    <button onclick="faqs_Toggle(this)" class="w-full flex justify-between items-center text-left text-base md:text-xl font-medium text-gray-800 hover:text-blue-700 transition">
+      <p class="font-bold"> How can I buy property through Lumeo?</p>
+      <span class="icon text-2xl text-blue-700 font-bold">+</span>
+    </button>
+    <div class="hidden mt-2 text-gray-600 md:text-base text-sm leading-relaxed">
+       Simply contact our advisory team or visit our office. We'll guide you through property options, legal processes, and payment plans step-by-step.
+    </div>
+  </div>
+
+  <div class="faq-item bg-gray-50 rounded-xl shadow-md w-full max-w-3xl p-4">
+    <button onclick="faqs_Toggle(this)" class="w-full flex justify-between items-center text-left text-base md:text-xl font-medium text-gray-800 hover:text-blue-700 transition">
+      <p class="font-bold"> Is Lumeo a registered real estate agency?</p>
+      <span class="icon text-2xl text-blue-700 font-bold">+</span>
+    </button>
+    <div class="hidden mt-2 text-gray-600 md:text-base text-sm leading-relaxed">
+        Yes, Lumeo is a fully registered and licensed real estate brand operating under local and international real estate regulations.
+    </div>
+  </div>
+
+    <div class="faq-item bg-gray-50 rounded-xl shadow-md w-full max-w-3xl p-4">
+    <button onclick="faqs_Toggle(this)" class="w-full flex justify-between items-center text-left text-base md:text-xl font-medium text-gray-800 hover:text-blue-700 transition">
+      <p class="font-bold">What type of properties does Lumeo deal in?</p>
+      <span class="icon text-2xl text-blue-700 font-bold">+</span>
+    </button>
+    <div class="hidden mt-2 text-gray-600 md:text-base text-sm leading-relaxed">
+        We deal in a variety of properties — including residential plots, luxury apartments, commercial spaces, and investment projects.
+    </div>
+  </div>
+
+    <div class="faq-item bg-gray-50 rounded-xl shadow-md w-full max-w-3xl p-4">
+    <button onclick="faqs_Toggle(this)" class="w-full flex justify-between items-center text-left text-base md:text-xl font-medium text-gray-800 hover:text-blue-700 transition">
+      <p class="font-bold">Does Lumeo provide property management or rental services?</p>
+      <span class="icon text-2xl text-blue-700 font-bold">+</span>
+    </button>
+    <div class="hidden mt-2 text-gray-600 md:text-base text-sm leading-relaxed">
+        Yes, we offer end-to-end property management and rental services for both investors and homeowners to ensure maximum returns and peace of mind.
+    </div>
+  </div>
+
+    <div class="faq-item bg-gray-50 rounded-xl shadow-md w-full max-w-3xl p-4">
+    <button onclick="faqs_Toggle(this)" class="w-full flex justify-between items-center text-left text-base md:text-xl font-medium text-gray-800 hover:text-blue-700 transition">
+      <p class="font-bold"> How can I verify a property before purchase?</p>
+      <span class="icon text-2xl text-blue-700 font-bold">+</span>
+    </button>
+    <div class="hidden mt-2 text-gray-600 md:text-base text-sm leading-relaxed">
+ Our legal team assists in full property verification — including title checks, ownership records, and project approval status before any purchase.
+    </div>
+  </div>
+
+    <div class="faq-item bg-gray-50 rounded-xl shadow-md w-full max-w-3xl p-4">
+    <button onclick="faqs_Toggle(this)" class="w-full flex justify-between items-center text-left text-base md:text-xl font-medium text-gray-800 hover:text-blue-700 transition">
+      <p class="font-bold">  How can I contact the Lumeo support team?</p>
+      <span class="icon text-2xl text-blue-700 font-bold">+</span>
+    </button>
+    <div class="hidden mt-2 text-gray-600 md:text-base text-sm leading-relaxed">
+    You can reach us via email, phone, or our website's contact form. Our support team responds within 24 hours to assist with all property-related inquiries.
+    </div>
+  </div>
+
+  <div class="bg-gray-50 rounded-xl shadow-md w-full max-w-3xl p-4">
+    <button onclick="faqs_Toggle(this)" class="w-full flex justify-between items-center text-left text-sm md:text-xl font-medium text-gray-800 hover:text-blue-700 transition">
+      <p class="font-bold">Does Lumeo assist with real estate investments for overseas clients?</p>
+      <span class="icon text-2xl text-blue-700 font-bold">+</span>
+    </button>
+    <div class="hidden mt-2 text-gray-600 md:text-base text-sm leading-relaxed">
+     Yes, Lumeo provides dedicated consultancy for international investors.
+     From market research and legal guidance to property management, our team ensures a smooth and secure investment process for overseas clients.   
+    </div>
+  </div>
+</section>
+
+<div class="text-center mt-10">
+  <p class="text-gray-500 text-sm p-1 md:text-base">
+    Still have questions? We're here to help — feel free to reach out to our team anytime.
+  </p>
+  <a href="contact.html" aria-label="Navigate to the contact page"
+     class="inline-block mt-4 bg-blue-700 hover:bg-blue-800 text-white font-medium py-2 px-5 rounded-lg shadow-md transition">
+     Contact Us
+  </a>
+</div>
+`)
+
+</script>

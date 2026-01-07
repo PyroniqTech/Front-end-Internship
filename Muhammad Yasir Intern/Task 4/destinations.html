@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploria - Destinations</title>
+    <meta name="description" content="Explore our amazing travel destinations and packages">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="images/Logo(black).jpg" alt="Exploria Logo" class="h-10 w-auto">
+                <span class="ml-2 text-xl font-bold text-blue-600">Exploria</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-6">
+                <a href="base.html" class="text-gray-600 hover:text-blue-600 transition">Welcome</a>
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+                <a href="destinations.html" class="text-blue-600 font-medium">Destinations</a>
+                <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </nav>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="base.html" class="block py-2 text-gray-600 hover:text-blue-600 transition">Welcome</a>
+            <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-600 transition">Home</a>
+            <a href="destinations.html" class="block py-2 text-blue-600 font-medium">Destinations</a>
+            <a href="contact.html" class="block py-2 text-gray-600 hover:text-blue-600 transition">Contact</a>
+        </div>
+    </header>
+
+    <main>
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-4">Our Destinations</h1>
+            <p class="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-12">
+                Discover our handpicked selection of breathtaking destinations around the globe. 
+                Each location offers unique experiences tailored to create unforgettable memories.
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 transform hover:scale-105">
+                    <img src="images/destination-1.jpg" alt="Santorini, Greece" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Santorini, Greece</h3>
+                        <p class="text-gray-600 mb-2">White-washed buildings, stunning sunsets, and crystal blue waters.</p>
+                        <p class="text-lg font-bold text-blue-600 mb-4">From $1,299</p>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300 book-now-btn" data-destination="Santorini, Greece">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 transform hover:scale-105">
+                    <img src="images/destination-2.jpg" alt="Bali, Indonesia" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Bali, Indonesia</h3>
+                        <p class="text-gray-600 mb-2">Lush landscapes, vibrant culture, and serene beaches.</p>
+                        <p class="text-lg font-bold text-blue-600 mb-4">From $899</p>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300 book-now-btn" data-destination="Bali, Indonesia">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 transform hover:scale-105">
+                    <img src="images/destination-3.jpg" alt="Kyoto, Japan" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Kyoto, Japan</h3>
+                        <p class="text-gray-600 mb-2">Ancient traditions, beautiful temples, and cherry blossoms.</p>
+                        <p class="text-lg font-bold text-blue-600 mb-4">From $1,599</p>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300 book-now-btn" data-destination="Kyoto, Japan">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 transform hover:scale-105">
+                    <img src="images/destination-4.jpg" alt="Paris, France" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Paris, France</h3>
+                        <p class="text-gray-600 mb-2">The city of love with iconic landmarks and exquisite cuisine.</p>
+                        <p class="text-lg font-bold text-blue-600 mb-4">From $1,199</p>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300 book-now-btn" data-destination="Paris, France">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 transform hover:scale-105">
+                    <img src="images/destination-5.jpg" alt="New York, USA" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">New York, USA</h3>
+                        <p class="text-gray-600 mb-2">The city that never sleeps with endless attractions.</p>
+                        <p class="text-lg font-bold text-blue-600 mb-4">From $1,099</p>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300 book-now-btn" data-destination="New York, USA">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 transform hover:scale-105">
+                    <img src="images/destination-6.jpg" alt="Rome, Italy" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Rome, Italy</h3>
+                        <p class="text-gray-600 mb-2">Ancient history, magnificent architecture, and delicious food.</p>
+                        <p class="text-lg font-bold text-blue-600 mb-4">From $1,099</p>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300 book-now-btn" data-destination="Rome, Italy">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 transform hover:scale-105">
+                    <img src="images/destination-7.jpg" alt="Sydney, Australia" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Sydney, Australia</h3>
+                        <p class="text-gray-600 mb-2">Iconic opera house, beautiful harbor, and stunning beaches.</p>
+                        <p class="text-lg font-bold text-blue-600 mb-4">From $1,799</p>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300 book-now-btn" data-destination="Sydney, Australia">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 transform hover:scale-105">
+                    <img src="images/destination-8.jpg" alt="Dubai, UAE" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Dubai, UAE</h3>
+                        <p class="text-gray-600 mb-2">Ultra-modern architecture, luxury shopping, and desert adventures.</p>
+                        <p class="text-lg font-bold text-blue-600 mb-4">From $1,499</p>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300 book-now-btn" data-destination="Dubai, UAE">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Book Your Dream Vacation</h2>
+                
+                <form id="booking-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Full Name *</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            <div class="text-red-500 text-sm mt-1 hidden" id="name-error">Please enter your full name</div>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address *</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            <div class="text-red-500 text-sm mt-1 hidden" id="email-error">Please enter a valid email address</div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            <div class="text-red-500 text-sm mt-1 hidden" id="phone-error">Please enter a valid phone number</div>
+                        </div>
+                        
+                        <div>
+                            <label for="destination" class="block text-gray-700 font-medium mb-2">Destination *</label>
+                            <select id="destination" name="destination" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                <option value="">Select a destination</option>
+                                <option value="Santorini, Greece">Santorini, Greece</option>
+                                <option value="Bali, Indonesia">Bali, Indonesia</option>
+                                <option value="Kyoto, Japan">Kyoto, Japan</option>
+                                <option value="Paris, France">Paris, France</option>
+                                <option value="New York, USA">New York, USA</option>
+                                <option value="Rome, Italy">Rome, Italy</option>
+                                <option value="Sydney, Australia">Sydney, Australia</option>
+                                <option value="Dubai, UAE">Dubai, UAE</option>
+                            </select>
+                            <div class="text-red-500 text-sm mt-1 hidden" id="destination-error">Please select a destination</div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="date" class="block text-gray-700 font-medium mb-2">Travel Date *</label>
+                            <input type="date" id="date" name="date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            <div class="text-red-500 text-sm mt-1 hidden" id="date-error">Please select a travel date</div>
+                        </div>
+                        
+                        <div>
+                            <label for="travelers" class="block text-gray-700 font-medium mb-2">Number of Travelers *</label>
+                            <input type="number" id="travelers" name="travelers" min="1" max="20" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            <div class="text-red-500 text-sm mt-1 hidden" id="travelers-error">Please enter a valid number of travelers</div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">
+                            Book Now
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <p class="text-lg font-semibold">Exploria Travel Agency</p>
+                    <p class="text-gray-400">Address: <a href="123 Travel Street, Adventure City" class="hover:text-white">123 Travel Street, Adventure City</a></p>
+                    <p class="text-gray-400">Phone: <a href="tel:+15551234567" class="hover:text-white">+1 (555) 123-4567</a></p>
+                    <p class="text-gray-400">Email: <a href="mailto:info@exploria.com" class="hover:text-white">info@exploria.com</a></p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page" class="text-gray-400 hover:text-white transition transform hover:scale-110">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our YouTube channel" class="text-gray-400 hover:text-white transition transform hover:scale-110">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram page" class="text-gray-400 hover:text-white transition transform hover:scale-110">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 Exploria. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Eventure</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#01161e',
+                        'secondary': '#124559',
+                        'accent': '#598392',
+                        'light': '#aec3b0',
+                        'background': '#eff6e0'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-background text-primary">
+
+    <nav class="bg-secondary shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center">
+                        <img src="images/logo.jpg" loading="lazy" alt="Eventure Logo" class="w-10 h-10 rounded-full mr-3 bg-accent object-cover" />
+                        <span class="text-light font-bold text-xl">EVENTURE</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-light hover:text-accent px-3 py-2 rounded-md font-medium">Home</a>
+                    <a href="speakers.html" class="text-light hover:text-accent px-3 py-2 rounded-md font-medium">Speakers</a>
+                    <a href="contact.html" class="text-light hover:text-accent px-3 py-2 rounded-md font-medium">Contact</a>
+                    <a href="speakers.html#booking" class="bg-accent hover:bg-primary text-light px-4 py-2 rounded-md font-medium transition">Register</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-light hover:text-accent focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+       
+        <div id="mobile-menu" class="md:hidden hidden bg-secondary">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="text-light hover:text-accent block px-3 py-2 rounded-md font-medium">Home</a>
+                <a href="speakers.html" class="text-light hover:text-accent block px-3 py-2 rounded-md font-medium">Speakers</a>
+                <a href="contact.html" class="text-light hover:text-accent block px-3 py-2 rounded-md font-medium">Contact</a>
+                <a href="speakers.html#booking" class="bg-accent hover:bg-primary text-light block px-3 py-2 rounded-md font-medium">Register</a>
+            </div>
+        </div>
+    </nav>
+
+   
+    <section class="relative text-light py-16 contact-header">
+        <div class="absolute inset-0 bg-primary opacity-80"></div>
+        <div class="relative max-w-7xl mx-auto px-4 text-center z-10">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
+            <p class="text-xl max-w-3xl mx-auto">Have questions about the summit? We're here to help. Get in touch with our team.</p>
+        </div>
+    </section>
+
+   
+    <section class="py-16 bg-light">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 text-secondary">Get In Touch</h2>
+                    <p class="text-lg mb-8">
+                        We'd love to hear from you. Whether you have questions about the event, need assistance with registration, or want to explore partnership opportunities, our team is ready to help.
+                    </p>
+                    
+                    <div class="space-y-6 mb-10">
+                        <div class="flex items-start">
+                            <div class="bg-accent text-light rounded-full p-3 mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Address</h4>
+                                <p>123 Business Avenue, Suite 500<br>New York, NY 10001</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-accent text-light rounded-full p-3 mr-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-accent text-light rounded-full p-3 mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Email</h4>
+                                <p>info@eventure.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-accent text-light rounded-full p-3 mr-4">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Office Hours</h4>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM EST</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-secondary">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/ukeventures/" target="_blank" class="bg-secondary hover:bg-accent text-light w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://x.com/eventureinc" target="_blank" class="bg-secondary hover:bg-accent text-light w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://uk.linkedin.com/company/eventurenet" target="_blank" class="bg-secondary hover:bg-accent text-light w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.instagram.com/eventure/" target="_blank" class="bg-secondary hover:bg-accent text-light w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-secondary">Send Us a Message</h3>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Full Name *</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none focus:border-accent" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email Address *</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none focus:border-accent" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none focus:border-accent">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium mb-2">Subject *</label>
+                            <select id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none focus:border-accent" required>
+                                <option value="">Select a subject</option>
+                                <option value="registration">Registration Inquiry</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="speaking">Speaking Opportunity</option>
+                                <option value="sponsorship">Sponsorship</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message *</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none focus:border-accent" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-secondary hover:bg-primary text-light font-bold py-3 px-4 rounded-lg transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">Frequently Asked Questions</h2>
+            
+            <div class="space-y-6">
+                <div class="bg-light rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-2 text-secondary">What is included in the registration fee?</h3>
+                    <p class="text-gray-700">Your registration includes access to all keynote sessions, breakout sessions, networking events, conference materials, and meals during the event.</p>
+                </div>
+                
+                <div class="bg-light rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-2 text-secondary">Can I get a refund if I can't attend?</h3>
+                    <p class="text-gray-700">We offer full refunds up to 30 days before the event. After that, we can transfer your registration to a colleague or credit it toward a future event.</p>
+                </div>
+                
+                <div class="bg-light rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-2 text-secondary">Is there a group discount?</h3>
+                    <p class="text-gray-700">Yes, we offer group discounts for registrations of 5 or more people from the same organization. Contact us for more information.</p>
+                </div>
+                
+                <div class="bg-light rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-2 text-secondary">What COVID-19 safety measures are in place?</h3>
+                    <p class="text-gray-700">We follow all local health guidelines and will implement appropriate safety measures. Specific protocols will be communicated to registered attendees closer to the event date.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <footer class="bg-primary text-light py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4">Eventure</h3>
+                    <p class="mb-6 max-w-md">Join industry leaders at the premier business event of the year. Discover new strategies, network with peers, and transform your business.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/ukeventures/" target="_blank" class="bg-secondary hover:bg-accent text-light w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://x.com/eventureinc" target="_blank" class="bg-secondary hover:bg-accent text-light w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://uk.linkedin.com/company/eventurenet" target="_blank" class="bg-secondary hover:bg-accent text-light w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/eventure/" target="_blank" class="bg-secondary hover:bg-accent text-light w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-accent transition">Home</a></li>
+                        <li><a href="speakers.html" class="hover:text-accent transition">Speakers</a></li>
+                        <li><a href="contact.html" class="hover:text-accent transition">Contact</a></li>
+                        <li><a href="speakers.html#booking" class="hover:text-accent transition">Register</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-2 mt-1"></i>
+                            <span>123 Business Ave, NYC 10001</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mr-2 mt-1"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mr-2 mt-1"></i>
+                            <span>info@eventure.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-secondary mt-12 pt-8 text-center">
+                <p>&copy; 2025 Eventure. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

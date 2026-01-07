@@ -1,0 +1,397 @@
+HTML5 (8)
+
+1. Difference between <section>, <article>, and <div> — give real use cases.
+
+
+2. What is the purpose of the <main> tag and why should it be unique?
+
+
+3. Why does semantic HTML matter beyond “clean code”?
+
+
+4. What are data-* attributes and when are they better than classes?
+
+
+5. Difference between localStorage, sessionStorage, and cookies?
+
+
+6. How does the <picture> element improve responsive images?
+
+
+7. What problem do <figure> and <figcaption> solve?
+
+
+8. How does native HTML5 form validation work without JavaScript?
+
+
+
+
+---
+
+Custom CSS (10)
+
+9. Difference between display: none and visibility: hidden?
+
+
+10. Explain the CSS box model and where developers usually mess it up.
+
+
+11. What is CSS specificity and how is it calculated?
+
+
+12. Difference between position: absolute, relative, fixed, and sticky?
+
+
+13. When should you use rem vs em vs px?
+
+
+14. How does z-index actually work, and why does it sometimes fail?
+
+
+15. What is a stacking context?
+
+
+16. Explain flex-grow, flex-shrink, and flex-basis.
+
+
+17. Difference between inline-block and flex layouts?
+
+
+18. What’s a common mistake with media queries?
+
+
+
+
+---
+
+Tailwind CSS (8)
+
+19. What problem does Tailwind solve compared to traditional CSS?
+
+
+20. What are utility-first classes and their main trade-offs?
+
+
+21. How does Tailwind handle responsive design?
+
+
+22. How do you customize Tailwind’s theme configuration?
+
+
+23. What is @apply and why can it be abused?
+
+
+24. Difference between hidden and invisible in Tailwind?
+
+
+25. How does Tailwind remove unused CSS in production?
+
+
+26. Why can Tailwind improve performance if used correctly?
+
+
+
+
+---
+
+Bootstrap CSS (6)
+
+27. Difference between Bootstrap Grid and native CSS Grid?
+
+
+28. How does Bootstrap implement responsive design?
+
+
+29. What are Bootstrap utility classes and when should you rely on them?
+
+
+30. Pros and cons of using Bootstrap in production projects?
+
+
+31. Why do Bootstrap styles often conflict with custom CSS?
+
+
+32. What is the correct way to override Bootstrap styles?
+
+
+
+
+---
+
+JavaScript (Plain JS) (8)
+
+33. Difference between var, let, and const — beyond scope.
+
+
+34. What is event delegation and why is it important for performance?
+
+
+35. How does this behave in different JavaScript contexts?
+
+
+36. Difference between == and ===, and when bugs appear.
+
+
+37. What is a closure and where is it used in real code?
+
+
+38. Explain the event loop in simple terms.
+
+
+39. Difference between map, filter, and reduce with use cases.
+
+
+40. Why is frequent DOM manipulation slow, and how do you optimize it?
+
+
+
+
+---
+
+React.js (Rewritten – 7)
+
+41. What exactly triggers a re-render in a React component?
+
+
+42. Why should you never mutate state directly, and what breaks if you do?
+
+
+43. Difference between useEffect(() => {}, []) and useEffect(() => {}).
+
+
+44. What problem do keys solve in lists, and why is using index risky?
+
+
+45. How does React batch state updates, and why does it matter?
+
+
+46. When should state be lifted up instead of kept locally?
+
+
+47. Difference between controlled and uncontrolled components — real use cases.
+
+
+
+
+---
+
+Basic SEO (On-Page) (Rewritten – 3)
+
+48. How do <title> and <meta description> affect rankings vs CTR?
+
+
+49. Why do heading hierarchy and semantic HTML matter for SEO?
+
+
+50. How do page speed and frontend mistakes directly hurt SEO?
+
+------------
+
+Below are direct, correct, no-BS answers to all 50 questions.
+These are the minimum expected answers for an actual intermediate.
+Anything significantly weaker = not intermediate.
+
+
+---
+
+HTML5 (1–8)
+
+1. section = thematic grouping, article = self-contained content, div = no semantic meaning.
+
+
+2. <main> represents primary content; must be unique for accessibility and SEO.
+
+
+3. Semantic HTML improves accessibility, SEO, maintainability.
+
+
+4. data-* stores custom data without affecting semantics; better than classes for JS hooks.
+
+
+5. localStorage = persistent, sessionStorage = tab-based, cookies = sent with requests.
+
+
+6. <picture> allows different images per screen size/device.
+
+
+7. Groups media with caption for semantic meaning.
+
+
+8. Uses input types, required, pattern, min/max.
+
+
+
+
+---
+
+Custom CSS (9–18)
+
+9. display:none removes from layout; visibility:hidden keeps space.
+
+
+10. Content → padding → border → margin; devs forget padding adds size.
+
+
+11. Inline > ID > class > element.
+
+
+12. relative = offset self; absolute = nearest positioned parent; fixed = viewport; sticky = scroll-based.
+
+
+13. rem = scalable; em = relative nesting; px = fixed.
+
+
+14. Works only on positioned elements and within stacking context.
+
+
+15. A new layering context created by position, transform, opacity, etc.
+
+
+16. Grow = expand, shrink = compress, basis = base size.
+
+
+17. inline-block = inline layout; flex = layout system.
+
+
+18. Poor breakpoints, mobile-last approach.
+
+
+
+
+---
+
+Tailwind CSS (19–26)
+
+19. Eliminates custom CSS bloat via utilities.
+
+
+20. Fast dev, but verbose markup.
+
+
+21. Uses breakpoint prefixes (sm:, md:).
+
+
+22. Modify tailwind.config.js.
+
+
+23. Reuses utilities; overuse defeats Tailwind.
+
+
+24. hidden removes layout; invisible hides visually.
+
+
+25. Purge removes unused classes at build.
+
+
+26. Smaller CSS bundle when purged.
+
+
+
+
+---
+
+Bootstrap CSS (27–32)
+
+27. Bootstrap grid = flex-based; CSS Grid = native 2D layout.
+
+
+28. Breakpoints + grid classes.
+
+
+29. For spacing, display, alignment.
+
+
+30. Fast but opinionated and bloated.
+
+
+31. High specificity and global styles.
+
+
+32. Override via custom CSS after Bootstrap or variables.
+
+
+
+
+---
+
+JavaScript (33–40)
+
+33. Scope + hoisting differences.
+
+
+34. One listener handles many children.
+
+
+35. Depends on call context.
+
+
+36. === avoids type coercion bugs.
+
+
+37. Function retaining outer scope.
+
+
+38. Call stack + task queue.
+
+
+39. Transform, filter, aggregate arrays.
+
+
+40. Causes reflows; batch updates, minimize DOM access.
+
+
+
+
+---
+
+React.js (41–47)
+
+41. State/props change.
+
+
+42. Breaks re-render detection.
+
+
+43. Empty deps = once; no deps = every render.
+
+
+44. Helps diffing; index breaks reorder logic.
+
+
+45. Improves performance.
+
+
+46. When multiple components share data.
+
+
+47. Controlled = React state; uncontrolled = DOM state.
+
+
+
+
+---
+
+SEO (48–50)
+
+48. Title affects ranking + CTR; description mainly CTR.
+
+
+49. Helps crawlers understand content hierarchy.
+
+
+50. Slow pages increase bounce, lower rankings.
+
+
+
+
+---
+
+Brutal Truth
+
+If a candidate:
+
+Can’t explain why, not just what
+
+Mixes up state mutation, DOM performance, or SEO basics
+
+They’re not intermediate — they’re guessing.

@@ -1,0 +1,74 @@
+1. Performance
+
+Khizar Khan successfully implemented a fully functional Classic Bites restaurant menu page with a responsive header, filter buttons, search functionality, menu cards, and footer.
+
+Header includes logo, navigation, and hamburger menu for mobile devices.
+
+Proper use of CSS Grid & Flexbox for layout; menu cards are visually organized with hover effects.
+
+Added responsive design for mobile screens with media queries.
+
+Implemented interactive JavaScript for filtering menu categories, search bar, and hamburger toggle.
+
+Footer includes contact, hours, and social links neatly organized in grid layout.
+
+Images use lazy loading (loading="lazy") improving page performance.
+
+Shows attention to design aesthetics with colors, card shadows, rounded corners, and hover animations.
+
+2. Mistakes / Issues
+
+Header & Nav:
+
+Logo linked via local file path (file:///D:/…), which will break on web hosting. Use relative or hosted URLs.
+
+Hamburger toggle lacks ARIA accessibility labels.
+
+
+Responsive Issues:
+
+Some text and search bar alignment may break on very small devices.
+
+Fixed padding/margins (margin-left: 100px) can cause layout shifts.
+
+
+Accessibility:
+
+Alt text for some images is vague (e.g., “Black Drink” or “Mango drinks”).
+
+Color contrast between text and background in filters/buttons could be improved.
+
+
+CSS & Code:
+
+Inline styling exists for the logo; better to move styles to CSS.
+
+Footer link hover color (black on dark orange) is hard to read.
+
+Redundant code or extra classes could be optimized.
+
+
+Content Issues:
+
+Inconsistent naming/capitalization of dishes (e.g., “Woffles” vs “Chocolate Lava Cake”).
+
+3. Guidelines & Areas of Improvement
+
+Replace local image paths with relative paths or hosted URLs to make project web-ready.
+
+Add ARIA labels for navigation and interactive elements to enhance accessibility.
+
+Ensure consistent capitalization and naming for dish items.
+
+Improve color contrast for buttons and text for readability.
+
+Optimize CSS by removing inline styles and grouping repeated styles.
+
+Test mobile responsiveness on multiple screen sizes; adjust margins, paddings, and grid gaps.
+
+Make alt text descriptive for all images to improve SEO and accessibility.
+
+Use one search functionality styling approach; avoid duplicating styles for header vs filter search bars.
+
+✅ Task 1 Evaluation – Classic Bites (Khizar Khan)
+Khizar Khan successfully completed Task 1 – Classic Bites Menu Page with visually appealing design, responsive layout, and functional JavaScript features. Overall good work only minor improvements are needed in accessibility, responsive design, code cleanliness, and content consistency to make this project production-ready.

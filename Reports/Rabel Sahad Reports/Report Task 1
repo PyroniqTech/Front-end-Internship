@@ -1,0 +1,44 @@
+1. Performance
+
+Rabel Sahad successfully created a fully functional Classic Bites restaurant menu page using HTML, CSS, and JavaScript.
+
+Demonstrates strong understanding of responsive design, including a hamburger menu for mobile screens.
+
+Implemented dynamic menu filtering using category buttons and real-time search functionality.
+
+Developed a modal image popup for menu items, enhancing user experience.
+
+Proper use of semantic HTML elements (header, nav, section, footer).
+
+CSS shows good use of variables, Flexbox, Grid layout, and hover effects.
+
+JavaScript code demonstrates DOM manipulation, event handling, and dynamic content rendering.
+
+Organized file structure (HTML, CSS, JS) and integration of external assets (images, icons) show strong organizational skills.
+
+2. Mistakes / Issues
+
+Minor typos in image paths may cause broken images.
+
+Some alt text could be more descriptive; no ARIA attributes for modal (accessibility improvement needed).
+
+UI could include active state for modal navigation if multiple images exist.
+
+Price formatting inconsistencies (mix of Rs and $).
+
+Certain AI-assisted code patterns detected in JavaScript, but implementation is correct and optimized.
+
+3. Guidelines & Areas of Improvement
+
+Ensure all image paths are correct and alt text descriptive for accessibility.
+
+Add ARIA attributes for modal popups to improve screen reader support.
+
+Maintain consistent currency formatting across menu items.
+
+Optionally enhance modal navigation and interactive feedback for better UX.
+
+Continue using AI-generated code as a reference, but refine logic for clarity and maintainability.
+
+✅ Task 1 Evaluation – Classic Bites (Rabel Sahad)
+Rabel Sahad successfully completed Task 1 – Classic Bites Restaurant Menu Page with a modern, responsive, and fully interactive design. Minor accessibility, image path, and formatting improvements are recommended, but overall execution is excellent and demonstrates strong front-end development skills.

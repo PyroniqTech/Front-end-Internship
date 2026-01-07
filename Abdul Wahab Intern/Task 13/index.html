@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingoude Company</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div class="bg-image"> 	
+	<div class="header">
+	    <a href="index.html"><div class="logo">Ingoude Company</div></a>
+
+	    <nav class="menu">
+	        <a href="aboutus.html">About Us</a>
+	        <a href="Gallery.html">Gallery</a>
+	        <a href="setting.html">Setting</a>
+	        <a href="contact.html">Contact</a>
+	    </nav>
+
+	    <div class="search-box">
+	    	<i class="fa-solid fa-magnifying-glass"></i>
+	        <button>Search</button>
+	    </div>
+		    <ul class="menu dropdown" id="menu">
+			    <li><a href="aboutus.html">About Us</a></li>
+			    <li><a href="Gallery.html">Gallery</a></li>
+			    <li><a href="setting.html">Setting</a></li>
+			    <li><a href="contact.html">Contact</a></li>
+			  </ul>
+	    <div class="hamburger" id="hamburger">&#9776;</div>
+	</div>
+	<div class="hero-section">
+		<div class="left-side">
+			<div>
+				<h1>INTERIOR DESIGN</h1>
+			</div>
+			<div class="hero-sec-img">
+				<img src="assets/images/hero-sec.jpg">
+			</div>
+		</div>
+		<div class="right-side">
+			<div class="side-bar">
+				<img src="assets/images/side-bar.jpg">
+			</div>
+			<div class="title-line">
+			  Ingoude Company
+			</div>
+			<div>
+				<p>In today’s fast-paced world, many people strive to balance work and personal life,
+seeking fulfillment and happiness. Achieving this requires understanding how to
+effectively manage time and prioritize tasks. By setting clear goals and maintaining
+a flexible schedule, individuals can enhance productivity and reduce stress. Engaging in regular physical activity and ensuring adequate rest are essential
+components of a healthy lifestyle. Furthermore, fostering strong relationships and
+practicing mindfulness can significantly contribute to overall well-being. Embracing these strategies allows individuals to transform aspirations into
+tangible realities, leading to a more satisfying and enriched life experience</p>
+			</div>
+			<div>
+				<a href="Gallery.html"><button class="learn-more-btn">Learn More</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('menu');
+
+  hamburger.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+</script>
+</body>
+</html>

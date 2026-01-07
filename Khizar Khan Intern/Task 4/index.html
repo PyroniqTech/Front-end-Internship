@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exploria | Home</title>
+  <meta name="description" content="Discover amazing destinations and travel packages with Exploria." />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-black text-white">
+
+  <header class="sticky top-0 bg-black bg-opacity-80 backdrop-blur-lg z-50 p-4 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <img src="file:///E:/HTML%20project/Exploria/js/images/Exploria.jpg" alt="Exploria Logo" class="w-10 h-10 rounded-full" />
+      <a href="base.html" class="font-bold text-xl text-blue-600 hover:text-blue-400 transition">Exploria</a>
+    </div>
+    <button id="menu-btn" class="sm:hidden text-white text-3xl">☰</button>
+    <nav id="nav-menu" class="hidden sm:flex space-x-6 text-lg">
+      <a href="index.html" class="hover:text-blue-400">Home</a>
+      <a href="destinations.html" class="hover:text-blue-400">Destinations</a>
+      <a href="contact.html" class="hover:text-blue-400">Contact</a>
+    </nav>
+  </header>
+
+  
+  <section class="h-screen flex flex-col items-center justify-center bg-cover bg-center text-center" style="background-image: url('file:///E:/HTML%20project/Exploria/js/images/Man.jpg');">
+    <h2 class="text-4xl md:text-6xl font-bold mb-6">Pack Your Bag & Come with us to Explore the world</h2>
+    <a href="destinations.html" class="bg-blue-600 hover:bg-black px-6 py-3 rounded-lg text-lg">View Destinations</a>
+  </section>
+
+  <section class="p-10 text-center">
+    <h3 class="text-3xl font-bold mb-4">About Exploria</h3>
+    <p class="text-gray-300 max-w-2xl mx-auto">We are a travel agency offering affordable tour packages at the best prices. With years of experience as certified tour guides, we have earned multiple awards. Travel with us for an unforgettable journey!</p>
+  </section>
+
+  
+  <section class="p-10">
+    <h3 class="text-3xl font-bold text-center mb-8">Most Traveled Destinations</h3>
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+        <img src="file:///E:/HTML%20project/Exploria/js/images/Eiffel%20Tower.jpg" alt="Paris" loading="lazy" />
+        <div class="p-4">
+          <h4 class="text-xl font-semibold">Paris. France</h4>
+          <p class="text-gray-400">The city of lights and love</p>
+          <a href="destinations.html" class="inline-block mt-3 bg-blue-600 hover:bg-black px-4 py-2 rounded-lg">Book Now</a>
+        </div>
+      </div>
+
+      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+        <img src="file:///E:/HTML%20project/Exploria/js/images/waterfall.jpg" alt="Maldives" loading="lazy" />
+        <div class="p-4">
+          <h4 class="text-xl font-semibold">Biausevu Waterfall, Maldives</h4>
+          <p class="text-gray-400">Relex on pretine beaches</p>
+          <a href="destinations.html" class="inline-block mt-3 bg-blue-600 hover:bg-black px-4 py-2 rounded-lg">Book Now</a>
+        </div>
+      </div>
+
+      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+        <img src="file:///E:/HTML%20project/Exploria/js/images/USA.jpg" alt="Tokyo" loading="lazy" />
+        <div class="p-4">
+          <h4 class="text-xl font-semibold">New York, USA</h4>
+          <p class="text-gray-400">The city that never sleep</p>
+          <a href="destinations.html" class="inline-block mt-3 bg-blue-600 hover:bg-black px-4 py-2 rounded-lg">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-center py-8 mt-12 text-gray-300">
+  <div class="flex justify-center space-x-6 mb-4">
+    <a href="https://www.facebook.com/Exploria" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Visit our Facebook">
+      <img src="file:///E:/HTML%20project/Exploria/js/images/facebook.svg" alt="Facebook" class="w-6 h-6 hover:opacity-80 transition" loading="lazy">
+    </a>
+
+    <a href="https://www.youtube.com/Exploria" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Visit our YouTube">
+      <img src="file:///E:/HTML%20project/Exploria/js/images/youtube.svg" alt="YouTube" class="w-6 h-6 hover:opacity-80 transition" loading="lazy">
+    </a>
+
+    <a href="https://www.instagram.com/Exploria" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Visit our Instagram">
+      <img src="file:///E:/HTML%20project/Exploria/js/images/instagram.svg" alt="Instagram" class="w-6 h-6 hover:opacity-80 transition" loading="lazy">
+    </a>
+  </div>
+
+  <p>45 Autobhan Street, Hyderabad, Pakistan</p>
+  <p>&copy; 2025 Exploria Travel Agency. All Rights Reserved.</p>
+</footer>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>

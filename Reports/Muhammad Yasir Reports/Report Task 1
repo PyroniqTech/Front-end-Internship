@@ -1,0 +1,48 @@
+1. Performance
+
+Muhammad Yasir successfully created a fully responsive Classic Bites restaurant menu page with a modern layout and interactive elements.
+
+Implemented a sticky header with logo, navigation links, and a working hamburger menu for mobile responsiveness.
+
+Developed a hero section with background image overlay and well-styled heading and description text.
+
+Built a dynamic menu grid using JavaScript arrays to manage menu items efficiently.
+
+Implemented category filters allowing users to filter menu items by type (Starters, Main Course, Desserts, Drinks).
+
+Added a search functionality with live input for searching by item name or description.
+
+Created interactive buttons (Add to Cart, Filter Buttons) with hover effects for better UX.
+
+Designed a footer section with contact info, opening hours, and social links.
+
+Used CSS variables for consistent color theme and applied modern design principles such as shadows, rounded corners, and hover effects.
+
+The page is fully responsive, adapting well to mobile screens with proper grid stacking and navigation menu behavior.
+
+2. Mistakes / Issues
+
+Minor typos in text (e.g., "Experinece" instead of "Experience", "mozarilla" instead of "mozzarella", "ingredinets" instead of "ingredients").
+
+Some image paths use backslashes (\) which may not render correctly on all browsers; forward slashes (/) are recommended.
+
+Certain menu item descriptions contain grammatical errors.
+
+Hamburger menu icon (fa-burger) may not clearly indicate navigation; standard icon (fa-bars) suggested.
+
+Minor accessibility improvements: add alt text for all images and ensure sufficient color contrast.
+
+3. Guidelines & Areas of Improvement
+
+Correct all spelling and grammar issues in headings and menu item descriptions.
+
+Adjust image paths for cross-platform consistency.
+
+Consider using a more intuitive hamburger menu icon for better UX.
+
+Improve accessibility: ARIA labels for buttons, alt text for images, and better color contrast where necessary.
+
+Optional: Add Add-to-Cart functionality integration for a more interactive experience.
+
+✅ Task 1 Evaluation – Classic Bites (Muhammad Yasir)
+Muhammad Yasir successfully completed Task 1 – Classic Bites Restaurant Menu Page with responsive design, interactive JavaScript features, and modern UI elements.  It is concluded that minor textual, accessibility, and UX improvements are recommended to enhance polish, but overall the project demonstrates strong front-end development skills and meets beginner-to-intermediate industry standards.

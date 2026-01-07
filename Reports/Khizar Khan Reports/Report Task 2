@@ -1,0 +1,43 @@
+1. Performance
+Khizar Khan delivered a complete product landing page with all sections: Header, Hero, Features, Pricing, Reviews, FAQ, and Footer. Responsive layout works from 480px to 4K; grids for features and reviews adjust well.
+
+Functional features include Buy Now button, dynamic shipping dropdown (auto-updating total price), and FAQ accordion (one answer opens at a time).
+
+Design: Gradient hero section, clean feature grids, reviews with star icons, footer with social links. Logo (Shopsy.jpg) included. Inline CSS and embedded JS are neat and readable. Dynamic pricing shows initiative beyond basic requirements.
+
+2. Mistakes / Issues
+
+No mobile hamburger menu; links stack on small screens.
+
+HTML: two nested <footer> tags — invalid structure.
+
+Reviews minimal; testimonials lack detail; star ratings not screen reader–friendly.
+
+Brand inconsistency: “Shopys” text vs “Shopsy.jpg” file name.
+
+Footer links lack icons/hover effects.
+
+Signs of AI-assisted code: gradient-heavy design, systematic spacing, dropdown logic; no human-style comments.
+
+Code duplication: duplicate footer may cause rendering issues.
+
+Accessibility gaps: minimal alt attributes, social links lack keyboard/focus styling.
+
+3. Guidelines & Improvements
+
+Add mobile hamburger menu with toggle.
+
+Fix HTML structure by removing duplicate <footer> tags.
+
+Expand reviews with customer names, avatars, and detailed testimonials.
+
+Improve accessibility: descriptive alt texts, keyboard navigation for FAQ and buttons.
+
+Ensure consistent brand naming: “Shopys” everywhere.
+
+Enhance footer links: add icons, hover effects, target="_blank".
+
+Improve pricing section: currency symbols, discounts, or more pricing tiers.
+
+✅ Task 2 Evaluation – Shopys Product Landing Page (Khizar Khan)
+Functional, responsive, and visually appealing landing page with dynamic pricing feature. Minor refinements in navigation, branding, accessibility, and content depth will make it fully production-ready.

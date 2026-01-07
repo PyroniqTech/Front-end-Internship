@@ -1,0 +1,34 @@
+Here’s Task 2 evaluation for Usama Zia – Product Landing Page rewritten in the concise style consistent with your other Task 2 notes:
+
+
+---
+
+1. Performance
+Usama Zia delivered a complete product landing page with all sections: Header, Hero, Features, Pricing, Reviews, FAQ, and Footer. Responsive layout works across devices. Buy Now buttons trigger JavaScript alerts; FAQ accordion works with toggle. Design is modern and clean, with gradient hero background, bright CTA buttons, emoji-feature icons, prominent pricing card, and reviews with star ratings, customer names, and testimonials. Footer includes contact info and social links. Semantic HTML used; embedded CSS is organized with hover and transition effects; minimal JS is functional.
+
+2. Mistakes / Issues
+
+AI-style coding traces: clean, systematic code and structured gradients.
+
+Header semantic issue: logo and brand text placement may break structure; <h1> missing or misused.
+
+Accessibility: some images have generic alt text; no ARIA attributes for FAQ/navigation.
+
+Design: hero image externally hosted; single pricing card instead of multiple tiers.
+
+3. Guidelines & Improvements
+
+Fix header semantic structure (wrap logo and brand correctly).
+
+Add descriptive alt text for all images (e.g., “Black Organic Cotton T-Shirt – Shopsy”).
+
+Expand pricing section with multiple tiers or feature comparison.
+
+Add ARIA attributes for FAQ and navigation.
+
+Replace external hero image with a local asset.
+
+Optional: add smooth scroll for navigation links.
+
+✅ Task 2 Evaluation – Shopsy Product Landing Page (Usama Zia)
+Functional, visually appealing, and responsive landing page. Minor improvements in accessibility, semantic structure, and code organization will elevate it to a professional, production-ready standard.

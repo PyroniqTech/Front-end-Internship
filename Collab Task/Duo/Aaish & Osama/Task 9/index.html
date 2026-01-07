@@ -1,0 +1,81 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Provide resuable content">
+<title>TaskGrid | Dashboard</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="static/css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="static/js/script.js"></script>
+<script>
+    loadPage("base.html", `
+    <section class="bg-black text-blue-400 antialiased">
+      <div class="container mx-auto px-4 py-10">
+      <div class="relative py-24 px-6 text-center text-blue-300">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-blue-500">Manage Your Projects Effortlessly with TaskGrid</h1>
+        <p class="mt-4 text-lg md:text-xl text-blue-300">Organize, Track, and Collaborate visually.</p>
+        <a href="tasks.html" class="inline-block mt-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition">Start Managing</a>
+      </div>
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+      <div class="bg-slate-900 p-6 rounded-lg shadow border border-blue-700">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-sm text-blue-300">Total Teams</p>
+            <p id="cardTeams" class="text-3xl font-bold text-blue-400">—</p>
+          </div>
+          <div aria-hidden class="text-2xl">👥</div>
+        </div>
+      </div>
+      <div class="bg-slate-900 p-6 rounded-lg shadow border border-blue-700">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-sm text-blue-300">Tasks Completed</p>
+            <p id="cardCompleted" class="text-3xl font-bold text-blue-400">—</p>
+          </div>
+          <div aria-hidden class="text-2xl">✅</div>
+        </div>
+      </div>
+      <div class="bg-slate-900 p-6 rounded-lg shadow border border-blue-700">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-sm text-blue-300">Pending Tasks</p>
+            <p id="cardPending" class="text-3xl font-bold text-blue-400">—</p>
+          </div>
+          <div aria-hidden class="text-2xl">⏳</div>
+        </div>
+      </div>
+      <div class="bg-slate-900 p-6 rounded-lg shadow border border-blue-700">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-sm text-blue-300">Active Members</p>
+            <p id="cardMembers" class="text-3xl font-bold text-blue-400">—</p>
+          </div>
+          <div aria-hidden class="text-2xl">🧑‍💻</div>
+        </div>
+      </div>
+      <div class="bg-slate-900 p-6 rounded-lg shadow border border-blue-700">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-sm text-blue-300">Avg Progress</p>
+            <p id="cardAvg" class="text-3xl font-bold text-blue-400">—</p>
+          </div>
+          <div aria-hidden class="text-2xl">📈</div>
+        </div>
+      </div>
+    </section>
+    <section class="grid sm:grid-cols-3 gap-8">
+        <div class="bg-slate-900 p-8 rounded-lg shadow border border-blue-700 hover:bg-slate-800 transition">
+          <h3 class="font-semibold text-blue-500 text-lg">Visual Task Board</h3>
+          <p class="text-sm text-blue-300 mt-2">Drag, drop and manage tasks visually for better clarity and organization.</p>
+        </div>
+        <div class="bg-slate-900 p-8 rounded-lg shadow border border-blue-700 hover:bg-slate-800 transition">
+          <h3 class="font-semibold text-blue-500 text-lg">Smart Progress Analytics</h3>
+          <p class="text-sm text-blue-300 mt-2">Get quick insights into task and team performance with clean visuals.</p>
+        </div>
+        <div class="bg-slate-900 p-8 rounded-lg shadow border border-blue-700 hover:bg-slate-800 transition">
+          <h3 class="font-semibold text-blue-500 text-lg">Responsive Design</h3>
+          <p class="text-sm text-blue-300 mt-2">Experience TaskGrid seamlessly on mobile, tablet, or desktop devices.</p>
+        </div>
+        </div>
+    </section>
+    `);
+</script>

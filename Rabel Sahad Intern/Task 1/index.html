@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classic Bites - Menu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <img src="logo1.jpg" alt="Restaurant Logo" />
+        <h1>Classic Bites</h1>
+      </div>
+
+      <!-- Hamburger icon for mobile -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Search & Filters -->
+    <section class="controls">
+      <input type="text" id="searchBar" placeholder="Search for a dish..." />
+      <div class="buttons">
+        <button class="filter-btn" data-category="all">All</button>
+        <button class="filter-btn" data-category="starters">Starters</button>
+        <button class="filter-btn" data-category="main">Main Course</button>
+        <button class="filter-btn" data-category="desserts">Desserts</button>
+        <button class="filter-btn" data-category="drinks">Drinks</button>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="menu" id="menuItems">
+      <div class="menu-item" data-category="starters">
+        <img src="images.jpg" alt="Bruschetta" />
+        <h3>Bruschetta</h3>
+        <p>Grilled bread with tomatoes, garlic, and olive oil.</p>
+        <span>Rs 990</span>
+      </div>
+
+      <div class="menu-item" data-category="main">
+        <img src="grilled.jpg" alt="Grilled Chicken" />
+        <h3>Grilled Chicken</h3>
+        <p>Served with seasonal vegetables and herbs.</p>
+        <span>Rs 1200</span>
+      </div>
+
+      <div class="menu-item" data-category="desserts">
+        <img src="choc-cake.jpg" alt="Chocolate Cake" />
+        <h3>Chocolate Cake</h3>
+        <p>Rich and creamy with dark chocolate glaze.</p>
+        <span>Rs 700</span>
+      </div>
+
+      <div class="menu-item" data-category="drinks">
+        <img src="lemonade.jpg" alt="Lemonade" />
+        <h3>Lemonade</h3>
+        <p>Freshly squeezed lemons with mint.</p>
+        <span>Rs 400</span>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>📍 G-9, Islamabad, Pakistan</p>
+      <p>📞 +92 333 3312123 | ✉️ contact@classicbites.com</p>
+      <div class="socials">
+        <a href="#">Facebook</a> | <a href="#">Instagram</a> |
+        <a href="#">Twitter</a>
+      </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg" />
+      <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

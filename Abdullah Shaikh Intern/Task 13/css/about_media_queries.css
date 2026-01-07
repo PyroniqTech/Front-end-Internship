@@ -1,0 +1,395 @@
+
+@media (max-width: 480px) {
+
+    .content-flex {
+        padding: 0px 0px;
+        margin: 0%;
+    }
+
+    .left-side-about {
+        padding: 0%;
+    }
+
+    .left-side-about img {
+        border: none;
+        padding: 0px;
+    }
+
+    .right-side-about {
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .right-side-about h2 {
+
+        font-size: 3rem;
+        margin: 0%;
+        text-align: center;
+    }
+
+    .right-side-about h4 {
+        font-size: 18px;
+    }
+
+    .right-side-about p {
+        font-size: 15px;
+    }
+
+    .left-side-about img {
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .left-side-about img {
+        border: none;
+        padding: 0px;
+        width: 350px;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .content-flex {
+        padding: 60px 100px;
+    }
+
+    .right-side h2 {
+        font-size: 55px;
+    }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+
+    .content-flex {
+        padding: 50px 70px;
+        gap: 35px;
+    }
+
+    .right-side-about h2 {
+        font-size: 50px;
+    }
+
+    .left-side-about img {
+        max-width: 380px;
+        padding: 14px;
+    }
+}
+
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+
+    .content-flex {
+        padding: 80px 140px;
+    }
+
+    .right-side-about h2 {
+        font-size: 70px;
+    }
+
+    .right-side-about p {
+        font-size: 20px;
+    }
+
+    .left-side-about img {
+        max-width: 450px;
+        border: 1.5px solid white;
+    }
+}
+
+@media (min-width: 1921px) and (max-width: 2560px) {
+    .content-flex {
+        padding: 100px 200px;
+        gap: 60px;
+    }
+
+    .right-side-about h2 {
+        font-size: 85px;
+    }
+
+    .right-side-about p {
+        font-size: 22px;
+    }
+
+    .left-side-about img {
+        max-width: 780px;
+    }
+
+}
+
+@media (min-width: 2561px) {
+
+    .content-flex {
+        padding: 140px 300px;
+        gap: 80px;
+    }
+
+    .right-side-about h2 {
+        font-size: 110px;
+    }
+
+    .right-side-about h4 {
+        font-size: 45px;
+        margin-top: 150px;
+    }
+
+    .right-side-about p {
+        font-size: 28px;
+        margin-top: 50px;
+        line-height: 1.8;
+    }
+
+    .left-side-about img {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .container2 {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .container2-leftside {
+        padding: 0px;
+        text-align: center;
+    }
+
+    .container2-leftside h1 {
+        font-size: 30px;
+        margin-bottom: 0px;
+    }
+
+    .container2-leftside h5 {
+        font-size: 14px;
+        margin-bottom: 0px;
+    }
+
+    .bulletpoint {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .bulletpoint-leftside {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .bulletpoint-rightside {
+        padding-left: 0;
+    }
+
+    .container2-rightside {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .images-leftside,
+    .images-rightside {
+
+        flex-direction: column;
+        align-items: center;
+        margin: 0%;
+        align-content: center;
+        justify-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .image-1,
+    .image-2,
+    .image-3,
+    .image-4 {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .container2 {
+        flex-direction: column;
+        padding: 0px;
+        gap: 0px;
+    }
+
+    .container2-leftside h1 {
+        font-size: 38px;
+        text-align: left;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .container2-leftside h5 {
+        padding: 0px;
+        font-size: 16px;
+    }
+
+    .bulletpoint {
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .bulletpoint-leftside {
+        font-size: 30px;
+    }
+
+    .bulletpoint-rightside {
+        margin-bottom: 0px;
+    }
+
+    .container2-rightside {
+        flex-direction: column;
+        gap: 30px;
+
+    }
+
+    .images-leftside,
+    .images-rightside {
+        margin: 0;
+        gap: 0;
+    }
+
+    .image-1,
+    .image-2,
+    .image-3,
+    .image-4 {
+        width: 300px;
+    }
+
+    .image-2,
+    .image-4{
+        margin-top: 25px ;
+    }
+}
+
+
+@media (min-width: 1024px) {
+
+    .container2 {
+        flex-direction: column;
+        padding: 0px;
+        gap: 0px;
+    
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+
+    .container2 {
+
+        flex-direction: row;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .container2-leftside h1 {
+        font-size: 58px;
+    }
+
+    .bulletpoint-leftside {
+        font-size: 32px;
+    }
+}
+
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+
+    .container2 {
+        flex-direction: row;
+        padding: 30px;
+        margin-top: 0 ;
+        padding-top: 0 ;
+        gap: 70px;
+    }
+
+    .container2-leftside h1 {
+        font-size: 70px;
+    }
+
+    .container2-leftside h5 {
+        font-size: 22px;
+    }
+
+    .bulletpoint-leftside {
+        font-size: 40px;
+    }
+
+    .image-1, .image-2, .image-3, .image-4 {
+        max-width: 650px;
+    }
+}
+
+@media (min-width: 1921px) and (max-width: 2560px) {
+
+    .container2 {
+        flex-direction: row;
+        padding: 140px;
+        gap: 90px;
+    }
+
+    .container2-leftside h1 {
+        font-size: 120px;
+    }
+    .container2-leftside h5 {
+        font-size: 30px;
+    }
+
+    .bulletpoint-leftside {
+        font-size: 60px;
+    }
+
+    .bulletpoint-rightside h3 {
+        font-size: 42px;
+    }
+    .bulletpoint-rightside p {
+        font-size: 22px;
+        margin-top: 20px;
+    }
+
+    .image-1, .image-2, .image-3, .image-4 {
+        max-width: 900px;
+    }
+}
+
+
+@media (min-width: 2561px) {
+
+.container2 {
+        flex-direction: row;
+        padding: 160px;
+        gap: 90px;
+    }
+
+    .container2-leftside h1 {
+        font-size: 130px;
+    }
+    .container2-leftside h5 {
+        font-size: 40px;
+    }
+
+    .bulletpoint-leftside {
+        font-size: 70px;
+    }
+
+    .bulletpoint-rightside h3 {
+        font-size: 58px;
+    }
+    .bulletpoint-rightside p {
+        font-size: 32px;
+        margin-top: 40px;
+    }
+
+    .image-1, .image-2, .image-3, .image-4 {
+        max-width: 900px;
+    }
+
+}

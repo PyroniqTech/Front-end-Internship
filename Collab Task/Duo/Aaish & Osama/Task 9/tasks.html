@@ -1,0 +1,80 @@
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Provide resuable content">
+  <title>All Tasks</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
+  <link rel="stylesheet" href="static/css/style.css">
+ 
+  <body class="bg-black text-blue-400 antialiased">
+  <div id="app" class="container mx-auto px-6 py-12"></div>
+  <script src="static/js/script.js"></script>
+
+  <script>
+      loadPage("base.html", ` 
+        <section class="container mx-auto px-4 py-10">  
+           <section class="bg-slate-900 border border-blue-700 p-4 rounded-lg mb-8 flex flex-col md:flex-row items-center justify-between gap-4">
+           <div class="flex gap-4 items-center">
+             <select id="teamFilter" class="bg-black border border-blue-700 text-blue-300 rounded px-3 py-2">
+               <option value="all">All Teams</option>
+               <option value="Team Alpha">Team Alpha</option>
+               <option value="Team Beta">Team Beta</option>
+               <option value="Team Gamma">Team Gamma</option>
+            </select>     
+            <select id="priorityFilter" class="bg-black border border-blue-700 text-blue-300 rounded px-3 py-2">
+                <option value="all">All Priorities</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+                </div>
+                <input id="searchBar" type="text" placeholder="Search tasks..." class="bg-black border border-blue-700 text-blue-300 rounded px-3 py-2 w-full md:w-64 focus:outline-none focus:ring focus:ring-blue-500" />
+            </section>
+            <section class="bg-slate-900 border border-blue-700 p-6 rounded-lg mb-10 max-w-2xl mx-auto">
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">Add New Task</h2>
+      <form id="taskForm" class="space-y-4">
+          <div>
+              <label class="block text-blue-300 mb-1">Task Title</label>
+              <input id="taskTitle" type="text" class="w-full p-2 rounded bg-black border border-blue-700 text-blue-300" required />
+            </div>
+            <div>
+            <label class="block text-blue-300 mb-1">Description</label>
+            <textarea id="taskDesc" class="w-full p-2 rounded bg-black border border-blue-700 text-blue-300" rows="3" required></textarea>
+            </div>
+            <div>
+                <label class="block text-blue-300 mb-1">Deadline</label>
+                <input id="taskDeadline" type="date" class="w-full p-2 rounded bg-black border border-blue-700 text-blue-300" required />
+            </div>
+            <div>
+                <label class="block text-blue-300 mb-1">Assigned To</label>
+                <input id="taskAssigned" type="text" placeholder="Team Alpha, Team Beta..." class="w-full p-2 rounded bg-black border border-blue-700 text-blue-300" required />
+            </div>
+            <div>
+                <label class="block text-blue-300 mb-1">Priority</label>
+          <select id="taskPriority" class="w-full p-2 rounded bg-black border border-blue-700 text-blue-300" required>
+              <option value="High">High</option>
+              <option value="Medium" selected>Medium</option>
+              <option value="Low">Low</option>
+            </select>
+        </div>
+        <div>
+            <label class="block text-blue-300 mb-1">Status</label>
+            <select id="taskStatus" class="w-full p-2 rounded bg-black border border-blue-700 text-blue-300" required>
+                <option value="Pending">Pending</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Done">Done</option>
+            </select>
+        </div>
+        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded shadow-md transition">Add Task</button>
+    </form>
+    <p id="taskMessage" class="text-green-400 mt-4 hidden">✅ Task Added Successfully!</p>
+</section>
+<section>
+    <h2 class="text-2xl font-semibold text-blue-400 mb-6">All Tasks</h2>
+    <div id="taskGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+</section>
+</main>
+`)
+</script>
+ 
+</body>

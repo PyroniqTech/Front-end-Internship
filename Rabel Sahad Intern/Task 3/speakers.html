@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speakers - Eventure</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#01161e',
+                        'secondary': '#124559',
+                        'accent': '#598392',
+                        'light': '#aec3b0',
+                        'background': '#eff6e0'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-background text-primary">
+  
+    <nav class="bg-secondary shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center">
+                        <img src="images/logo.jpg" loading="lazy" alt="Eventure Logo" class="w-10 h-10 rounded-full mr-3 bg-accent object-cover" />
+                        <span class="text-light font-bold text-xl">EVENTURE</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-light hover:text-accent px-3 py-2 rounded-md font-medium">Home</a>
+                    <a href="speakers.html" class="text-light hover:text-accent px-3 py-2 rounded-md font-medium">Speakers</a>
+                    <a href="contact.html" class="text-light hover:text-accent px-3 py-2 rounded-md font-medium">Contact</a>
+                    <a href="#booking" class="bg-accent hover:bg-primary text-light px-4 py-2 rounded-md font-medium transition">Register</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-light hover:text-accent focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+     
+        <div id="mobile-menu" class="md:hidden hidden bg-secondary">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="text-light hover:text-accent block px-3 py-2 rounded-md font-medium">Home</a>
+                <a href="speakers.html" class="text-light hover:text-accent block px-3 py-2 rounded-md font-medium">Speakers</a>
+                <a href="contact.html" class="text-light hover:text-accent block px-3 py-2 rounded-md font-medium">Contact</a>
+                <a href="#booking" class="bg-accent hover:bg-primary text-light block px-3 py-2 rounded-md font-medium">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    
+    <section class="relative text-light py-16 speakers-header">
+        <div class="absolute inset-0 bg-primary opacity-80"></div>
+        <div class="relative max-w-7xl mx-auto px-4 text-center z-10">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Distinguished Speakers</h1>
+            <p class="text-xl max-w-3xl mx-auto">Learn from industry leaders, innovators, and visionaries who are shaping the future of business and technology.</p>
+        </div>
+    </section>
+
+   
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="speaker-card bg-light rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-accent overflow-hidden">
+                        <img src="images/speaker1.jpg" loading="lazy" alt="Sarah Johnson" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-secondary">Sarah Johnson</h3>
+                        <p class="text-accent font-medium mb-4">CEO, Tech Innovations Inc.</p>
+                        <p class="mb-4">Leading digital transformation expert with 15+ years of experience helping Fortune 500 companies adapt to technological changes.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Digital Transformation</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Leadership</span>
+                        </div>
+                    </div>
+                </div>
+                
+               
+                <div class="speaker-card bg-light rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-accent overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" loading="lazy" alt="Michael Chen" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-secondary">Michael Chen</h3>
+                        <p class="text-accent font-medium mb-4">VP of Strategy, Global Finance Corp</p>
+                        <p class="mb-4">Financial strategist and author specializing in sustainable business models and impact investing in emerging markets.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Finance</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Sustainability</span>
+                        </div>
+                    </div>
+                </div>
+                
+              
+                <div class="speaker-card bg-light rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-accent overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80" loading="lazy" alt="Elena Rodriguez" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-secondary">Elena Rodriguez</h3>
+                        <p class="text-accent font-medium mb-4">Founder, Future Market Analytics</p>
+                        <p class="mb-4">Data scientist and entrepreneur revolutionizing how businesses leverage AI and predictive analytics for market insights.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">AI & Analytics</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Entrepreneurship</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="speaker-card bg-light rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-accent overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" loading="lazy" alt="David Thompson" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-secondary">David Thompson</h3>
+                        <p class="text-accent font-medium mb-4">Chief Marketing Officer, BrandSphere</p>
+                        <p class="mb-4">Award-winning marketing strategist with expertise in brand development, digital marketing, and customer experience optimization.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Marketing</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Brand Strategy</span>
+                        </div>
+                    </div>
+                </div>
+
+             
+                <div class="speaker-card bg-light rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-accent overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" loading="lazy" alt="Priya Sharma" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-secondary">Priya Sharma</h3>
+                        <p class="text-accent font-medium mb-4">Head of Operations, SupplyChain Pro</p>
+                        <p class="mb-4">Operations expert specializing in supply chain optimization, logistics, and process improvement for global enterprises.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Operations</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Supply Chain</span>
+                        </div>
+                    </div>
+                </div>
+
+           
+                <div class="speaker-card bg-light rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-64 bg-accent overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" loading="lazy" alt="James Wilson" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-secondary">James Wilson</h3>
+                        <p class="text-accent font-medium mb-4">Technology Director, NextGen Solutions</p>
+                        <p class="mb-4">Technology visionary focused on emerging technologies, digital infrastructure, and cybersecurity for enterprise systems.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Technology</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Cybersecurity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section id="booking" class="py-16 bg-light">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-secondary">Register for the Event</h2>
+            <p class="text-center text-lg mb-12 max-w-2xl mx-auto">Secure your spot at the premier business event of the year. Limited seats available.</p>
+            
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <form id="booking-form" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="md:col-span-2">
+                        <h3 class="text-xl font-bold mb-4 text-secondary">Personal Information</h3>
+                    </div>
+                    
+                    <div>
+                        <label for="name" class="block text-sm font-medium mb-2">Full Name *</label>
+                        <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none focus:border-accent" required>
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-medium mb-2">Email Address *</label>
+                        <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none focus:border-accent" required>
+                    </div>
+                    
+                    <div>
+                        <label for="phone" class="block text-sm font-medium mb-2">Phone Number *</label>
+                        <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none focus:border-accent" required>
+                    </div>
+                    
+                    <div>
+                        <label for="company" class="block text-sm font-medium mb-2">Company</label>
+                        <input type="text" id="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none focus:border-accent">
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <h3 class="text-xl font-bold mb-4 text-secondary">Event Details</h3>
+                    </div>
+                    
+                    <div>
+                        <label for="event-date" class="block text-sm font-medium mb-2">Preferred Event Date *</label>
+                        <select id="event-date" class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none focus:border-accent" required>
+                            <option value="">Select a date</option>
+                            <option value="oct15">October 15, 2025</option>
+                            <option value="oct16">October 16, 2025</option>
+                            <option value="oct17">October 17, 2025</option>
+                            <option value="all">All Three Days</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="seats" class="block text-sm font-medium mb-2">Number of Seats *</label>
+                        <input type="number" id="seats" min="1" max="10" class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none focus:border-accent" required>
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <label for="special-requirements" class="block text-sm font-medium mb-2">Special Requirements</label>
+                        <textarea id="special-requirements" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none focus:border-accent"></textarea>
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <button type="submit" class="w-full bg-secondary hover:bg-primary text-light font-bold py-3 px-4 rounded-lg transition duration-300">
+                            Complete Registration
+                        </button>
+                    </div>
+                    
+                    <div class="md:col-span-2 text-center text-sm text-gray-600">
+                        <p>* Required fields. Your information is secure and will not be shared with third parties.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-primary text-light py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4">Eventure</h3>
+                    <p class="mb-6 max-w-md">Join industry leaders at the premier business event of the year. Discover new strategies, network with peers, and transform your business.</p>
+                    <div class="flex space-x-4">
+                      <a href="https://www.facebook.com/ukeventures/" target="_blank" class="bg-secondary hover:bg-accent text-light w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://x.com/eventureinc" target="_blank" class="bg-secondary hover:bg-accent text-light w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://uk.linkedin.com/company/eventurenet" target="_blank" class="bg-secondary hover:bg-accent text-light w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/eventure/" target="_blank" class="bg-secondary hover:bg-accent text-light w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-accent transition">Home</a></li>
+                        <li><a href="speakers.html" class="hover:text-accent transition">Speakers</a></li>
+                        <li><a href="contact.html" class="hover:text-accent transition">Contact</a></li>
+                        <li><a href="#booking" class="hover:text-accent transition">Register</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-2 mt-1"></i>
+                            <span>123 Business Ave, NYC 10001</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mr-2 mt-1"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mr-2 mt-1"></i>
+                            <span>info@eventure.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-secondary mt-12 pt-8 text-center">
+                <p>&copy; 2025 Eventure. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

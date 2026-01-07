@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Eventure | Speakers</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="flex flex-col min-h-screen">
+  <header class="bg-gray-900 text-white">
+    <nav class="container mx-auto flex items-center justify-between p-4">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="images/logo.png" loading="lazy" alt="Logo" class="h-10 w-10 rounded-full object-cover">
+        <span class="text-xl font-bold">Eventure</span>
+      </a>
+      <ul class="hidden md:flex gap-6">
+        <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+        <li><a href="speakers.html" class="hover:text-gray-300">Speakers</a></li>
+        <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
+      </ul>
+      <button id="mobileMenuBtn2" class="md:hidden"><i class="fa fa-bars"></i></button>
+    </nav>
+    <div id="mobileMenu2" class="hidden md:hidden bg-gray-800 px-4 py-2">
+      <a href="index.html" class="block py-1">Home</a>
+      <a href="speakers.html" class="block py-1">Speakers</a>
+      <a href="contact.html" class="block py-1">Contact</a>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <section class="container mx-auto px-4 py-12">
+      <h2 class="text-3xl font-semibold text-center mb-8">Meet Our Speakers</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-center">
+          <img src="images/image1.png" loading="lazy" alt="Ayan Khan" class="h-32 w-32 mx-auto rounded-full mb-4 object-cover">
+          <h3 class="font-semibold">Ayan Khan</h3>
+          <p class="text-gray-600 mt-2">Entrepreneur & Innovator sharing his journey.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-center">
+          <img src="images/image2.png" loading="lazy" alt="Raza Ali" class="h-32 w-32 mx-auto rounded-full mb-4 object-cover">
+          <h3 class="font-semibold">Raza Ali</h3>
+          <p class="text-gray-600 mt-2">Tech visionary discussing the future of AI.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-center">
+          <img src="images/image3.png" loading="lazy" alt="Sara Ahmed" class="h-32 w-32 mx-auto rounded-full mb-4 object-cover">
+          <h3 class="font-semibold">Muhammad Ahmed</h3>
+          <p class="text-gray-600 mt-2">Creative Director inspiring new storytellers.</p>
+        </div>
+      </div>
+
+      <div id="booking" class="max-w-xl mx-auto bg-gray-50 p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-semibold mb-4 text-center">Book Your Seat</h3>
+        <form id="bookingForm" class="space-y-4">
+          <input type="text" name="name" placeholder="Full Name" required class="w-full border rounded px-3 py-2">
+          <input type="email" name="email" placeholder="Email" required class="w-full border rounded px-3 py-2">
+          <input type="tel" name="phone" placeholder="Phone" required class="w-full border rounded px-3 py-2">
+          <input type="date" name="date" required class="w-full border rounded px-3 py-2">
+          <input type="number" name="seats" placeholder="Number of Seats" required class="w-full border rounded px-3 py-2">
+          <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition">Reserve</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+ <footer class="bg-gray-900 text-white py-6">
+  <div class="container mx-auto text-center space-y-4">
+    <div class="flex justify-center gap-6">
+      <a href="https://www.facebook.com/eventure" target="_blank" class="hover:text-blue-500"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.x.com/eventure" target="_blank" class="hover:text-sky-400"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/eventure" target="_blank" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/eventure" target="_blank" class="hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
+      
+    
+    </div>
+    <p>📍 Expo Center, Hyderabad, Pakistan</p>
+    <p>&copy; 2025 Eventure. All rights reserved.</p>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

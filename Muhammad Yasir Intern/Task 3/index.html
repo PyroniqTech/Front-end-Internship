@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventure - Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    
+       
+       <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <img src="images/Logo(white).jpeg" alt="Eventure Logo" class="h-10" loading="lazy">
+                    <span class="text-2xl font-bold text-blue-600 hidden sm:block">Eventure</span>
+                </a>
+                
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-blue-600 font-medium border-b-2 border-blue-600 pb-1">Home</a>
+                    <a href="speakers.html" class="text-gray-600 hover:text-blue-600 transition duration-300">Speakers</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition duration-300">Contact</a>
+                </div>
+                
+              
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+          
+            <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-200">
+                <a href="index.html" class="block py-3 text-blue-600 font-medium border-l-4 border-blue-600 pl-4">Home</a>
+                <a href="speakers.html" class="block py-3 text-gray-600 hover:text-blue-600 transition duration-300 pl-4">Speakers</a>
+                <a href="contact.html" class="block py-3 text-gray-600 hover:text-blue-600 transition duration-300 pl-4">Contact</a>
+            </div>
+        </div>
+    </nav>
+   
+    <section class="bg-gradient-to-r from-gray-900 to-gray-700 text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-pulse">Eventure</h1>
+            <p class="text-xl md:text-2xl mb-8 font-light">Exploring the Future of Technology Innovation</p>
+            <p class="text-lg mb-10 opacity-90"><i class="fas fa-calendar-alt mr-2"></i>October 15-17, 2023 | <i class="fas fa-map-marker-alt mr-2"></i>San Francisco, CA</p>
+            <a href="speakers.html" class="bg-blue-600 text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition duration-300 inline-block transform hover:scale-105 shadow-lg">
+                <i class="fas fa-ticket-alt mr-2"></i>Register Now
+            </a>
+        </div>
+    </section>
+
+    
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">About </h2>
+            <div class="w-20 h-1 bg-blue-600 mx-auto mb-12"></div>
+            <div class="max-w-4xl mx-auto text-lg text-gray-700">
+                <p class="mb-6 text-center leading-relaxed">
+                    Eventure brings together industry leaders, innovators, and technology enthusiasts for three days of insightful talks, workshops, and networking opportunities. Our mission is to foster collaboration and knowledge sharing in the rapidly evolving tech landscape.
+                </p>
+                <div class="grid md:grid-cols-3 gap-8 mt-12">
+                    <div class="text-center p-6 hover:shadow-lg transition duration-300 rounded-lg">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-brain text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">AI & Machine Learning</h3>
+                        <p class="text-gray-600">Explore the latest advancements in artificial intelligence and its practical applications.</p>
+                    </div>
+                    <div class="text-center p-6 hover:shadow-lg transition duration-300 rounded-lg">
+                        <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Cybersecurity</h3>
+                        <p class="text-gray-600">Learn about cutting-edge security protocols and threat prevention strategies.</p>
+                    </div>
+                    <div class="text-center p-6 hover:shadow-lg transition duration-300 rounded-lg">
+                        <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-cloud text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Cloud Computing</h3>
+                        <p class="text-gray-600">Discover scalable cloud solutions and infrastructure best practices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Featured Speakers</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Learn from industry pioneers and thought leaders who are shaping the future of technology</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-64 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <img src="images/speaker1.jpg" alt="Sarah Johnson" class="h-48 w-48 rounded-full object-cover border-4 border-white shadow-lg" loading="lazy">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold mb-2">Sarah Johnson</h3>
+                        <p class="text-blue-600 font-semibold mb-3">AI Research Director at Tech Innovations</p>
+                        <p class="text-gray-700 mb-4 text-sm">Leading research in ethical AI development with 15+ years of experience in machine learning applications.</p>
+                        <div class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-medium inline-block">
+                            AI & Ethics
+                        </div>
+                    </div>
+                </div>
+                
+               
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-64 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                        <img src="images/speaker2.jpg" alt="Michael Chen" class="h-48 w-48 rounded-full object-cover border-4 border-white shadow-lg" loading="lazy">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold mb-2">Michael Chen</h3>
+                        <p class="text-green-600 font-semibold mb-3">Cybersecurity Expert at Secure Systems</p>
+                        <p class="text-gray-700 mb-4 text-sm">Specializing in network security and threat prevention for Fortune 500 companies.</p>
+                        <div class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-medium inline-block">
+                            Cybersecurity
+                        </div>
+                    </div>
+                </div>
+                
+              
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-64 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                        <img src="images/speaker3.jpg" alt="Elena Rodriguez" class="h-48 w-48 rounded-full object-cover border-4 border-white shadow-lg" loading="lazy">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold mb-2">Elena Rodriguez</h3>
+                        <p class="text-purple-600 font-semibold mb-3">Blockchain Developer at ChainTech</p>
+                        <p class="text-gray-700 mb-4 text-sm">Pioneering blockchain applications in supply chain and digital identity solutions.</p>
+                        <div class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-xs font-medium inline-block">
+                            Blockchain
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="speakers.html" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 inline-block transform hover:scale-105">
+                    View All Speakers <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+  
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold mb-2">3</div>
+                    <div class="text-blue-200">Days</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">25+</div>
+                    <div class="text-blue-200">Speakers</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">50+</div>
+                    <div class="text-blue-200">Sessions</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">1000+</div>
+                    <div class="text-blue-200">Attendees</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="images/Logo(white).jpeg" alt="Eventure Logo" class="h-12 mb-4" loading="lazy">
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Connecting innovators and thought leaders in technology. Three days of inspiration, learning, and networking.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="speakers.html" class="text-gray-400 hover:text-white transition duration-300">Speakers</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Schedule</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Event Info</h4>
+                    <div class="text-gray-400 space-y-2 text-sm">
+                        <p><i class="fas fa-calendar-alt mr-2"></i>October 15-17, 2025</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>San Francisco, CA</p>
+                        <p><i class="fas fa-clock mr-2"></i>9:00 AM - 6:00 PM Daily</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/eventure" target="_blank" class="bg-gray-700 text-white p-3 rounded-full hover:bg-blue-600 transition duration-300 transform hover:scale-110">
+                            <i class="fab fa-facebook-f text-lg md:text-xl"></i>
+                        </a>
+                        <a href="https://www.twitter.com/company/eventure" target="_blank" class="bg-gray-700 text-white p-3 rounded-full hover:bg-blue-400 transition duration-300 transform hover:scale-110">
+                            <i class="fab fa-twitter text-lg md:text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/eventure" target="_blank" class="bg-gray-700 text-white p-3 rounded-full hover:bg-pink-600 transition duration-300 transform hover:scale-110">
+                            <i class="fab fa-instagram text-lg md:text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/eventure" target="_blank" class="bg-gray-700 text-white p-3 rounded-full hover:bg-blue-800 transition duration-300 transform hover:scale-110">
+                            <i class="fab fa-linkedin-in text-lg md:text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Eventure. All rights reserved. | Designed with <i class="fas fa-heart text-red-500"></i> for eventure</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

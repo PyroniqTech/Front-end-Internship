@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🍴 Classic Bites | Menu</title>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f3f2f2;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+   background: #111111;
+   padding: 15px 30px;
+   display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    }
+    .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* space between logo and text */
+  text-decoration: none;
+}
+
+.logo img {
+  height: 60px;          /* size of logo */
+  width: 60px;           /* make width = height */
+  object-fit: cover;     /* ensures it fills the circle */
+  border-radius: 50%;    /* makes it a circle */
+  border: 2px solid #fff;
+}
+
+.logo h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+    
+
+    header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 12px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fcfafa;
+      font-weight: 500;
+      transition: background 0.3s, color 0.3s;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    nav ul li a:hover {
+      background: #ff0404;
+      color: #fff;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      margin: 25px auto 15px auto;
+    }
+
+    .search-bar input {
+      padding: 12px 14px;
+      width: 320px;
+      border: 1px solid #444;
+      border-radius: 6px;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .filter-buttons {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .filter-buttons button {
+      padding: 10px 22px;
+      margin: 6px;
+      border: none;
+      background: #ffffff;
+      color: #000;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .filter-buttons button:hover {
+      background: #ff1201;
+      color: #fff;
+    }
+
+    .menu-section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.04);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 16px;
+    }
+
+    .card-content h3 {
+      margin-bottom: 8px;
+      color: #111;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .card-content p {
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: #444;
+    }
+
+    .price {
+      font-weight: 600;
+      color: #ff0404;
+      font-size: 15px;
+    }
+
+    footer {
+      background: #030303;
+      padding: 25px 20px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    footer p {
+      color: #aaa;
+      margin: 6px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <div class="logo">
+    <img src="file:///D:/task1/logo.jpg" alt="Classic Bites Logo">
+    <h1>Classic Bites</h1>
+  </div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="search-bar">
+    <input type="text" id="search" placeholder="Search for a dish..." onkeyup="searchMenu()">
+  </div>
+
+  <div class="filter-buttons">
+    <button onclick="filterMenu('all')">All</button>
+    <button onclick="filterMenu('starters')">Starters</button>
+    <button onclick="filterMenu('main')">Main Course</button>
+    <button onclick="filterMenu('desserts')">Desserts</button>
+    <button onclick="filterMenu('drinks')">Drinks</button>
+  </div>
+
+  <section class="menu-section" id="menu">
+    <div class="menu-grid" id="menuGrid">
+
+      
+      <div class="card" data-category="main">
+        <img src="https://media.istockphoto.com/id/1400656321/photo/homemade-cheese-smash-burger.jpg?s=1024x1024&w=is&k=20&c=1pq3Pm6KrGhuBybemZ8RthoK3sZmi8FuwV0esGYkEeM=" alt="Smash Beef Burger">
+        <div class="card-content">
+          <h3>Smash Beef Burger</h3>
+          <p class="price">Rs. 400</p>
+        </div>
+      </div>
+
+      <div class="card" data-category="main">
+        <img src="https://media.istockphoto.com/id/660670674/photo/bistro-good-food-cafe-serving-fusion-menu.jpg?s=1024x1024&w=is&k=20&c=jCczbxLs0naTR6o-AYzW17WjHTeDf3CPvgEDHrT5pow=" alt="BBQ Chicken Pizza">
+        <div class="card-content">
+          <h3>BBQ Chicken Pizza</h3>
+          <p class="price">Rs. 1600</p>
+        </div>
+      </div>
+
+      <div class="card" data-category="starters">
+        <img src="https://media.istockphoto.com/id/2157514574/photo/tornado-potato-tangy-tasty-and-homemade.jpg?s=1024x1024&w=is&k=20&c=sTkcEbGN6H64qDlA3iFQh55b2TLq-k7sa424OVrI_Mw=" alt="Spicy Twister Fries">
+        <div class="card-content">
+          <h3>Spicy Twister Fries</h3>
+          <p class="price">Rs. 900</p>
+        </div>
+      </div>
+
+      <div class="card" data-category="main">
+        <img src="https://media.istockphoto.com/id/1217611897/photo/grilled-chicken-breasts-with-thyme-garlic-and-lemon-slices-on-a-grill-pan-close-up.jpg?s=1024x1024&w=is&k=20&c=fT3d5PH4SIGswni3YRiTv13BVFDHU-zhJzSNehmB5AE=" alt="Grilled chicken">
+        <div class="card-content">
+          <h3>Grilled Chicken</h3>
+          <p class="price">Rs. 500</p>
+        </div>
+      </div>
+
+      <div class="card" data-category="main">
+        <img src="https://cdn.pixabay.com/photo/2020/09/18/20/41/meat-5582923_1280.jpg" alt="Grilled Chicken Sandwich">
+        <div class="card-content">
+          <h3>Grilled Chicken Sandwich</h3>
+          <p class="price">Rs. 300</p>
+        </div>
+      </div>
+
+      <div class="card" data-category="starters">
+        <img src="https://thumbs.dreamstime.com/b/bucket-crispy-fried-chicken-wings-legs-filled-delicious-indulgent-treat-perfect-gathering-meal-362273833.jpg" alt="Wings Bucket">
+        <div class="card-content">
+          <h3>Crispy Wings Bucket</h3>
+          <p class="price">Rs. 650</p>
+        </div>
+      </div>
+
+      <div class="card" data-category="desserts">
+        <img src="https://www.foodnetwork.com/content/dam/images/food/fullset/2014/2/19/1/WU0701H_Molten-Chocolate-Cakes_s4x3.jpg" alt="Chocolate Lava Cake">
+        <div class="card-content">
+          <h3>Chocolate Lava Cake</h3>
+          <p class="price">Rs. 670</p>
+        </div>
+      </div>
+
+      <div class="card" data-category="drinks">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.KbgRmkXQWf5van5zitjiVgHaE8?pid=Api&h=220&P=0" alt="Chocolate Shake">
+        <div class="card-content">
+          <h3>Chocolate Shake</h3>
+          <p class="price">Rs. 800</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>Address | 10 Number, Hyderabad, Sindh</p>
+    <p>Cell | +923202177952</p>
+    <p>restaurant@classicbites.com</p>
+    <p>© 2025 Classic Bites Restaurant. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function searchMenu() {
+      let input = document.getElementById("search").value.toLowerCase();
+      let cards = document.querySelectorAll(".card");
+      cards.forEach(card => {
+        let itemName = card.querySelector("h3").textContent.toLowerCase();
+        card.style.display = itemName.includes(input) ? "block" : "none";
+      });
+    }
+
+    function filterMenu(category) {
+      let cards = document.querySelectorAll(".card");
+      cards.forEach(card => {
+        if (category === "all" || card.getAttribute("data-category") === category) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
+

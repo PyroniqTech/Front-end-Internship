@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Front-End Internship Portfolio</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(to bottom, #000000, #c75555);
+      color: #f7f4f4;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #000404;
+      padding: 15px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 0;
+    }
+
+    nav li a {
+      text-decoration: none;
+      color: #14cde2;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    nav li a:hover {
+      color: #3509e6;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background-image: url('hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: #f1eeee;
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .projects {
+      max-width: 800;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 60px 30px;
+      flex-grow: 1;
+    }
+
+    .project {
+      background: #000000;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+    }
+
+    footer {
+      background: #000000;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #db0d0d;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+      .hero h2 {
+        font-size: 1.6rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 60px 15px;
+      }
+      nav ul {
+        gap: 10px;
+      }
+      .project {
+        padding: 15px;
+      }
+    }
+  </style>
+  
+</head>
+<body>
+  <header>
+    <h1>Front-End Internship Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+<main>
+  <section class="hero" id="about">
+    <h2>Welcome to My Portfolio</h2>
+    <p>I am learning HTML, CSS, and JavaScript to become a professional front-end developer.</p>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="project">
+      <h3>Landing Page Design</h3>
+      <p>A sample landing page built using HTML & CSS only.</p>
+    </div>
+    <div class="project">
+      <h3>Interactive Form</h3>
+      <p>A form that validates user input and shows alerts.</p>
+    </div>
+    <div class="project">
+      <h3>Image Gallery</h3>
+      <p> A gallery with hover effects using CSS transitions.</p>
+    </div>
+  </section>
+  <section id="contact" style="text-align: center; padding: auto;">
+    <h2>Contact Me</h2>
+    <p>You can contact me through an email: <strong>khizarkhan0684@gmail.com</strong></p>
+  </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Front End Internship — All Rights Reserved</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

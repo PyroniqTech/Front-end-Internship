@@ -1,0 +1,105 @@
+<meta name="description" content="Explore our Agency platform.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exploria Travels | Welcome</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<body class="min-h-screen flex flex-col  text-gray-800">
+  <div id="app" class="container mx-auto px-6 py-12"></div>
+  <script src="js/script.js"></script>
+  <script>
+    loadPage("base.html", `
+    <section
+        class="relative bg-cover bg-center bg-no-repeat h-[630px] object-center"
+        style="background-image: url('./images/home-hero.jpg');"
+      >
+        <div class="absolute inset-0 bg-gradient-to-br from-[#002F86]/30 to-black/90 flex justify-center  ">
+          <div class="text-center text-white ">
+            <img src="images/logo.jpg" class=" md:w-44 w-28 rounded-full items-center justify-center mx-auto lg:my-6 md:my-2 my-6">
+            </img>
+
+            <p class="text-3xl md:text-5xl italic font-bold text-gray-200 tracking-wide text-green-600 p-2">
+              Explore the World with
+              <strong>Exploria </strong>
+            </p>
+
+            <p class="text-base md:text-xl md:mb-7 mb-4 md:max-w-3xl tracking-wider"></p>
+
+            <p class="text-base md:text-xl mb-8 text-gray-200 font-semibold ">
+              Find breathtaking destinations and plan your perfect journey today.
+            </p>
+
+<div class="items-center justify-center md:text-base text-xs">
+
+  <a href="destinations.html" aria-label="navigate to destination page"> 
+    <button class="bg-white text-gray-700 my-5 font-medium md:px-2 px-2 py-2 md:py-3  rounded-lg hover:bg-gray-200 transition-all hover:scale-110 cursor-pointer">
+      Explore Destinations
+    </button>
+  </a>
+</div>
+      </div>
+      </div>
+</section>
+
+    <section class="bg-white py-12 px-6 md:px-16 lg:px-24">
+    <div class="max-w-3xl mx-auto text-center space-y-4">
+    <h2 class="text-2xl md:text-3xl font-bold text-green-700">About Exploria</h2>
+    <p class="text-gray-700 leading-relaxed">
+    At <span class="font-semibold text-green-600">Exploria</span>, we believe every journey tells a story.  
+    Our mission is to create unforgettable travel experiences, whether you're seeking adventure, relaxation, or cultural discovery.  
+    With expert guides and tailored packages, we ensure your trips are stress-free and memorable.  
+    From breathtaking destinations to personalized services, we're here to turn your travel dreams into reality.  
+    Discover the world with Exploria — your trusted travel partner.
+    </p>
+    </div>
+    </section>
+    
+    <section class="py-12">
+    <div class="max-w-6xl mx-auto px-6 text-center ">
+      <h2 class="md:text-3xl text-2xl font-bold text-green-800 mb-10">Featured Destinations</h2>
+
+      <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+
+        <div
+          class="bg-gray-300 rounded-xl shadow-md shadow-gray-300 cursor-pointer p-6 hover:shadow-xl hover:shadow-gray-500  transition duration-100">
+          <img src="./images/destination-1.jpg" loading="lazy" alt="american detination"
+            class="w-64 h-44 mx-auto rounded-lg  mb-4">
+          <h3 class="text-xl font-semibold text-gray-700">America - Statue of liberty</h3>
+          <p class="text-gray-500 mt-2 text-base italic">Experience the world's most iconic symbol of liberty in the
+            heart of New York.</p>
+          <button
+            class="bg-green-600 text-gray-200 hover:scale-110 transition-all p-2 rounded-sm mt-3 cursor-pointer">Book
+            Now</button>
+        </div>
+
+        <div
+        class="bg-gray-300 rounded-xl shadow-md shadow-gray-300 cursor-pointer p-6 hover:shadow-xl hover:shadow-gray-500  transition duration-100">
+          <img src="./images/destination-2.jpg" loading="lazy" alt="american detination"
+            class="w-64 h-44 mx-auto rounded-lg  mb-4">
+          <h3 class="text-xl font-semibold text-gray-700">Tomb of Muhammad Ali Jinnah</h3>
+          <p class="text-gray-500 mt-2 text-base italic">Visit pakistan's famoust tourist point at the city of lights --
+            Karachi</p>
+          <button
+            class="bg-green-600 text-gray-200 hover:scale-110 transition-all p-2 rounded-sm mt-3 cursor-pointer">Book
+            Now</button>
+        </div>
+
+        <div
+          class="bg-gray-300 rounded-xl shadow-md shadow-gray-300 cursor-pointer p-6 hover:shadow-xl hover:shadow-gray-500  transition duration-100">
+          <img src="./images/destination-3.jpg" loading="lazy" alt="american detination"
+            class="w-64 h-44 mx-auto rounded-lg  mb-4">
+            <h3 class="text-xl font-semibold text-gray-700">Sawat - sawat valley</h3>
+            <p class="text-gray-500 mt-2 text-base italic">Experience the world's most Top Beautiful Lakes in Swat Kalam
+              Valley </p>
+          
+              <button class="bg-green-600 text-gray-200 hover:scale-110 transition-all p-2 rounded-sm mt-3 cursor-pointer">
+            Book Now
+            </button>
+        </div>
+        </div>
+</section>
+        
+        `);
+  </script>
+
+
+</body>

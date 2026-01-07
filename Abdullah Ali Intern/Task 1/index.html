@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classic Bites | Menu</title>
+  <style>
+    /* General Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #f5f5f5;
+    }
+
+    header {
+      background: #1c1c1c;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #f5f5f5;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+
+    .menu-section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .filters, .search-bar {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .filters button {
+      background: #2a2a2a;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #fff;
+      transition: background 0.3s;
+    }
+
+    .filters button:hover, .filters button.active {
+      background: #ffcc00;
+      color: #000;
+    }
+
+    .search-bar input {
+      padding: 10px;
+      width: 250px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1e1e1e;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content h3 {
+      margin-bottom: 10px;
+      color: #ffcc00;
+    }
+
+    .card-content p {
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+      color: #ccc;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #fff;
+    }
+
+    footer {
+      background: #1c1c1c;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    footer p, footer a {
+      color: #aaa;
+      text-decoration: none;
+      margin: 5px;
+    }
+
+    footer a:hover {
+      color: #ffcc00;
+    }
+
+    /* Responsive Navbar */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      margin: 1px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #1c1c1c;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="logo.jpg" alt="Classic Bites Logo">
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Menu Section -->
+  <section class="menu-section" id="menu">
+  <!-- Filter Buttons -->
+    <div class="filters">
+        <button class="active" onclick="filterMenu('all', this)">All</button>
+        <button onclick="filterMenu('starters', this)">Starters</button>
+        <button onclick="filterMenu('main', this)">Main Course</button>
+        <button onclick="filterMenu('desserts', this)">Desserts</button>
+        <button onclick="filterMenu('drinks', this)">Drinks</button>
+    </div>
+
+
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search for a dish..." onkeyup="searchMenu()">
+    </div>
+
+    <div class="menu-grid" id="menu-grid">
+      <!-- Menu Items (10) -->
+      <div class="card starters">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Aloo_Tikki_served_with_chutneys.jpg/500px-Aloo_Tikki_served_with_chutneys.jpg" alt="Aloo Tikki">
+        <div class="card-content">
+          <h3>Aloo Tikki</h3>
+          <p>Spiced potato patties served with chutney.</p>
+          <p class="price">Rs. 350</p>
+        </div>
+      </div>
+
+      <div class="card starters">
+        <img src="https://imgs.search.brave.com/xBlKeNqlkqSGaEnMmjPlCTXOQmXSISbujR0ZFiEmTxY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9zZWVraC1rYWJh/Yi1tYWRlLXdpdGgt/bWluY2VkLWNoaWNr/ZW4tbXV0dG9uLWtl/ZW1hLXNlcnZlZC13/aXRoLWdyZWVuLWNo/dXRuZXktc2FsYWRf/NDY2Njg5LTc4NzY5/LmpwZz9zZW10PWFp/c19oeWJyaWQmdz03/NDA" alt="Chicken Seekh Kabab">
+        <div class="card-content">
+          <h3>Chicken Seekh Kabab</h3>
+          <p>Minced chicken skewers, grilled with spices.</p>
+          <p class="price">Rs. 550</p>
+        </div>
+      </div>
+
+      <div class="card main">
+        <img src="https://imgs.search.brave.com/sIl2TZqkQIg-0ocU53YWa2_yl5yMLjCMj0ct998OkEE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9kdW0taGFuZGkt/Y2hpY2tlbi1iaXJ5/YW5pLWlzLXByZXBh/cmVkLWVhcnRoZW4t/Y2xheS1wb3QtY2Fs/bGVkLWhhYW5kaS1w/b3B1bGFyLWluZGlh/bi1ub24tdmVnZXRh/cmlhbi1mb29kXzQ2/NjY4OS01MjM4NC5q/cGc_c2VtdD1haXNf/aW5jb21pbmcmdz03/NDAmcT04MA" alt="Chicken Biryani">
+        <div class="card-content">
+          <h3>Chicken Biryani</h3>
+          <p>Fragrant basmati rice with chicken and spices.</p>
+          <p class="price">Rs. 750</p>
+        </div>
+      </div>
+
+      <div class="card main">
+        <img src="https://imgs.search.brave.com/VpcCYxQqlZ6VEp1127zrvidqs7EjglgGUPkmC29lCuY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mbGF2/b3JlZGJ5ZmF0aW1h/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAyMi8wNC8xMTQ4/MjdCRi0zMzNCLTQy/M0UtQkFENC02REQ1/NjIzOEIyQTAtc2Nh/bGVkLmpwZWc" alt="Nihari">
+        <div class="card-content">
+          <h3>Nihari</h3>
+          <p>Slow-cooked beef stew with rich spices.</p>
+          <p class="price">Rs. 900</p>
+        </div>
+      </div>
+
+      <div class="card main">
+        <img src="https://imgs.search.brave.com/xrKaIU6GCVjdo1fXaZsTewsVZeuXfTJMe9Wh_rILd5A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQx/MDMzNTgyOS9waG90/by9tdXR0b24tc3Vr/a2Eta2FyYWhpLXNl/cnZlZC1pbi1hLWRp/c2gtaXNvbGF0ZWQt/b24tZGFyay1iYWNr/Z3JvdW5kLXRvcC12/aWV3LmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1BT1Rscl9K/RmlLckU5dTNKTEY4/ZFJhUlNDZmxQWklv/ZkM3a3ZOSC1rczBZ/PQ" alt="Karahi Gosht">
+        <div class="card-content">
+          <h3>Karahi Gosht</h3>
+          <p>Goat meat cooked in a spicy tomato-garlic based karahi.</p>
+          <p class="price">Rs. 850</p>
+        </div>
+      </div>
+
+      <div class="card desserts">
+        <img src="https://imgs.search.brave.com/UXCbY0jNmfm5A1cxsIlw_G3gR-1rZMtSL5xlPO9B3rI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTIw/ODc1NDQ3MS9waG90/by9nYWphci1rYS1o/YWx3YS5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9bGZZS0FS/TFhIUzJDYkh0dVUy/NXVEblFRMVlNZzgz/VF9xU19lRkI4d05S/Zz0" alt="Gajar Halwa">
+        <div class="card-content">
+          <h3>Gajar Halwa</h3>
+          <p>Sweet carrot pudding with nuts and cardamom.</p>
+          <p class="price">Rs. 450</p>
+        </div>
+      </div>
+
+      <div class="card desserts">
+        <img src="https://imgs.search.brave.com/8L8F6dIE3f8byfSW-Q2Y0XmtNKpxickRSl3WIyPNb9M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2h1dHRlcnN0b2Nr/LmNvbS9pbWFnZS1w/aG90by9yaWNlLWto/ZWVyLWluZGlhbi1z/d2VldC1wYXllc2gt/MjYwbnctMjAzNDc0/MDI1Mi5qcGc" alt="Kheer">
+        <div class="card-content">
+          <h3>Kheer</h3>
+          <p>Rice pudding cooked with milk, nuts and sugar.</p>
+          <p class="price">Rs. 400</p>
+        </div>
+      </div>
+
+      <div class="card drinks">
+        <img src="https://imgs.search.brave.com/g09oAHrLr01F9fM_7Wb5o2shL8Ck0tUhZvmlQcqktfA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzE2LzU5LzI2LzEz/LzM2MF9GXzE2NTky/NjEzMzhfR0dtWGFy/RGpTWWlYSHRYWHRq/VldSM05QM0ZENVFZ/dUcuanBn" alt="Lassi">
+        <div class="card-content">
+          <h3>Lassi</h3>
+          <p>Creamy yogurt drink with sweet/salty options.</p>
+          <p class="price">Rs. 300</p>
+        </div>
+      </div>
+
+      <div class="card drinks">
+        <img src="https://imgs.search.brave.com/ha0PC7QbpMIZac6cc1zwOZsH1Obq9Ve3k0H9o79L74M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dGFzdGluZ3RhYmxl/LmNvbS9pbWcvZ2Fs/bGVyeS9mYWxvb2Rh/LXRoZS10ZXh0dXJl/ZC1kZXNzZXJ0LXdp/dGgtdmFyaWVkLW9y/aWdpbnMvdmFyaWF0/aW9ucy1vZi1mYWxv/b2RhLWFuZC1pbi1v/dGhlci1jdWx0dXJl/cy0xNjgxNjQ2NjA4/LmpwZw" alt="Falooda">
+        <div class="card-content">
+          <h3>Falooda</h3>
+          <p>Milk-based dessert drink with vermicelli and rose syrup.</p>
+          <p class="price">Rs. 350</p>
+        </div>
+      </div>
+
+      <div class="card main">
+        <img src="https://imgs.search.brave.com/WRZ-w-UQY8XTHNSAZPdQxtHuwvcP06Mw2wgw9DbsGm0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWct/Z2xvYmFsLmNwY2Ru/LmNvbS9yZWNpcGVz/LzBiZjhlZmJiZjc5/YTQ1YjAvNjgweDQ4/MmNxNzAvc2Fyc29u/LWthLXNhYWctbWFr/YWkta2ktcm90aS1v/ci1uYW1rZWVuLWxh/c3NpLXJlY2lwZS1t/YWluLXBob3RvLmpw/Zw" alt="Saag & Makai">
+        <div class="card-content">
+          <h3>Saag & Makai</h3>
+          <p>Mustard greens & corn, cooked with spices.</p>
+          <p class="price">Rs. 700</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>📍  Street No: 4 Latifabad unit 6, Hyderabad Sindh</p>
+    <p>📞 +92 300 1234567</p>
+    <p>✉️ info@classicbites.com</p>
+    <p>
+      <a href="#">Facebook</a> | 
+      <a href="#">Instagram</a> | 
+      <a href="#">Twitter</a>
+    </p>
+  </footer>
+
+<script>
+  function filterMenu(category, el) {
+    let cards = document.querySelectorAll('.card');
+    let buttons = document.querySelectorAll('.filters button');
+
+    buttons.forEach(btn => btn.classList.remove('active'));
+    el.classList.add('active');
+
+    cards.forEach(card => {
+      if (category === 'all' || card.classList.contains(category)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function searchMenu() {
+    let input = document.getElementById('search').value.toLowerCase();
+    let cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+      let text = card.innerText.toLowerCase();
+      if (text.includes(input)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function toggleMenu() {
+    let navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('show');
+  }
+</script>
+
+</body>
+</html>
+

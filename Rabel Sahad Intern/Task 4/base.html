@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exploria - Explore the World with Us</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-50">
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <a href="base.html" class="flex items-center space-x-2">
+            <img
+              src="images/logo.jpg"
+              alt="Exploria Logo"
+              class="h-10 w-10 rounded-full"
+            />
+            <span class="text-xl font-bold text-blue-600">EXPLORIA</span>
+          </a>
+
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="base.html"
+              class="text-gray-700 hover:text-blue-600 font-medium"
+              >Welcome</a
+            >
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-blue-600 font-medium"
+              >Home</a
+            >
+            <a
+              href="destinations.html"
+              class="text-gray-700 hover:text-blue-600 font-medium"
+              >Destinations</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-700 hover:text-blue-600 font-medium"
+              >Contact</a
+            >
+          </div>
+          ]
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="text-gray-700 hover:text-blue-600 focus:outline-none"
+            >
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+          <a
+            href="base.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
+            >Welcome</a
+          >
+          <a
+            href="index.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
+            >Home</a
+          >
+          <a
+            href="destinations.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
+            >Destinations</a
+          >
+          <a
+            href="contact.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <section
+      class="relative h-screen bg-cover bg-center flex items-center justify-center"
+      style="background-image: url('images/starry-sky-town.jpg')"
+      loading="lazy"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div class="relative z-10 text-center text-white px-4">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          Explore the World with Us
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+          Discover amazing destinations and create unforgettable memories
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="index.html"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105"
+            >Home</a
+          >
+          <a
+            href="destinations.html"
+            class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105"
+            >Destinations</a
+          >
+          <a
+            href="contact.html"
+            class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="flex space-x-6 mb-4 md:mb-0">
+            <a
+              href="https://www.facebook.com/exploria.pk/"
+              target="_blank"
+              aria-label="Visit our Facebook"
+              class="text-white hover:text-blue-400 transition duration-300"
+            >
+              <i class="fab fa-facebook-f text-xl"></i>
+            </a>
+            <a
+              href="http://www.youtube.com/@exploriaTours"
+              target="_blank"
+              aria-label="Visit our YouTube"
+              class="text-white hover:text-red-500 transition duration-300"
+            >
+              <i class="fab fa-youtube text-xl"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/exploria.pk/#"
+              target="_blank"
+              aria-label="Visit our Instagram"
+              class="text-white hover:text-pink-500 transition duration-300"
+            >
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+          </div>
+
+          <div class="text-center md:text-right">
+            <p class="mb-2">123 Travel Street, Adventure City, AC 12345</p>
+            <p>&copy; 2025 Exploria Travel Agency. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("hidden");
+        });
+    </script>
+  </body>
+</html>

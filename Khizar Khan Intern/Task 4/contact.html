@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exploria | Contact Us</title>
+  <meta name="description" content="Contact Exploria Travel Agency for inquiries or assistance." />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-black text-white">
+
+  
+  <header class="sticky top-0 bg-black bg-opacity-80 backdrop-blur-lg z-50 p-4 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <img src="file:///E:/HTML%20project/Exploria/js/images/Exploria.jpg" alt="Exploria Logo" class="w-10 h-10 rounded-full" />
+      <a href="base.html" class="font-bold text-xl text-blue-600 hover:text-blue-400 transition">Exploria</a>
+    </div>
+    <button id="menu-btn" class="sm:hidden text-white text-3xl">☰</button>
+    <nav id="nav-menu" class="hidden sm:flex space-x-6 text-lg">
+      <a href="index.html" class="hover:text-blue-400">Home</a>
+      <a href="destinations.html" class="hover:text-blue-400">Destinations</a>
+      <a href="contact.html" class="hover:text-blue-400">Contact</a>
+    </nav>
+  </header>
+
+  
+  <section class="h-72 flex flex-col items-center justify-center bg-cover bg-center text-center" style="background-image: url('file:///E:/HTML%20project/Exploria/js/images/Mountains.jpg');">
+    <h2 class="text-4xl md:text-5xl font-bold">Get in Touch</h2>
+  </section>
+
+  
+  <section class="grid gap-10 lg:grid-cols-2 p-10 max-w-6xl mx-auto">
+    
+    <div class="bg-white p-8 rounded-lg shadow-lg">
+      <h3 class="text-2xl font-bold mb-6 text-black">Send Us a Message</h3>
+      <form id="contact-form" class="space-y-4">
+        <input type="text" id="cname" placeholder="Full Name" class="w-full p-3 rounded text-black" required />
+        <input type="email" id="cemail" placeholder="Email Address" class="w-full p-3 rounded text-black" required />
+        <textarea id="cmessage" placeholder="Your Message" rows="5" class="w-full p-3 rounded text-black" required></textarea>
+        <button type="submit" class="w-full bg-blue-600 hover:bg-black text-white p-3 rounded">Send Message</button>
+      </form>
+    </div>
+
+    
+    <div class="bg-white p-8 rounded-lg shadow-lg">
+      <h3 class="text-2xl font-bold mb-4 text-black">Contact Information</h3>
+      <p class="mt-4 text-black"><strong>Address:</strong> 45 Autobhan Street, Hyderabad, Pakistan</p>
+      <p class="mt-4 text-black"><strong>Phone:</strong> +92 314 5953564</p>
+      <p class="mt-4 text-black"><strong>Email:</strong> contact@exploria.com</p>
+      <p class="mt-4 text-black">We’re here to help plan your next adventure — send us a message or reach out directly!</p>
+    </div>
+  </section>
+
+  
+  <footer class="bg-gray-900 text-center py-8 mt-12 text-gray-300">
+  <div class="flex justify-center space-x-6 mb-4">
+    <a href="https://www.facebook.com/Exploria" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Visit our Facebook">
+      <img src="file:///E:/HTML%20project/Exploria/js/images/facebook.svg" alt="Facebook" class="w-6 h-6 hover:opacity-80 transition" loading="lazy">
+    </a>
+
+    <a href="https://www.youtube.com/Exploria" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Visit our YouTube">
+      <img src="file:///E:/HTML%20project/Exploria/js/images/youtube.svg" alt="YouTube" class="w-6 h-6 hover:opacity-80 transition" loading="lazy">
+    </a>
+
+    <a href="https://www.instagram.com/Exploria" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Visit our Instagram">
+      <img src="file:///E:/HTML%20project/Exploria/js/images/instagram.svg" alt="Instagram" class="w-6 h-6 hover:opacity-80 transition" loading="lazy">
+    </a>
+  </div>
+
+  <p>45 Autobhan Street, Hyderabad, Pakistan</p>
+  <p>&copy; 2025 Exploria Travel Agency. All Rights Reserved.</p>
+</footer>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>

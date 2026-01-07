@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔥 Classic Bites Menu 🔥</title>
+  <style>
+    /* ====== Basic Reset ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      background: #f8f8f8;
+    }
+
+    /* ====== Header ====== */
+    
+    header {
+  background-color: #FCF8F3;
+  color: goldenrod;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  
+}
+
+.logo {
+  height: 140px;
+}
+
+header h1 {
+  font-size: 32px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin-left: 100px;
+}
+
+/* Nav styling */
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 15px;
+}
+
+nav ul li a {
+  color: goldenrod;
+  padding: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.menu-heading{
+ color: white;
+  background-color: #B88E2F;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: inline-block;
+  font-size: 24px;
+  padding: 9px;
+  border-radius: 3px;
+  margin-top: 70px;
+  margin-bottom: 50px;
+
+  display: table;       
+  margin-left: auto;
+  margin-right: auto;}
+
+/* ====== Responsive Nav (Mobile) ====== */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+    /* ====== Search & Filter Section ====== */
+    .controls {
+  display: flex;
+  justify-content:space-evenly;
+  margin-top: 80px;
+  margin-bottom: 30px;
+    }
+
+    .controls input {
+      padding: 12px;
+      margin: 5px;
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .controls button {
+      margin: 5px;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      background: goldenrod;
+      color: white;
+      cursor: pointer;
+    }
+
+    .controls button:hover {
+      background: #B88E2F;
+    }
+
+    /* ====== Menu Grid ====== */
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    justify-items:auto;
+    }
+
+    .card {
+      background:whitesmoke;
+      padding: 18px;
+      border-radius: 1px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s
+
+    }
+    .card:hover{
+      transform: scale(1.03); 
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+      
+    }
+    
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+          }
+
+    .card h3 {
+      margin: 10px 0;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #898989;
+    }
+
+    .price {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* ====== Footer ====== */
+    footer {
+      background:goldenrod;
+      color: whitesmoke;
+      text-align: center;
+      padding: 25px;
+      margin-top: 20px;
+  
+    }
+
+    footer a {
+      color: green;
+      margin: 0 5px;
+      text-decoration: none;
+    }
+
+    
+    @media (max-width: 600px) {
+     header {
+    flex-direction: column;   /* sab vertically stack honge */
+    text-align: center;
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto;  /* logo center me aa jayega */
+    height: 190px;
+  }
+
+  header h1 {
+    font-size: 26px;
+    margin-left: 5px; 
+    
+  }
+
+  .menu-heading{
+    margin-top: 24px;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin: 12px auto; /* hamburger bhi center me */
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #FCF8F3;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  nav ul.show {
+    display: flex; /* hamburger click hone pe show hoga */
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .controls {
+
+    display: block;
+    padding: 7px;
+    margin-top: 12px;
+  }
+}
+    
+  </style>
+</head>
+<body>
+
+  <!-- ====== HEADER ====== -->
+  <!-- <header>
+      <img class="logo" src="logo-image.jpg" alt="LOGO">
+    <h1>Classic Bites Restaurant</h1>
+    <span class="menu-toggle">☰</span>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header> -->
+
+<!-- ====== HEADER ====== -->
+<header>
+  <div class="header-left">
+    <img class="logo" src="logo-image.jpg" alt="LOGO">
+  </div>
+  <div class="header-center">
+    <h1>Classic Bites Restaurant</h1>
+  </div>
+  <div class="header-right">
+    <span class="menu-toggle">☰</span>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<h1 class="menu-heading">Today's Special Menu in Classic Bites</h1>
+  <!-- ====== Search & Filter ====== -->
+  <div class="controls">
+    <!-- Search Bar -->
+    <input type="text" id="search" placeholder="Search dishes...">
+    <br><br>
+    <!-- Category Buttons -->
+     <div>
+
+       <button onclick="filterMenu('all')">All items</button>
+       <button onclick="filterMenu('starters')">Starters</button>
+       <button onclick="filterMenu('main')">Main Course</button>
+       <button onclick="filterMenu('desserts')">Desserts</button>
+       <button onclick="filterMenu('drinks')">Drinks</button>
+      </div>
+      </div>
+    <hr>
+  <!-- ====== MENU GRID ====== -->
+  <section class="menu" id="menu">
+    <!-- Example Menu Item -->
+    <div class="card" data-category="main">
+      <img src="burger.jpg" alt="Soup">
+      <h3>Beef Burger</h3>
+      <p>Spicy Burger with fries</p>
+      <div class="price">$8</div>
+    </div>
+
+    <div class="card" data-category="main">
+      <img src="pizza.jpg" alt="Pizza">
+      <h3>Margherita Pizza</h3>
+      <p>Classic cheese pizza </p>
+      <div class="price">$12</div>
+    </div>
+
+    
+    <div class="card" data-category="desserts">
+      <img src="cake.jpg" alt="Cake">
+      <h3>Chocolate Cake</h3>
+      <p>Moist and rich chocolate cake.</p>
+      <div class="price">$6</div>
+    </div>
+
+
+    <div class="card" data-category="starters">
+      <img src="soup.jpg" alt="Cake">
+      <h3>corn soup</h3>
+      <p>Hot chilli soup with corn and vegetables</p>
+      <div class="price">$3</div>
+    </div>
+
+    <div class="card" data-category="desserts">
+      <img src="custurd.jpg" alt="custurd">
+      <h3>custurd</h3>
+      <p>custurd with fruit topping </p>
+      <div class="price">$17</div>
+    </div>
+
+    <div class="card" data-category="starters">
+      <img src="fries.png" alt="french fries">
+      <h3>French fries</h3>
+      <p>Crispy french fries with sause </p>
+      <div class="price">$2</div>
+    </div>
+
+    <div class="card" data-category="starters">
+      <img src="nuggets.jpg" alt="french fries">
+      <h3>Chicken Nuggets</h3>
+      <p>Quality fried Nuggets </p>
+      <div class="price">$2</div>
+    </div>
+
+
+    <div class="card" data-category="starters">
+      <img src="garlic.jpg" alt="garlic bread">
+      <h3>Garlic bread</h3>
+      <p>cheesy hot garlic bread </p>
+      <div class="price">$1</div>
+    </div>
+
+    <div class="card" data-category="desserts">
+      <img src="Ice-cream.jpg" alt="Ice cream">
+      <h3>Ice cream</h3>
+      <p>Moist and rich jelato icecream.</p>
+      <div class="price">$6</div>
+    </div>
+
+
+    
+    <div class="card" data-category="desserts">
+      <img src="rasmalai.jpg" alt="ras malai">
+      <h3>Ras malai</h3>
+      <p>Moist and rich rasmalai.</p>
+      <div class="price">$6</div>
+    </div>
+    
+    <div class="card" data-category="main">
+      <img src="biryani.jpg" alt="biryani">
+      <h3>Chicken Biryani</h3>
+      <p>Basmati rice hot biryani</p>
+      <div class="price">$12</div>
+    </div>
+
+
+    <div class="card" data-category="main">
+      <img src="daal-chawal.jpg" alt="dal-chwal">
+      <h3>Daal Chawal</h3>
+      <p>Daal Chawal served with kabab</p>
+      <div class="price">$4</div>
+    </div>
+
+    
+    <div class="card" data-category="drinks">
+      <img src="juice.jpg" alt="Juice">
+      <h3>Strawberry Juice</h3>
+      <p>Chilled and fresh strawberry juice </p>
+      <div class="price">$7</div>
+    </div>
+
+
+    <div class="card" data-category="drinks">
+      <img src="coffee.jpg" alt="coffee">
+      <h3>coffee</h3>
+      <p>UK style Smooth coffe </p>
+      <div class="price">$7</div>
+    </div>
+
+      <div class="card" data-category="drinks">
+      <img src="soda.jpg" alt="">
+      <h3>soda bottle </h3>
+      <p>chilled and light blue berry soda</p>
+      <div class="price">$1</div>
+    </div>
+
+
+      <div class="card" data-category="drinks">
+      <img src="tea.jpg" alt="">
+      <h3>Tea </h3>
+      <p>Strong Masalh Tea with flavour </p>
+      <div class="price">$1</div>
+    </div>
+ 
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <p> Address: Hydrabad Latif abad road | 📞 Phone: 123-456-789 | ✉ Email: classicbite@restaurant.com</p>
+    <p>
+      Follow us:
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">Twitter</a>
+    </p>
+  </footer>
+
+  <!-- ====== JavaScript ====== -->
+  <script>
+    // ====== Mobile Navbar Toggle ======
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav ul');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+
+    // ====== Filter Menu Items by Category ======
+    function filterMenu(category) {
+      const items = document.querySelectorAll('.card');
+      items.forEach(item => {
+        if (category === 'all' || item.dataset.category === category) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // ====== Search Functionality ======
+    const searchInput = document.getElementById('search');
+    searchInput.addEventListener('keyup', () => {
+      const searchText = searchInput.value.toLowerCase();
+      const items = document.querySelectorAll('.card');
+      items.forEach(item => {
+        const name = item.querySelector('h3').innerText.toLowerCase();
+        if (name.includes(searchText)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

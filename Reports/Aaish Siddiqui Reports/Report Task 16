@@ -1,0 +1,17 @@
+Strength
+
+Clean, modern UI with consistent dark theme and responsive layouts.
+Proper use of CSS variables, Flexbox/Grid, and semantic HTML.
+No production comments; code is readable and visually polished.
+
+Mistakes/issues
+
+Header and nav are duplicated across pages; base.html is not truly reusable.
+Heavy CSS duplication across files; no centralized design system.
+Unused and poorly designed JavaScript (loadPage()); bad templating.
+Accessibility is largely ignored (focus states, contrast, ARIA).
+“Scalable / best practices” claims exceed actual implementation.
+
+Final Remark
+
+Aaish Siddiqui’s Project reflects strong visual execution and competent frontend fundamentals, but the architecture is largely static and does not yet demonstrate true modularity or scalability. Improving code reuse, structural consistency, and accessibility would align the implementation more closely with the stated technical claims.

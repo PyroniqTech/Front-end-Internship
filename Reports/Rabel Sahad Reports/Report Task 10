@@ -1,0 +1,38 @@
+Strengths
+
+Fully responsive landing page using Tailwind + Bootstrap + custom CSS.
+Sticky navbar with scroll effect and smooth mobile toggle.
+Hero section with floating product cards and gradients.
+Products section: interactive 3D hover, pricing, and details.
+About section with story, values, and icon highlights.
+Gallery with lazy-loaded images, hover overlays, and 3D buttons.
+Contact form with front-end validation and visual feedback.
+JS: smooth scrolling, 3D card rotation, IntersectionObserver animations.
+SEO meta tags implemented.
+
+Issues & Mistakes
+
+<meta name="author"> still uses placeholder.
+JS hover effects could be throttled for performance.
+No fallback for users with JS disabled.
+Minor responsive tweaks needed for very small screens.
+footer icons missing.
+
+JavaScript
+
+Smooth scrolling navigation implemented.
+3D rotation on product cards with mousemove events.
+Contact form front-end validation with visual feedback.
+IntersectionObserver animations for products, gallery, and about section.
+Gallery 3D view placeholders (alert-based, not fully functional).
+
+Improvements
+
+Update <meta> author.
+Add ARIA alerts/inline messages for form accessibility.
+Throttle 3D hover effects.
+JS fallback notices for users with disabled JS.
+
+Final Remark
+
+Rabel Sahad’s project is polished, interactive, and portfolio-ready, Only minor performance and accessibility enhancements are recommended.

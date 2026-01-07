@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew Master-Coffe Maker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto ;
+    padding: 0 20px ;
+}
+
+header{
+     background-color: #2c3e50;
+     z-index: 1000;
+     position: fixed;
+     width: 100%;
+     top: 0;
+     box-shadow:0 2px 10px rgba(0, 0, 0, 0.1);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+.logo-container{
+    display: flex;
+    text-align: center;
+}
+
+.logo{
+    height: 40px;
+    margin-right: 10px;
+}
+
+.brand-name{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li{
+    margin-left: 30px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500px;
+    transition: color 0.3s ;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+.buy-now-btn{
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 4px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.buy-now-btn:hover{
+    background-color: #c0392b;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+
+.hero{
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    padding: 150px 5% 100px;
+    margin-top: 70px;
+}
+
+.hero-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.hero-text{
+    flex: 1;
+    padding-right: 50px;
+}
+
+.hero-text h1{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.hero-text p{
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-bottom: 30px;
+} 
+
+.cta-button{
+   background-color: #e74c3c;
+   color: white;
+   padding: 12px 30px;
+   border-radius: 4px;
+   border: none;
+   cursor: pointer;
+   font-size: 1.1rem;
+   transition: background-color 0.3s;
+}
+
+.cta-button:hover{
+    background-color: #c0392b;
+}
+
+.hero-image{
+    flex: 1;
+    text-align: center;
+}
+
+.hero img{
+    max-width: 100%;
+    box-shadow: 0 10 30 rgba(0, 0, 0, 0.3);
+    height: auto;
+    border-radius: 10px;
+}
+
+.features{
+    padding: 100px 5%;
+    background-color: #f9f9f9;
+}
+
+.features h2{
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 50px;
+}
+.feature-grid{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.feature-card{
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    text-align: center;
+    transition: box-shadow 0.3s transform 0.3s;
+}
+
+.feature-card:hover{
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+
+}
+
+.feature-card i{
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom:20px;
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.pricing {
+    padding: 100px 5%;
+}
+
+.pricing h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #2c3e50;
+}
+
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.price-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.price-card:hover {
+    transform: translateY(-10px);
+}
+
+.price-card.featured {
+    border: 2px solid #3498db;
+    transform: scale(1.05);
+}
+
+.price-card.featured:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.popular-tag {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e74c3c;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.price-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 30px;
+}
+
+.price span {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+.price-card ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.price-card ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.price-card ul li:last-child {
+    border-bottom: none;
+}
+
+.price-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.price-btn:hover {
+    background-color: #2980b9;
+}
+
+.reviews {
+    padding: 100px 5%;
+    background-color: #f9f9f9;
+}
+
+.reviews h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #2c3e50;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.review-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.stars {
+    color: #f39c12;
+    margin-bottom: 20px;
+}
+
+.review-card p {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.reviewer {
+    display: flex;
+    align-items: center;
+}
+
+.reviewer img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.reviewer h4 {
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.reviewer span {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.faq {
+    padding: 100px 5%;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #2c3e50;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid #ecf0f1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 20px;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background: #f9f9f9;
+}
+
+.faq-question h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.faq-question i {
+    transition: transform 0.3s;
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s, padding 0.3s;
+}
+
+.faq-answer p {
+    padding: 20px 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 0 20px;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 70px 5% 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-brand p {
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    transition: background 0.3s;
+}
+
+.social-links a:hover {
+    background: #3498db;
+}
+
+.footer-contact h3,
+.footer-newsletter h3 {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.footer-contact p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-contact i {
+    margin-right: 10px;
+    color: #3498db;
+}
+
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0.7;
+}
+
+@media (max-width: 968px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: 50px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .menu {
+        display: flex;
+    }
+    
+    .price-card.featured {
+        transform: scale(1);
+    }
+    
+    .price-card.featured:hover {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #2c3e50;
+        flex-direction: column;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+}
+    
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="Shopsy.jpg" alt="Shopsy-Logo" class="logo">
+                <span class="brand-name">Shopsy</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#" class="buy-now-btn">Buy Now</a></li>
+            </ul>
+            <div class="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Brew To Perfection Every Morning</h1>
+                <p>
+                    Experience the ultimate coffee experience like never before with the Shops'y Smart Coffe Maker.
+                    Freshley ground beans, precise temperature for your finest cup of coffee.
+                </p>
+
+                <button class="cta-button">Buy-Now</button>
+            </div>
+
+            <div class="hero-image">
+                <img src="https://media.istockphoto.com/id/1366583927/photo/a-black-drip-electric-coffee-machine-with-a-glass-teapot-brews-a-morning-drink-household.jpg?s=612x612&w=0&k=20&c=7KhLNB3XaT82387LLCe7kSLcwIB4d6sDomwdr4S6wlM="
+                    alt="hero-image">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Why Choose Shops'y Coffe Maker?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-mug-hot"></i>
+                    <h3>Perfet Coffee Every Time</h3>
+                    <p>Our advanced temperature controls make sures that you get the rich flovourful coffee.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Smart Scheduling</h3>
+                    <p>Program your coffee maker to ready your coffee when you want it</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Bean to cup freshness</h3>
+                    <p>State of the art grinder the grind the whole beans for freshness and flavoured</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>App Controlled</h3>
+                    <p>Control your coffee maker remotley with our interactive mobile app</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Choose Your Plan</h2>
+            <div class="price-cards">
+                <div class="price-card">
+                    <h3>Basic</h3>
+                    <div class="price">$149<span>/one-time</span></div>
+                    <ul>
+                        <li>12-Cup Capacity</li>
+                        <li>Programable Timer</li>
+                        <li>Remote Controlling</li>
+                        <li>One year warranty</li>
+                    </ul>
+
+                    <button class="price-btn">Select-Plan</button>
+                </div>
+
+                <div class="price-card">
+                    <div class="popular-tag">Most-Popular</div>
+                    <h3>Premium</h3>
+                    <div class="price">$249 <span>/one-time</span></div>
+                    <ul>
+                        <li>3 Year Warranty</li>
+                        <li>Smart Phone Control</li>
+                        <li>Bean to Cup System</li>
+                        <li>Scheduling</li>
+                    </ul>
+
+                    <button class="price-btn">Select-Plan</button>
+                </div>
+
+                <div class="price-card">
+                    <h3>Deluxe</h3>
+                    <div class="price">$349<span>/one-time</span></div>
+                    <ul>
+                        <li>All Premium Features</li>
+                        <li>Voice Compatability</li>
+                        <li>5-Years-Warranty</li>
+                    </ul>
+
+                    <button class="price-btn">Select-Plan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"This coffee maker has revolutionized my mornings. The app scheduling feature is a game-changer!"
+                    </p>
+                    <div class="reviewer">
+                        <img src="https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"
+                            alt="Sarah Johnson">
+                        <div>
+                            <h4>Sarah Johnson</h4>
+                            <span>Coffee Enthusiast</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"The built-in grinder makes such a difference in flavor. Best investment I've made for my
+                        kitchen."</p>
+                    <div class="reviewer">
+                        <img src="https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"
+                            alt="person2">
+                        <div>
+                            <h4>Megan Fox</h4>
+                            <span>Home Barista</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Easy to use, looks great on my counter, and makes perfect coffee every time. Highly recommend!"
+                    </p>
+                    <div class="reviewer">
+                        <img src="https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"
+                            alt="person3">
+                        <div>
+                            <h4>Emma Rodriguez</h4>
+                            <span>Busy Professional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Frequnetly Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How does the smart scheduling work?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The coffee maker is connected to wifi which in turn you can can control remotely with your
+                            mobile.
+                            So the coffee will be ready when you want it.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is the warranty period?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The warranty period depends upon different plan for the basic plan it is 1 year
+                            for the premium plan it is 3 years and for the deluxe plan it is 5 years.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What beans does it uses?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>As of benas the coffe maker works with all types of beans its state of the art grinder adjust
+                            to the beans shapes and sizes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="Shopsy.jpg" alt="logo" class="footer-logo">
+                    <p>Brewing perfection since 2024,Making your mornings great and energetic.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fa-solid fa-location-dot"></i> Brew Coffee Street 12345 Saddar, Karachi Pakistan</p>
+                    <p><i class="fas fa-phone"></i> +923106642704</p>
+                    <p><i class="fas fa-envelope"></i> help@shopsy.gmail.com</p>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy;2024 Shops'y, All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </section>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', () => {
+          
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+         
+            item.classList.toggle('active');
+        });
+    });
+    
+   
+    const buyNowButtons = document.querySelectorAll('.buy-now-btn, .cta-button, .price-btn');
+    
+    buyNowButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Thank you for your interest in ShopSy Coffee Maker! You will be redirected to our secure checkout page.');
+          
+        });
+    });
+    
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+});
+</script>
+
+
+</html>

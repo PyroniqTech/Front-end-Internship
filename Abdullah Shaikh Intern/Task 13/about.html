@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Ingoude Company</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/media_queries.css">
+    <link rel="stylesheet" href="./css/about_media_queries.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="icon" type="image/png" href="./assets/favicon.jpg" />
+
+    <meta name="description"
+        content="Ingoude Company provides premium interior design services, modern home styling, kitchen design, dining aesthetics, and luxury home solutions." />
+    <meta name="keywords"
+        content="Interior design, home design, luxury interior, modern kitchen, Ingoude Company, home styling, dining room design" />
+
+
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <header class="relative z-30 flex justify-between items-center py-4 px-4 lg:px-8 border-white/20">
+            <div class="text-2xl font-semibold tracking-wider">Ingoude Company</div>
+
+            <!-- DESKTOP NAV -->
+            <nav class="hidden lg:flex space-x-8 text-lg font-medium">
+                <a href="./about.html" class="hover:text-amber-200 transition duration-200">About Us</a>
+                <a href="#" class="hover:text-amber-200 transition duration-200">Gallery</a>
+                <a href="#" class="hover:text-amber-200 transition duration-200">Setting</a>
+                <a href="#" class="hover:text-amber-200 transition duration-200">Contact</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+
+                <!-- SEARCH BUTTON -->
+                <div class="search-wrapper">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </div>
+
+                <!-- DESKTOP SEARCH BUTTON -->
+                <button
+                    class="hidden lg:block bg-[#3b2721]/20 hover:bg-white/30 text-white font-medium py-1 px-8 transition duration-200 border border-white/40">
+                    Search
+                </button>
+
+                <!-- MOBILE MENU BUTTON -->
+                <button id="menuBtn" class="lg:hidden p-2 rounded-md hover:bg-white/10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <div id="sidebar"
+            class="fixed top-0 left-0 h-full w-64 bg-[#3b2721]/50 text-white transform -translate-x-full transition-transform duration-300 z-40">
+
+            <div class="p-4 text-xl font-semibold border-b border-white/10">Menu</div>
+
+            <nav class="flex flex-col p-4 space-y-4 text-lg">
+                <a href="./about.html" class="hover:text-amber-200">About Us</a>
+                <a href="#" class="hover:text-amber-200">Gallery</a>
+                <a href="#" class="hover:text-amber-200">Setting</a>
+                <a href="#" class="hover:text-amber-200">Contact</a>
+            </nav>
+        </div>
+
+        <div id="overlay" class="hidden fixed inset-0 bg-black/50 z-30"></div>
+
+
+        <main class="content-flex">
+
+            <div class="left-side-about">
+                <img src="./assets/pp_pic_4.PNG.png" alt="Flower Pot on Side Table">
+            </div>
+
+            <div class="right-side-about p-8 ">
+
+                <h2 class="text-7xl mb-12 ">Welcome to Our Company</h2>
+                <h4 class="my-8  text-2xl">About Our Planning</h4>
+                <p class="">Our planning process is built on clarity, precisionand a practical understanding of how
+                    space should function. We start by identifying the client's needs, mapping out the flowof the area,
+                    and definingthe structural and aesthetic requirements. Every step is organized to ensure efficient
+                    execution consistent quality, and a final design that aligns with both the client's vision and the
+                    project constraints</p>
+            </div>
+
+        </main>
+
+        <div class="container2">
+            <div class="container2-leftside">
+
+                <h1 class="text-6xl">Our Mission</h1>
+
+                <h5>placeholder</h5>
+
+                <div class="bulletpoints">
+                    <div class="bulletpoint">
+                        <div class="bulletpoint-leftside text-4xl text-center">
+                            01
+                        </div>
+                        <div class="bulletpoint-rightside pl-24 mb-16">
+                            <h3 class="text-2xl">Mission Here</h3>
+                            <p class="text-sm mt-2">placeholder</p>
+                        </div>
+
+                    </div>
+                    <div class="bulletpoint">
+                        <div class="bulletpoint-leftside text-4xl text-center">
+                            02
+                        </div>
+                        <div class="bulletpoint-rightside pl-24 mb-16">
+                            <h3 class="text-2xl">Mission Here</h3>
+                            <p class="text-sm mt-2">placeholder</p>
+                        </div>
+
+                    </div>
+                    <div class="bulletpoint">
+                        <div class="bulletpoint-leftside text-4xl text-center">
+                            03
+                        </div>
+                        <div class="bulletpoint-rightside pl-24 mb-16">
+                            <h3 class="text-2xl">Mission Here</h3>
+                            <p class="text-sm mt-2">placeholder</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="container2-rightside">
+
+                <div class="images-leftside">
+
+                    <img class="image-1" src="./assets/pp_pic_6.png" alt="">
+                    <img class="image-2" src="./assets/pp_pic_5.png" alt="">
+
+                </div>
+                <div class="images-rightside">
+                    <img class="image-3" src="./assets/pp_pic_7.png" alt="">
+                    <img class="image-4" src="./assets/pp_pic_8.png" alt="">
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+<script src="./js/main.js"></script>
+
+</html>

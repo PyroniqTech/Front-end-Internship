@@ -1,0 +1,35 @@
+1. Performance
+Muhammad Yasir submitted a complete product landing page with all sections: Header, Hero, Features, Pricing, Reviews, FAQ, and Footer. Responsive layout works across 480px → 4K screens. Features include 4 feature cards, 3 pricing cards (Basic, Premium, Deluxe), 3 review cards, and FAQ accordion structure. Buttons and hover effects styled; hamburger menu designed for mobile. Minimal JavaScript used, mostly handled by CSS toggles.
+
+2. Mistakes / Issues
+
+Missing JavaScript: FAQ accordion and mobile menu toggle non-functional; Buy Now / Select Plan buttons do not trigger alerts.
+
+Spelling/grammar errors: “Coffe,” “Perfet,” “benas,” “Compatability,” and other body text issues.
+
+Accessibility: missing alt text for some images; inconsistent heading hierarchy.
+
+CSS errors: invalid box-shadow and font-weight values.
+
+Design/text issues: hero headline too small; featured pricing card overly scaled.
+
+Signs of AI-assisted code (icon usage, structure, styling patterns).
+
+3. Guidelines & Improvements
+
+Add JavaScript for FAQ accordion and mobile menu toggle.
+
+Implement alert functionality for Buy Now / Select Plan buttons.
+
+Correct spelling/grammar throughout.
+
+Fix CSS errors (box-shadow, font-weight).
+
+Add descriptive alt text for all images; improve heading hierarchy.
+
+Resize hero headline for better visual impact; standardize pricing card styles.
+
+Test responsiveness across devices and orientations.
+
+✅ Task 2 Evaluation – Shopys Product Landing Page (Muhammad Yasir)
+Well-structured landing page with all sections completed. Missing interactivity, placeholder logo, CSS mistakes, and content issues reduce overall quality. With polish in functionality, accessibility, and content correctness, the project can reach production-ready standards.

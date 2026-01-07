@@ -1,0 +1,9 @@
+Summary — key problem areas (highest priority)
+
+Accessibility: social links use SVG-only anchors without aria-label or descriptive text, links blank just #. and external links do not include target/rel attributes. No confirmation of meaningful alt attributes for images in templates. Remove All Comments.
+Child page inline JS: index.html includes large inline HTML content in a script and calls loadpage(); your checklist disallowed inline JS beyond the loadpage() call (ambiguous requirement — still flagging).
+SEO: head lacks required meta tags (description, canonical, robots, author, keywords).
+CDN usage: external CDNs (Tailwind/AOS) are included without SRI integrity/crossorigin attributes.
+Some clean-code issues: inline background images in style attributes, some console.log usage, missing target/rel on external links
+
+score: 66/100

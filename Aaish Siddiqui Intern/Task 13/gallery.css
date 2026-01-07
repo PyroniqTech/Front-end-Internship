@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #3C2418;
+  color: #fff;
+}
+
+header {
+
+    font-family: "Playfair Display", serif; 
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: #FFFFFF;          
+    text-decoration: none;    
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.logo {
+    font-size: x-large;
+    color: #e6d5cf;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 65px;
+}
+
+nav li {
+    margin-left: 15px;
+}
+
+#search {
+    padding: 5px 25px;
+    font-size: medium;
+    border: 3px solid white;
+    border-radius: 1px;
+    background: transparent;
+    color: white;
+    text-align: center;
+}
+
+#searching {
+    padding: 12px;
+    align-items: center;
+    gap: 25px;
+    display: flex;
+}
+
+.icon {
+    font-size: x-large;
+}
+
+
+.gallery-section {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+
+.gallery-title {
+  font-size: 42px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+
+.gallery-text {
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  color: #f0e7df;
+}
+
+
+.gallery-grid {
+  display: grid;
+   grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+
+.gallery-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform .3s ease, opacity .3s ease;
+}
+
+
+.gallery-grid img:hover {
+  transform: scale(1.04);
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+
+     header {
+        flex-direction:column
+
+    }
+
+    .logo {
+        height: 30px;
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        gap: 4px;
+        margin-bottom: 10px;
+    }
+
+    #searching {
+        padding: 12px;
+        align-items: center;
+        gap: 30px;
+        display: flex;
+
+    }
+
+  .gallery-section {
+    padding: 40px 20px;
+  }
+
+.gallery-title {
+  font-size: 32px;
+}
+  .gallery-grid {
+  display: grid;
+   grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+}
+
+}

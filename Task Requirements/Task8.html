@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="e">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillForge — Portfolio Showcase</titl>
+  <style>
+    * {margin:0;padding:0;box-sizing:border-box;font-family: 'Poppins', sans-serif;}
+    body {background:#0e0e10;color:#e5e5e5;overflow-x:hidden;}
+    header {display:flex;justify-content:space-between;align-items:center;padding:1rem 3rem;background:#16161a;position:sticky;top:0;z-index:1000;}
+    header h1 {font-size:1.4rem;letter-spacing:1px;color:#fff;}
+    nav ul {display:flex;gap:1.5rem;list-style:none;}
+    nav a {color:#bbb;text-decoration:none;transition:0.3s;}
+    nav a:hover {color:#fff;}
+    .hero {min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 2rem;}
+    .hero h2 {font-size:2.5rem;color:#fff;margin-bottom:1rem;}
+    .hero p {max-width:700px;line-height:1.6;color:#cfcfcf;margin-bottom:2rem;}
+    .hero button {padding:0.8rem 2rem;border:none;background:#3b82f6;color:#fff;font-size:1rem;border-radius:6px;cursor:pointer;transition:0.3s;}
+    .hero button:hover {background:#2563eb;}
+    .projects {padding:5rem 3rem;background:#141418;}
+    .projects h2 {text-align:center;font-size:2rem;margin-bottom:2rem;color:#fff;}
+    .project-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;
+    .card {background:#1f1f24;padding:2rem;border-radius:12px;transition:0.3s;display:flex;flex-direction:column;justify-content:space-between;}
+    .card:hover {transform:translateY(-5px);background:#27272a;}
+    .card h3 {margin-bottom:1rem;color:#fff;font-size:1.3rem;}
+    .card p {flex-grow:1;color:#bdbdbd;font-size:0.95rem;margin-bottom:1.5rem;}
+    .card button {background:#3b82f6;color:#fff;padding:0.6rem 1.4rem;border:none;border-radius:6px;cursor:pointer;}
+    .about {padding:5rem 3rem;background:#0e0e10;display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;align-items:center;}
+    .about-text h2 {font-size:2rem;color:#fff;margin-bottom:1rem;}
+    .about-text p {color:#c4c4c4;line-height:1.7;margin-bottom:1rem;}
+    .about-stats {display:flex;gap:2rem;margin-top:1.5rem;}
+    .about-stats div {text-align:center;}
+    .about-stats h4 {font-size:1.5rem;color:#3b82f6;}
+    .contact {padding:5rem 3rem;background:#16161a;text-align:center;}
+    .contact h2 {color:#fff;margin-bottom:1.5rem;}
+    .contact form {max-width:500px;margin:0 auto;display:flex;flex-direction:column;gap:1rem;}
+    .contact input,.contact textarea {padding:0.8rem;background:#1f1f24;border:none;border-radius:8px;color:#fff;resize:none;}
+    .contact button {background:#3b82f6;color:#fff;padding:0.8rem;border:none;border-radius:8px;cursor:pointer;transition:0.3s;}
+    .contact button:hover {background:#2563eb;}
+    footer {background:#0a0a0b;text-align:center;padding:1rem 0;color:#8a8a8a;font-size:0.9rem;}
+    @media (max-width:768px){
+      header{padding:1rem 1.5rem;}
+      nav ul{display:none;}
+      .menu-toggle{display:block;cursor:pointer;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SkillForge</h1>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div>
+  <section class="hero" id="hero">
+    <h2>Empowering Web Creativity</h2>
+    <p>Crafting elegant, user-focused interfaces with precision and performance in mind. Explore a portfolio that blends innovation, responsiveness, and minimalism.</p>
+    <button onclick="scrollToSection('projects')">View Projects</button>
+  </section>
+
+  <section class="projects" id="projects">
+    <h2>Projects Showcase</h2>
+    <div class="project-grid">
+      <div class="card">
+        <h3>Interactive Dashboard</h3>
+        <p>A responsive data dashboard built using HTML, CSS, and JavaScript featuring real-time chart rendering and filtering controls.</p></div>
+        <button>View Details</button>
+      </div>
+      <div class="card">
+        <h3>Landing Page Design</h3>
+        <p>A clean, fast-loading product landing page optimized for conversions and mobile-first layout practices.</p>
+        <button>View Details</button>
+      </div>
+      <div class="card">
+        <h3>Portfolio Builder</h3>
+        <p>A dynamic portfolio generator allowing creators to customize sections, live preview edits, and export personal pages.</p>
+        <button>View Details</button>
+      </div>
+      <div class="card">
+        <h3>Team Collaboration App</h3>
+        <p>Lightweight frontend prototype for a task collaboration tool with modal-based task creation and drag-and-drop lists.</p>
+        <button>View Details</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="abouttext">
+      <h2>About Developer</h2>
+      <p>Front-end enthusiast passionate about building intuitive interfaces that connect design and technology. Skilled in crafting scalable, reusable UI components.</p>
+      <div class="about-stats">
+        <div><h4>10+</h4><p>Projects</p></div>
+        <div><h4>3+</h4><p>Frameworks</p></div>
+        <div><h4>2</h4><p>Internships</p></div>
+      </div>
+    </div>
+    <div class="about-text">
+      <h2>Development Approach</h2>
+      <p>Every project starts with user empathy, followed by structured planning, responsive grid setup, and performance optimization before deployment.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Developer</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="email" id="email" placeholder="Email Address" required>
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 SkillForge. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function scrollToSection(id){
+      document.getElementById(id).scrollIntoView{({behavior:"smooth"});(
+    })}
+    document.getElementById("contactForm").addEventListener("submit",function(e){
+      e.preventDefault();
+      alert("Thank you! Your message has been submitted successfully.");
+      this.reset();}
+    });
+  </script>
+</body>

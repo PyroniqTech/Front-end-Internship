@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Provide resuable content">
+    <title>TaskGrid Basepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+    
+</head>
+<body>
+  <header class="bg-black shadow-md border shadow-gray-700 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="static/images/taskgrid.png" alt="taskgrid official Logo" class="w-36" loading="lazy">
+      </a>
+      <nav class="hidden md:flex space-x-8 text-yellow-600 font-medium">
+        <a href="index.html" class="hover:text-blue-400 hover:scale-110 transition">Dashboard</a>
+        <a href="teams.html" class="hover:text-blue-400 hover:scale-110 transition">Teams</a>
+        <a href="tasks.html" class="hover:text-blue-400 hover:scale-110 transition">Tasks</a>
+        <a href="analytics.html" class="hover:text-blue-400 hover:scale-110 transition">Analytics</a>
+        <a href="contact.html" class="hover:text-blue-400 hover:scale-110 transition">Contact</a>
+      </nav>
+
+      <button id="btn" class="md:hidden text-yellow-700 text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+      <nav id="menu" class="hidden md:hidden flex flex-col items-center space-y-4 py-3 shadow-lg bg-gray-800 ">
+        <a href="dashboard.html" class="text-gray-200 hover:text-blue-400 transition hover:scale-110">Dashboard</a>
+        <a href="teams.html" class="text-gray-200 hover:text-blue-400 transition hover:scale-110">Teams</a>
+        <a href="tasks.html" class="text-gray-200 hover:text-blue-400 transition hover:scale-110">Tasks</a>
+        <a href="analytics.html" class="text-gray-200 hover:text-blue-400 transition hover:scale-110">Analytics</a>
+        <a href="contact.html" class="text-gray-200 hover:text-blue-400 transition hover:scale-110">Contact</a>
+      </nav>
+  </header>
+<main id="content"></main>
+<footer class="bg-black shadow-md border shadow-gray-700 sticky top-0 z-50">
+    <div class="px-16 flex flex-col md:flex-row justify-between md:items-start lg:gap-12 md:gap-0 gap-4">
+      <div class="flex flex-col items-center md:items-start">
+        <img src="static/images/taskgrid.png" alt="taskgrid Offical Logo" class="w-32 mb-3 rounded-xl" loading="lazy">
+      </div>
+      <div class="flex space-x-7 text-gray-300 text-xl md:my-10">
+        <a href="facebook.com/taskgrid" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook"
+          class="hover:scale-125 transition transform duration-200"><i class="fab fa-facebook"></i></a>
+        <a href="linkedin.com/taskgrid" target="_blank" rel="noopener noreferrer" aria-label="Visit our linkedin"
+          class="hover:scale-125 transition transform duration-200"><i class="fab fa-linkedin"></i></a>
+        <a href="instagram.com/taskgrid" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram"
+          class="hover:scale-125 transition transform duration-200"><i class="fab fa-instagram"></i></a>
+        <a href="youtube.com/taskgrid" target="_blank" rel="noopener noreferrer" aria-label="Visit our YouTube"
+          class="hover:scale-125 transition transform duration-200"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="text-center md:text-right text-gray-300 text-sm my-3 font-medium cursor-default">
+        <p>Visit our office: <br>At Ring Road, Lahore</p>
+        <p>Phone: +92 300 1234567</p>
+        <p class="mt-2 text-xs">&copy; 2025 Taskgrid. All Rights Reserved.</p>
+      </div>
+    </div>
+</footer>
+<script src="static/js/script.js"></script>
+</body>
+</html>

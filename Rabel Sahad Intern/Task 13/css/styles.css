@@ -1,0 +1,248 @@
+:root {
+  --bg-brown: #3b2b24; /* page brown */
+  --bg-brown-2: #4a362f;
+  --accent: #ffffff; /* light text */
+  --muted: rgba(255, 255, 255, 0.55);
+  --gold: #e6d5cf;
+  --container: 1200px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background: var(--bg-brown);
+  color: var(--accent);
+  line-height: 1.45;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 74px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-name {
+  color: var(--gold);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.4px;
+}
+.main-nav {
+  display: flex;
+  gap: 90px;
+  align-items: center;
+}
+.nav-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.9;
+  transition: color 0.18s, transform 0.18s;
+}
+.nav-link:hover {
+  color: #fff;
+  transform: translateY(-1px);
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.search-wrap {
+  position: relative;
+}
+.icon-btn {
+  background: transparent;
+  border: 0;
+  color: var(--accent);
+  cursor: pointer;
+  padding: 6px 8px;
+  display: inline-flex;
+  align-items: center;
+}
+.search-input {
+  width: 120px;
+  height: 34px;
+  border: 1px solid rgb(255, 255, 255);
+  background: transparent;
+  color: var(--accent);
+  padding: 6px 10px;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+.hero {
+  min-height: 720px;
+  position: relative;
+  padding-top: 120px;
+  overflow: hidden;
+  background-image: url("../assets/featured.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(66, 50, 38));
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 48px;
+  align-items: start;
+  padding: 48px 0 100px;
+}
+.hero-left {
+  position: relative;
+}
+.hero-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 0.95;
+  margin-bottom: 48px;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: 4px;
+  transform: translateY(6px);
+}
+
+.featured-frame {
+  width: 100%;
+  max-width: 820px;
+  background: rgba(0, 0, 0, 0.12);
+  padding: 30px;
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+.featured-img {
+  display: block;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.hero-right {
+  position: relative;
+  padding-top: 5px;
+}
+.small-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 20px;
+}
+.aside-title {
+  color: var(--gold);
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+.aside-rule {
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  margin: 12px 0 24px;
+}
+.aside-text {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+  margin-bottom: 28px;
+  max-width: 360px;
+}
+.btn-learn {
+  display: inline-block;
+  padding: 14px 34px;
+  background: #e9ddd7;
+  color: #1b1513;
+  text-decoration: none;
+  border-radius: 2px;
+  font-weight: 600;
+}
+@media (max-width: 1100px) {
+  .hero-grid {
+    grid-template-columns: 1fr 360px;
+    gap: 32px;
+  }
+  .featured-img {
+    height: 360px;
+  }
+  .hero-title {
+    font-size: 72px;
+  }
+}
+@media (max-width: 900px) {
+  .header-inner {
+    height: 64px;
+  }
+  .main-nav {
+    display: none;
+  }
+  .search-input {
+    display: none;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .hero {
+    min-height: 760px;
+    padding-top: 96px;
+  }
+  .hero-title {
+    font-size: 56px;
+    margin-bottom: 28px;
+  }
+  .featured-img {
+    height: 320px;
+  }
+  .aside-text {
+    max-width: none;
+  }
+  .hero-right {
+    order: 2;
+  }
+}
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 36px;
+    letter-spacing: 2px;
+  }
+  .featured-img {
+    height: 220px;
+  }
+  .brand-name {
+    display: none;
+  }
+}

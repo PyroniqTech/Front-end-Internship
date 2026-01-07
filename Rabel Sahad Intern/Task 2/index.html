@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopsy — Book Landing</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="sticky-header">
+        <div class="brand">
+          <img src="Shopsy-removebg-preview.png" alt="Shopsy Logo" />
+          <h1>Shopsy</h1>
+        </div>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#features">Features</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#pricing" class="cta-inline">Buy Now</a>
+        </nav>
+        <button class="hamburger" onclick="toggleMobileNav()">
+          <span class="bar"></span><span class="bar"></span
+          ><span class="bar"></span>
+        </button>
+      </header>
+
+      <!-- Hero -->
+      <section id="home" class="hero">
+        <div class="hero-left">
+          <div class="kicker">New · Bestseller</div>
+          <h2 class="title">The Psychology of Money — Unlock Your Mind</h2>
+          <p class="subtitle">
+            A groundbreaking book that helps you reshape the way you think,
+            learn, and grow. Perfect for students, professionals, and lifelong
+            learners.
+          </p>
+          <div class="hero-actions">
+            <button class="btn primary" onclick="buyNow()">
+              Buy Now — Rs. 1,999
+            </button>
+            <button class="btn" onclick="learnMore()">Learn More</button>
+          </div>
+          <div class="micro">
+            Free delivery · 30-day returns · Author-signed copies available
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="product-visual">
+            <img
+              src="https://m.media-amazon.com/images/I/71g2ednj0JL._AC_UF1000,1000_QL80_.jpg"
+              alt="Book cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features">
+        <div class="section-title">Features</div>
+        <div class="features">
+          <div class="feature">
+            <div class="f-icon">📖</div>
+            <div class="f-body">
+              <h4>Easy to Read</h4>
+              <p>Written in simple, engaging language for all readers.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="f-icon">💡</div>
+            <div class="f-body">
+              <h4>Life-changing Ideas</h4>
+              <p>Powerful concepts you can apply immediately.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="f-icon">🌍</div>
+            <div class="f-body">
+              <h4>Global Bestseller</h4>
+              <p>Over 1 million copies sold worldwide.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section id="pricing">
+        <div class="section-title">Pricing</div>
+        <div class="pricing">
+          <div class="price-card">
+            <div class="price">Rs. <span>1,999</span></div>
+            <small>One-time purchase</small>
+            <ul>
+              <li>Free delivery</li>
+              <li>30-day returns</li>
+              <li>Signed copy available</li>
+            </ul>
+            <button class="btn primary" onclick="buyNow()">Buy Now</button>
+          </div>
+          <div class="price-details">
+            <p class="why-title">Why this book?</p>
+            <div class="typing-container">
+              <p class="muted" id="typing"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews -->
+      <section id="reviews">
+        <div class="section-title">What readers say</div>
+        <div class="reviews">
+          <div class="review">
+            <div class="stars">★★★★★</div>
+            <p>
+              <strong>Tony Mike</strong> — "This book completely changed the way
+              I learn and work."
+            </p>
+          </div>
+          <div class="review">
+            <div class="stars">★★★★☆</div>
+            <p>
+              <strong>Jennifer S.</strong> — "Amazing insights. A bit long, but
+              worth it."
+            </p>
+          </div>
+          <div class="review">
+            <div class="stars">★★★★★</div>
+            <p>
+              <strong>John Matt.</strong> — "Practical and inspiring. Highly
+              recommend!"
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq">
+        <div class="section-title">FAQ</div>
+        <div class="qa" id="q1">
+          <button onclick="toggleFAQ('q1')">
+            Is it available in Urdu? <span class="micro">+</span>
+          </button>
+          <div class="answer">
+            Yes, the Urdu translation will be available soon.
+          </div>
+        </div>
+        <div class="qa" id="q2">
+          <button onclick="toggleFAQ('q2')">
+            Is there an ebook version? <span class="micro">+</span>
+          </button>
+          <div class="answer">Yes, available in Kindle and PDF formats.</div>
+        </div>
+        <div class="qa" id="q3">
+          <button onclick="toggleFAQ('q3')">
+            Can I gift this book? <span class="micro">+</span>
+          </button>
+          <div class="answer">
+            Yes, you can send it as a gift with a personalized note.
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-flex">
+          <div class="footer-left">
+            <img src="Shopsy-removebg-preview.png" alt="Shopsy Logo" />
+            <div>
+              <div class="brand-text">Shopsy</div>
+              <div class="muted micro">
+                support@shopsy.example · +92 333 8989899
+              </div>
+            </div>
+          </div>
+          <div class="socials">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+

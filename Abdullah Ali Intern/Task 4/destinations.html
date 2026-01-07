@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore destinations and packages. Book your next adventure with Exploria.">
+  <title>Exploria | Destinations</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
+  <div id="app" class="container mx-auto px-6 py-12"></div>
+  <script src="js/script.js"></script>
+  <script>
+    loadPage("base.html", `
+      <main>
+        <section class="py-12">
+          <h1 class="text-3xl md:text-4xl font-extrabold text-center">Destinations & Packages</h1>
+          <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+              <img src="images/destination1.jpg" alt="Paris" loading="lazy" class="w-full h-44 object-cover">
+              <div class="p-4">
+                <h3 class="font-semibold text-lg">Paris</h3>
+                <p class="text-sm text-gray-300 mt-2">4 nights • City highlights</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="font-bold">$1,199</div>
+                  <button class="book-now-btn px-3 py-2 rounded-md bg-blue-600" data-dest="Paris">Book Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+              <img src="images/destination2.jpg" alt="Bali" loading="lazy" class="w-full h-44 object-cover">
+              <div class="p-4">
+                <h3 class="font-semibold text-lg">Bali</h3>
+                <p class="text-sm text-gray-300 mt-2">6 nights • Beach package</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="font-bold">$999</div>
+                  <button class="book-now-btn px-3 py-2 rounded-md bg-blue-600" data-dest="Bali">Book Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+              <img src="images/destination3.jpg" alt="New York" loading="lazy" class="w-full h-44 object-cover">
+              <div class="p-4">
+                <h3 class="font-semibold text-lg">New York</h3>
+                <p class="text-sm text-gray-300 mt-2">3 nights • City & food tours</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="font-bold">$1,099</div>
+                  <button class="book-now-btn px-3 py-2 rounded-md bg-blue-600" data-dest="New York">Book Now</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- New destinations -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+              <img src="images/destination4.jpg" alt="Tokyo" loading="lazy" class="w-full h-44 object-cover">
+              <div class="p-4">
+                <h3 class="font-semibold text-lg">Tokyo</h3>
+                <p class="text-sm text-gray-300 mt-2">5 nights • Modern culture & ancient temples</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="font-bold">$1,499</div>
+                  <button class="book-now-btn px-3 py-2 rounded-md bg-blue-600" data-dest="Tokyo">Book Now</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+              <img src="images/destination5.jpg" alt="Dubai" loading="lazy" class="w-full h-44 object-cover">
+              <div class="p-4">
+                <h3 class="font-semibold text-lg">Dubai</h3>
+                <p class="text-sm text-gray-300 mt-2">4 nights • Desert adventures & city skyline</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="font-bold">$1,299</div>
+                  <button class="book-now-btn px-3 py-2 rounded-md bg-blue-600" data-dest="Dubai">Book Now</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+              <img src="images/destination6.jpg" alt="Rome" loading="lazy" class="w-full h-44 object-cover">
+              <div class="p-4">
+                <h3 class="font-semibold text-lg">Rome</h3>
+                <p class="text-sm text-gray-300 mt-2">5 nights • Ancient ruins & Italian cuisine</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="font-bold">$1,099</div>
+                  <button class="book-now-btn px-3 py-2 rounded-md bg-blue-600" data-dest="Rome">Book Now</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+              <img src="images/destination7.jpg" alt="Sydney" loading="lazy" class="w-full h-44 object-cover">
+              <div class="p-4">
+                <h3 class="font-semibold text-lg">Sydney</h3>
+                <p class="text-sm text-gray-300 mt-2">6 nights • Beaches, opera house & wildlife</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="font-bold">$1,399</div>
+                  <button class="book-now-btn px-3 py-2 rounded-md bg-blue-600" data-dest="Sydney">Book Now</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+              <img src="images/destination8.jpg" alt="Cape Town" loading="lazy" class="w-full h-44 object-cover">
+              <div class="p-4">
+                <h3 class="font-semibold text-lg">Cape Town</h3>
+                <p class="text-sm text-gray-300 mt-2">5 nights • Mountains, vineyards & coastline</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="font-bold">$1,249</div>
+                  <button class="book-now-btn px-3 py-2 rounded-md bg-blue-600" data-dest="Cape Town">Book Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="mt-12">
+            <div class="max-w-lg mx-auto bg-gray-800 rounded-lg p-6">
+              <h2 class="text-xl font-semibold">Book a Trip</h2>
+              <form id="bookingForm" class="mt-4 space-y-4">
+                <div><label class="block text-sm">Name</label><input id="name" name="name" type="text" required class="mt-1 w-full rounded-md bg-gray-700 border border-gray-600 px-3 py-2"></div>
+                <div><label class="block text-sm">Email</label><input id="email" name="email" type="email" required class="mt-1 w-full rounded-md bg-gray-700 border border-gray-600 px-3 py-2"></div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div><label class="block text-sm">Phone</label><input id="phone" name="phone" type="tel" inputmode="numeric" pattern="[0-9]*" required class="mt-1 w-full rounded-md bg-gray-700 border border-gray-600 px-3 py-2"></div>
+                  <div><label class="block text-sm">Destination</label><input id="destination" name="destination" type="text" class="mt-1 w-full rounded-md bg-gray-700 border border-gray-600 px-3 py-2"></div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div><label class="block text-sm">Date</label><input id="date" name="date" type="date" class="mt-1 w-full rounded-md bg-gray-700 border border-gray-600 px-3 py-2"></div>
+                  <div><label class="block text-sm">Number of Travelers</label><input id="travelers" name="travelers" type="number" min="1" required class="mt-1 w-full rounded-md bg-gray-700 border border-gray-600 px-3 py-2"></div>
+                </div>
+                <div class="text-right"><button type="submit" class="px-4 py-2 rounded-md bg-green-600">Confirm Booking</button></div>
+              </form>
+            </div>
+          </section>
+        </section>
+      </main>
+    `);
+  </script>
+</body>
+</html>

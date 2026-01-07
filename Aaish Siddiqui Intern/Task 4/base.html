@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to the Exploria Travel agency">
+  <title>Exploria Travels | Welcome</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+  <header class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="./images/logo.jpg" alt="Exploria Logo" class="w-36" loading="lazy">
+      </a>
+
+      <nav class="hidden md:flex space-x-10 text-gray-700 font-medium">
+        <a href="index.html" class="hover:text-green-500 hover:scale-110 transition">Home</a>
+        <a href="destinations.html" class="hover:text-green-500 hover:scale-110 transition">Destinations</a>
+        <a href="contact.html" class="hover:text-green-500 hover:scale-110 transition">Contact</a>
+      </nav>
+
+      <button id="btn" class="md:hidden text-gray-700 text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <div id="menu" class="hidden md:hidden flex flex-col items-center space-y-4 py-3 shadow-lg bg-green-200">
+      <a href="index.html" class="text-gray-700 hover:text-green-600 transition hover:scale-110">Home</a>
+      <a href="destinations.html" class="text-gray-700 hover:text-green-600 transition hover:scale-110">Destinations</a>
+      <a href="contact.html" class="text-gray-700 hover:text-green-600 transition hover:scale-110">Contact</a>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="relative bg-cover bg-center bg-no-repeat h-[780px] "
+      style="background-image: url('./images/travel.jpg');">
+      <div class="absolute inset-0 bg-gradient-to-br from-[#002F86]/40 to-black/90 flex justify-center  ">
+        <div class="text-center text-white ">
+          <img src="images/logo.jpg"
+            class=" md:w-44 w-28 rounded-full items-center justify-center mx-auto lg:my-6 md:my-2 my-6"> </img>
+
+          <p class="text-3xl md:text-5xl italic font-bold text-gray-200 tracking-wide ">
+            Explore the World with
+            <strong class="text-green-400">Exploria </strong>
+          </p>
+
+          <p class="text-base md:text-xl md:mb-7 mb-4 md:max-w-3xl tracking-wider"></p>
+
+          <p class="text-base md:text-lg mb-12 text-gray-200 ">
+            Get step-by-step guidance if you are planning your tour. <br> we will assist you in choosing your beautiful
+            travel path <br>
+            set your budget & Pack your bags!
+
+          </p>
+
+          <div class="flex md:space-x-8 space-x-4 items-center justify-center md:text-base text-xs ">
+
+            <a href="index.html">
+              <button
+                class="bg-white text-gray-700 my-5 font-medium md:px-2 px-2 py-2  md:py-2  rounded-md hover:bg-gray-300 transition-all cursor-pointer">
+                Home page
+              </button>
+            </a>
+
+            <a href="destinations.html">
+              <button
+                class="bg-white text-gray-700 my-5 font-medium md:px-2 px-2 py-2  md:py-2  rounded-md hover:bg-gray-300 transition-all cursor-pointer">
+                Destinations
+              </button>
+            </a>
+
+            <a href="contact.html">
+              <button
+                class="bg-white text-gray-700 my-5 font-semibold md:px-2 px-2 py-2  md:py-2  rounded-md hover:bg-gray-300 transition-all cursor-pointer">
+                Contact us
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="bg-green-100 py-8">
+    <div class="px-16 flex flex-col md:flex-row justify-between items-center md:items-start lg:gap-12 md:gap-0 gap-4">
+
+      <div class="flex flex-col items-center md:items-start">
+        <img src="./images/logo.jpg" alt="Exploria Offical Logo" class="w-32 mb-3 rounded-xl" loading="lazy">
+
+      </div>
+
+      <div class="flex space-x-6 text-green-700 text-xl md:my-10">
+
+        <a href="facebook.com/Exploria" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook"
+          class="hover:scale-125 transition transform duration-200"><i class="fab fa-facebook"></i></a>
+        <a href="instagram.com/Exploria" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram"
+          class="hover:scale-125 transition transform duration-200"><i class="fab fa-instagram"></i></a>
+        <a href="youtube.com/Exploria" target="_blank" rel="noopener noreferrer" aria-label="Visit our YouTube"
+          class="hover:scale-125 transition transform duration-200"><i class="fab fa-youtube"></i></a>
+
+      </div>
+
+      <div class="text-center md:text-right text-green-600 text-sm my-3 font-medium cursor-default">
+        <p>Visit our office: <br>At Bahria Town, Karachi</p>
+        <p>Phone: +92 300 1234567</p>
+        <p class="mt-2 text-xs">&copy; 2025 Exploria. All Rights Reserved.</p>
+      </div>
+
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

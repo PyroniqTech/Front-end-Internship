@@ -1,0 +1,313 @@
+
+/* NAVBAR */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.search-wrapper {
+    position: relative;
+}
+
+.search-input {
+    padding: 6px 32px 6px 12px;
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.search-input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.search-icon {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    stroke: white;
+}
+
+/* Sidebar */
+#sidebar {
+    width: 260px;
+}
+
+/* MAIN */
+
+.main-container {
+    background-color: #3b2721;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    padding: 1.5rem;
+    padding-top: 0%;
+    min-height: 100vh;
+}
+
+.bg-image {
+    background-image: url('./assets/pp_pic_1.PNG');
+}
+
+/* Main flex container */
+.content-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    position: relative;
+    z-index: 20;
+}
+
+/* Left side (headline + big kitchen image) */
+.left-side {
+    flex: 1;
+}
+
+.text-headline {
+    font-size: 5rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.kitchen-image-container {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 2rem;
+    z-index: 5;
+}
+
+.kitchen-image-container img {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    border: 1px solid white;
+}
+
+.right-side {
+    flex: 1;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.dining-image-container {
+    max-width: 80%;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: -3rem;
+    position: relative;
+    z-index: 10;
+}
+
+.dining-image-container img {
+    width: 100%;
+}
+.right-text-block {
+    padding: 1.5rem;
+    width: 85%;
+    border-radius: 12px;
+    position: relative;
+    z-index: 5;
+}
+
+.right-text-block h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.right-text-block h2::after {
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    background-color: white;
+    opacity: 0.6;
+}
+
+.right-text-block p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.right-text-block button {
+    padding: 0.8rem 3rem;
+    color: black;
+    background: #d6d3d1;
+    border: none;
+    font-size: larger;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+
+.right-text-block button:hover {
+    transform: scale(1.05);
+    background: #e5e5e5;
+}
+
+/* Desktop layout */
+@media (min-width: 1024px) {
+    .content-flex {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+/* ----------- 480px (Small Mobile) ----------- */
+@media (max-width: 480px) {
+
+    .text-headline {
+        font-size: 2.2rem;
+        padding-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .kitchen-image-container img {
+        padding: 1rem;
+        border-width: 1px;
+    }
+
+    .right-text-block {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .right-text-block h2 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .right-text-block p {
+        font-size: 0.85rem;
+    }
+/* 
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    nav {
+        display: none;
+    } */
+}
+
+
+/* ----------- Tablet Screens ----------- */
+/* @media (max-width: 768px) {
+
+    .text-headline {
+        font-size: 3.2rem;
+        text-align: center;
+    }
+
+    .dining-image-container {
+        margin-bottom: -2rem;
+    }
+
+    .right-text-block {
+        width: 95%;
+    }
+} */
+
+
+/* ----------- Standard Laptops ----------- */
+/* @media (min-width: 1024px) and (max-width: 1440px) {
+
+    .text-headline {
+        font-size: 4rem;
+    }
+
+    .kitchen-image-container img {
+        padding: 1.5rem;
+    }
+
+    .dining-image-container {
+        max-width: 70%;
+    }
+} */
+
+
+/* ----------- Full HD Screens ----------- */
+/* @media (min-width: 1441px) and (max-width: 1920px) {
+
+    .content-flex {
+        padding: 3rem 4rem;
+    }
+
+    .text-headline {
+        font-size: 4rem;
+    }
+
+    .right-text-block {
+        width: 75%;
+    }
+} */
+
+
+/* ----------- 2K Screens ----------- */
+/* @media (min-width: 1921px) and (max-width: 2560px) {
+
+    .content-flex {
+        padding: 4rem 8rem;
+    }
+
+    .text-headline {
+        font-size: 6.5rem;
+    }
+
+    .right-text-block {
+        width: 70%;
+        font-size: 1.1rem;
+    }
+}
+ */
+
+/* ----------- 4K Screens ----------- */
+/* @media (min-width: 2561px) {
+
+    .content-flex {
+        padding: 6rem 10rem;
+        gap: 4rem;
+    }
+
+    .text-headline {
+        font-size: 8rem;
+    }
+
+    .kitchen-image-container img {
+        padding: 3rem;
+    }
+
+    .dining-image-container {
+        max-width: 60%;
+    }
+
+    .right-text-block {
+        width: 60%;
+        font-size: 1.3rem;
+    }
+
+    .right-text-block h2 {
+        font-size: 3rem;
+    }
+} */

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Contact US</title>
+</head>
+
+<body>
+  <div class=" flex md:flex-row flex-col md:justify-between px-5 py-2 bg-gray-100 shadow-sm ">
+
+    <div class="md:mx-4 md:my-0">
+      <img src="./images/Eventure-logo.png" loading="lazy" alt="Logo" class="md:w-40 w-28">
+    </div>
+
+    <button id="btn" aria-label="Open navigation menu" class="md:hidden text-purple-600 text-xl absolute right-5 top-12  focus:outline-none">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="menu"
+      class="hidden md:flex md:my-16 md:mx-4 text-center items-center space-x-5 lg:space-x-10 md:text-base text-sm text-purple-500 font-medium">
+      <a href="index.html" class="hover:text-blue-400">Home</a>
+      <a href="speakers.html" class="hover:text-blue-400">Speakers</a>
+      <a href="contact.html" class="hover:text-blue-400">Contact</a>
+    </div>
+  </div>
+
+  <section class="text-center py-10 px-4 bg-gradient-to-r from-purple-500 to-indigo-500">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
+      Contact Us
+    </h1>
+    <p class="text-md md:text-xl text-gray-100 max-w-2xl mx-auto">
+      You are welcome to reach out by phone, email, or by visiting our office.
+      We are committed to providing you timely responses with relevant information.
+    </p>
+      
+      <h2 class="text-lg font-semibold text-white mt-5">Contact Information:</h2>
+      <p class="text-white cursor-pointer mt-2"><i class="fas fa-map-marker-alt mr-2 text-white text-xs"></i> Bahria Town
+        Karachi</p>
+        <p class="text-white cursor-pointer "><i class="fas fa-envelope mr-2 text-white text-xs"></i> info@eventure.com</p>
+        <p class="text-white cursor-pointer "><i class="fas fa-phone mr-2 text-white text-xs"></i> +92 300 1234567</p>
+
+
+  </section>
+  <section class="py-12 p-2 ">
+
+    <div class="max-w-lg mx-auto p-6 bg-white text-gray-800 shadow-xl rounded-xl border border-purple-400">
+      <h2 class="text-xl font-semibold text-purple-600 mb-4">
+        Get In Touch With Us
+      </h2>
+
+      <form id="contactForm" class="flex flex-col space-y-4 ">
+
+        <label for="name" class="font-medium text-base">Your Name</label>
+        <input id="name" type="text"
+          class="border border-gray-300 p-3 rounded-md w-full text-sm focus:outline-none focus:border-purple-500"
+          placeholder="Your Full Name" required />
+
+        <label for="email" class="font-medium text-base">Email Address</label>
+        <input id="email" type="email"
+          class="border border-gray-300 p-3 rounded-md w-full text-sm focus:outline-none focus:border-purple-500"
+          placeholder="abc@gmail.com" required />
+
+        <label for="phone" class="font-medium text-base">Phone Number</label>
+        <input id="phone" type="tel"
+          class="border border-gray-300 p-3 rounded-md w-full text-sm focus:outline-none focus:border-purple-500"
+          placeholder="Phone" required />
+
+        <label for="phone" class="font-medium text-base">Message</label>
+        <textarea id="message"
+          class="border border-gray-300 p-3 rounded-md w-full text-sm focus:outline-none focus:border-purple-500"
+          placeholder="I want to ask ..." required>
+        </textarea>
+
+        <button type="submit"
+          class="w-full px-4 py-2 bg-purple-600 border hover:bg-white hover:text-purple-600 hover:border-purple-600 text-white font-semibold rounded transition">
+          Submit
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-gray-100 py-8 text-purple-600">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+
+      <div class="mb-2 md:mb-0">
+        <img src="./images/Eventure-logo.png" loading="lazy" alt="Eventure Logo" class="w-36">
+      </div>
+
+      <div class="flex space-x-6 mb-6 md:mb-0 ">
+        <a href="www.facebook.com/eventure" target="_blank" aria-label="facebook page"
+          class="transform hover:scale-125 transition duration-100 fab fa-facebook"></a>
+        <a href="www.twitter.com/eventure" target="_blank" aria-label="twitter page"
+          class="transform hover:scale-125 transition duration-100 fab fa-twitter"></a>
+        <a href="www.instagram.com/eventure" target="_blank" aria-label="instagram page"
+          class="transform hover:scale-125 transition duration-100 fab fa-instagram"></a>
+        <a href="www.linkedin.com/eventure" target="_blank" aria-label="linkedin page"
+          class="transform hover:scale-125 transition duration-100 fab fa-linkedin"></a>
+      </div>
+      <div class="text-xs text-purple-600 md:text-xs font-semibold cursor-pointer">
+        ADDRESS:- Bahria town karachi near Tool plaza
+      </div>
+    </div>
+
+    <div class="text-xs text-gray-400 lg:mx-20 mx-7 mt-5">
+      © 2025 Eventure. All Rights Reserved.
+      <p>Karachi, Pakistan</p>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

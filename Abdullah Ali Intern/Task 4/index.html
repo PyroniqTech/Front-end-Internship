@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to Exploria Travel Agency. Discover new adventures and book destinations today.">
+  <title>Exploria | Home</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
+  <div id="app" class="container mx-auto px-6 py-12"></div>
+  <script src="js/script.js"></script>
+  <script>
+    loadPage("base.html", `
+      <main>
+        <section class="text-center py-20 bg-cover bg-center rounded-xl shadow-lg" style="background-image: url('images/hero.jpg');">
+          <h2 class="text-4xl md:text-6xl font-extrabold text-white">Explore the World with Us</h2>
+          <a href="destinations.html" class="mt-6 inline-block px-6 py-3 rounded-lg bg-amber-400 text-gray-900 font-bold hover:bg-amber-500">View Destinations</a>
+        </section>
+
+        <section class="mt-16">
+          <h3 class="text-2xl font-bold text-center mb-6">About Us</h3>
+          <p class="max-w-2xl mx-auto text-center text-gray-300">At Exploria, we bring you the best travel experiences with curated packages, affordable deals, and unforgettable adventures. Our mission is to make the world accessible to everyone.</p>
+        </section>
+
+        <section class="mt-16">
+          <h3 class="text-2xl font-bold text-center mb-6">Featured Destinations</h3>
+          <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div class="bg-gray-800 rounded-lg shadow p-4 text-gray-100">
+              <img src="images/destination1.jpg" loading="lazy" alt="Paris" class="w-full h-48 object-cover rounded">
+              <h4 class="text-lg font-semibold mt-3">Paris</h4>
+              <p class="text-gray-400">Romantic city of lights and love.</p>
+              <a href="destinations.html" class="inline-block mt-3 px-4 py-2 bg-blue-600 rounded hover:bg-blue-700">Book Now</a>
+            </div>
+            <div class="bg-gray-800 rounded-lg shadow p-4 text-gray-100">
+              <img src="images/destination2.jpg" loading="lazy" alt="Bali" class="w-full h-48 object-cover rounded">
+              <h4 class="text-lg font-semibold mt-3">Bali</h4>
+              <p class="text-gray-400">Tropical paradise with serene beaches.</p>
+              <a href="destinations.html" class="inline-block mt-3 px-4 py-2 bg-blue-600 rounded hover:bg-blue-700">Book Now</a>
+            </div>
+            <div class="bg-gray-800 rounded-lg shadow p-4 text-gray-100">
+              <img src="images/destination3.jpg" loading="lazy" alt="New York City" class="w-full h-48 object-cover rounded">
+              <h4 class="text-lg font-semibold mt-3">New York</h4>
+              <p class="text-gray-400">The city that never sleeps, full of lights and culture.</p>
+              <a href="destinations.html" class="inline-block mt-3 px-4 py-2 bg-blue-600 rounded hover:bg-blue-700">Book Now</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    `);
+  </script>
+</body>
+</html>

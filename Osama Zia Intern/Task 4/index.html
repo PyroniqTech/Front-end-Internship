@@ -1,0 +1,94 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exploria — Explore the World with Us</title>
+<meta name="description" content="Exploria travel agency helps you discover destinations worldwide. Book tours, holidays, and adventures with us.">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<body>
+   <div id="app" class="container mx-auto px-6 py-12"></div>
+   <script src="js/script.js"></script>
+   <script>
+     loadPage("base.html", `
+      <section class="relative bg-cover bg-center h-screen flex items-center justify-center text-center text-white"
+    style="background-image: url('images/images.png');">
+  <div class="bg-black/50 absolute inset-0"></div>
+  <div class="relative z-10 max-w-2xl px-4">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6">Explore the World with Us</h1>
+    <a href="destinations.html" 
+      class="px-6 py-3 bg-sky-600 hover:bg-sky-700 text-lg rounded shadow-lg">
+      Discover Destinations
+    </a>
+  </div>
+</section>
+<section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+     <h2 class="text-3xl md:text-4xl font-extrabold mb-6">About Us</h2>
+     <p class="text-lg md:text-xl text-blue-100 leading-relaxed max-w-3xl mx-auto">
+      At <span class="font-semibold">Exploria</span>, we believe travel is not just about 
+      visiting places — it’s about creating lifelong memories. From relaxing 
+      span class="font-semibold">beach holidays</span> to adventurous 
+      <span class="font-semibold">mountain treks</span>, we curate unforgettable 
+      experiences tailored just for you.
+     </p>
+   <div class="mt-10 flex justify-center">
+     <img src="images/1images.png" loading="lazy" alt="About Exploria" 
+       class="rounded-2xl shadow-2xl w-full max-w-md object-cover" />
+    </div>
+   </div>
+</section>
+<section class="bg-slate-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+     <h3 class="text-2xl md:text-3xl font-bold text-slate-800">Featured Destinations</h3>
+    <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+     <article class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition">
+     <img src="images/2images.png" loading="lazy" alt="Tropical Paradise" loading="lazy" 
+       class="h-52 w-full object-cover" />
+    <div class="p-6">
+      <h4 class="font-semibold text-lg">Tropical Paradise</h4>
+      <p class="text-sm text-slate-500 mt-1">5 nights, all-inclusive</p>
+     <div class="mt-4 flex justify-between items-center">
+       <span class="font-bold text-sky-600">$799</span>
+       <a href="destinations.html#tropical" 
+        class="px-4 py-2 bg-sky-600 hover:bg-sky-700 rounded text-white text-sm">
+       Book Now
+      </a>
+    </div>
+    </div>
+</article>
+<article class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition">
+    <img src="images/4images.png" loading="lazy" alt="Mountain Escape" loading="lazy" 
+    class="h-52 w-full object-cover" />
+  <div class="p-6">
+    <h4 class="font-semibold text-lg">Mountain Escape</h4>
+    <p class="text-sm text-slate-500 mt-1">4 nights, guided trek</p>
+  <div class="mt-4 flex justify-between items-center">
+  <span class="font-bold text-sky-600">$599</span>
+  <a href="destinations.html#mountain" 
+  class="px-4 py-2 bg-sky-600 hover:bg-sky-700 rounded text-white text-sm">
+    Book Now
+  </a>
+  </div>
+</div>
+</article>
+<article class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition">
+    <img src="images/5images.png" loading="lazy" alt="City Highlights" loading="lazy" 
+    class="h-52 w-full object-cover" />
+    <div class="p-6">
+    <h4 class="font-semibold text-lg">City Highlights</h4>
+    <p class="text-sm text-slate-500 mt-1">3 nights, city tour</p>
+    <div class="mt-4 flex justify-between items-center">
+      <span class="font-bold text-sky-600">$399</span>
+      <a href="destinations.html#city" 
+      class="px-4 py-2 bg-sky-600 hover:bg-sky-700 rounded text-white text-sm">
+      Book Now
+      </a>
+    </div>
+  </div>
+</article>
+</div>
+ </div>
+</section>
+     `);
+   </script> 
+
+</body>

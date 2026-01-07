@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploria - Contact Us</title>
+    <meta name="description" content="Get in touch with Exploria Travel Agency for your next adventure">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="images/Logo(black).jpg" alt="Exploria Logo" class="h-10 w-auto">
+                <span class="ml-2 text-xl font-bold text-blue-600">Exploria</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-6">
+                <a href="base.html" class="text-gray-600 hover:text-blue-600 transition">Welcome</a>
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+                <a href="destinations.html" class="text-gray-600 hover:text-blue-600 transition">Destinations</a>
+                <a href="contact.html" class="text-blue-600 font-medium">Contact</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </nav>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="base.html" class="block py-2 text-gray-600 hover:text-blue-600 transition">Welcome</a>
+            <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-600 transition">Home</a>
+            <a href="destinations.html" class="block py-2 text-gray-600 hover:text-blue-600 transition">Destinations</a>
+            <a href="contact.html" class="block py-2 text-blue-600 font-medium">Contact</a>
+        </div>
+    </header>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-4">Contact Us</h1>
+            <p class="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-12">
+                Have questions about our travel packages or need help planning your next adventure? 
+                Our team of travel experts is here to assist you.
+            </p>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+                <div class="bg-gray-100 rounded-lg p-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h2>
+                    
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="contact-name" class="block text-gray-700 font-medium mb-2">Full Name *</label>
+                            <input type="text" id="contact-name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            <div class="text-red-500 text-sm mt-1 hidden" id="contact-name-error">Please enter your full name</div>
+                        </div>
+                        
+                        <div>
+                            <label for="contact-email" class="block text-gray-700 font-medium mb-2">Email Address *</label>
+                            <input type="email" id="contact-email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            <div class="text-red-500 text-sm mt-1 hidden" id="contact-email-error">Please enter a valid email address</div>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message *</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                            <div class="text-red-500 text-sm mt-1 hidden" id="message-error">Please enter your message</div>
+                        </div>
+                        
+                        <div>
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Get in Touch</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Our Address</h3>
+                                <p class="text-gray-600">123 Travel Street, Adventure City, AC 12345</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Phone Number</h3>
+                                <p class="text-gray-600">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Email Address</h3>
+                                <p class="text-gray-600">info@exploria.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Business Hours</h3>
+                                <p class="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                <p class="text-gray-600">Saturday: 10:00 AM - 4:00 PM</p>
+                                <p class="text-gray-600">Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page" class="bg-blue-600 text-white p-3 rounded-full transition transform hover:scale-110">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our YouTube channel" class="bg-red-600 text-white p-3 rounded-full transition transform hover:scale-110">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram page" class="bg-pink-600 text-white p-3 rounded-full transition transform hover:scale-110">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <p class="text-lg font-semibold">Exploria Travel Agency</p>
+                    <p class="text-gray-400">Address: <a href="123 Travel Street, Adventure City" class="hover:text-white">123 Travel Street, Adventure City</a></p>
+                    <p class="text-gray-400">Phone: <a href="tel:+15551234567" class="hover:text-white">+1 (555) 123-4567</a></p>
+                    <p class="text-gray-400">Email: <a href="mailto:info@exploria.com" class="hover:text-white">info@exploria.com</a><p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page" class="text-gray-400 hover:text-white transition transform hover:scale-110">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our YouTube channel" class="text-gray-400 hover:text-white transition transform hover:scale-110">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram page" class="text-gray-400 hover:text-white transition transform hover:scale-110">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 Exploria. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

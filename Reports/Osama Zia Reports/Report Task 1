@@ -1,0 +1,44 @@
+1. Performance
+
+Usama Zia successfully created a fully functional Classic Bites restaurant menu page using HTML, CSS, and JavaScript.
+
+The page is modern, clean, and visually appealing, demonstrating strong frontend design and UI/UX principles.
+
+Implemented a responsive header with logo and navigation links suitable for desktop and mobile layouts.
+
+Developed a search bar for real-time filtering and category filter buttons (Starters, Main Course, Desserts, Drinks) for dynamic interaction.
+
+Built a grid-based menu layout using CSS Grid with consistent spacing, sizing, and hover effects.
+
+JavaScript functions efficiently handle search, filtering, and DOM manipulation.
+
+Footer includes complete contact information and proper structure, showing attention to detail.
+
+Integrated external assets such as Google Fonts and images effectively.
+
+2. Mistakes / Issues
+
+Some image links are hosted externally; local hosting or fallback recommended.
+
+Search function lacks debouncing, which could improve performance for larger menus.
+
+Minor accessibility improvements needed: ARIA attributes for buttons and search input, more descriptive alt text for images.
+
+Could include active state for filter buttons to indicate the selected category.
+
+Certain patterns in JavaScript suggest possible AI-assisted coding, though implementation shows clear candidate understanding.
+
+3. Guidelines & Areas of Improvement
+
+Host all images locally or provide fallback options for consistency.
+
+Implement debouncing for search input to optimize performance.
+
+Add ARIA labels and ensure alt text is descriptive for accessibility compliance.
+
+Highlight active filter states to improve user interaction clarity.
+
+Continue refining JavaScript logic for clarity and maintainability.
+
+✅ Task 1 Evaluation – Classic Bites (Usama Zia)
+Usama Zia successfully completed Task 1 – Classic Bites Restaurant Menu Page with responsive design, interactive features, and modern UI elements. Minor accessibility and optimization improvements are recommended, but overall execution is excellent and demonstrates strong front-end development skills.

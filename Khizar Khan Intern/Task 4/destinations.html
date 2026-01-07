@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exploria | Destinations</title>
+  <meta name="description" content="Browse travel packages and book your dream destination with Exploria.">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  
+  <header class="bg-black shadow-md fixed w-full z-50">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <div class="flex items-center space-x-2">
+        <img src="file:///E:/HTML%20project/Exploria/js/images/Exploria.jpg" alt="Exploria Logo" class="h-10 w-10 rounded-full"loading="lazy">
+        <a href="base.html" class="font-bold text-xl text-blue-600 hover:text-blue-400 transition">Exploria</a>
+      </div>
+      <nav class="hidden md:flex space-x-6 font-medium text-white">
+        <a href="index.html" class="hover:text-blue-500">Home</a>
+        <a href="destinations.html" class="text-blue-500 font-semibold">Destinations</a>
+        <a href="contact.html" class="hover:text-blue-500">Contact</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden text-white focus:outline-none">☰</button>
+    </div>
+    <div id="nav-menu" class="hidden md:hidden bg-white text-black border-t shadow-md">
+      <a href="index.html" class="block px-4 py-2 hover:bg-gray-100">Home</a>
+      <a href="destinations.html" class="block px-4 py-2 text-blue-600 font-semibold">Destinations</a>
+      <a href="contact.html" class="block px-4 py-2 hover:bg-gray-100">Contact</a>
+    </div>
+  </header>
+
+  
+  <main class="relative pt-28 pb-16 text-white">
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('file:///E:/HTML%20project/Exploria/js/images/Mountains.jpg');"></div>
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative text-center">
+      <h1 class="text-3xl md:text-5xl font-bold mb-12">Destinations You Mostly Like</h1>
+    </div>
+  </main>
+
+  
+  <section class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 bg-black p-6">
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-transform">
+      <img src="file:///E:/HTML%20project/Exploria/js/images/Couple%20behind%20eiffel%20tower.jpg" alt="Paris" class="w-full h-40 object-cover" loading="lazy">
+      <div class="p-4">
+        <h2 class="text-lg font-semibold">Paris, France</h2>
+        <p class="text-gray-600 text-sm mb-2">City of lights and romance</p>
+        <p class="font-bold text-blue-600 mb-3">$1200</p>
+        <a href="#booking" class="px-3 py-2 bg-blue-700 text-white rounded hover:bg-black">Book Now</a>
+      </div>
+    </div>
+
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-transform">
+      <img src="file:///E:/HTML%20project/Exploria/js/images/Bali.jpg" alt="Bali" class="w-full h-40 object-cover" loading="lazy">
+      <div class="p-4">
+        <h2 class="text-lg font-semibold">Bali, Indonesia</h2>
+        <p class="text-gray-600 text-sm mb-2">beaches & tropical vibes</p>
+        <p class="font-bold text-blue-600 mb-3">$950</p>
+        <a href="#booking" class="px-3 py-2 bg-blue-700 text-white rounded hover:bg-black">Book Now</a>
+      </div>
+    </div>
+
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-transform">
+      <img src="file:///E:/HTML%20project/Exploria/js/images/Dubia.jpg" alt="Dubia" class="w-full h-40 object-cover" loading="lazy">
+      <div class="p-4">
+        <h2 class="text-lg font-semibold">Dubia, UAE</h2>
+        <p class="text-gray-600 text-sm mb-2">Luxury and innovation</p>
+        <p class="font-bold text-blue-600 mb-3">$1149</p>
+        <a href="#booking" class="px-3 py-2 bg-blue-700 text-white rounded hover:bg-black">Book Now</a>
+      </div>
+    </div>
+    
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-transform">
+      <img src="file:///E:/HTML%20project/Exploria/js/images/Japan.jpg" alt="Tokyo" class="w-full h-40 object-cover" loading="lazy">
+      <div class="p-4">
+        <h2 class="text-lg font-semibold">Tokyo, Japan</h2>
+        <p class="text-gray-600 text-sm mb-2">Tech meets tradition</p>
+        <p class="font-bold text-blue-600 mb-3">$1849</p>
+        <a href="#booking" class="px-3 py-2 bg-blue-700 text-white rounded hover:bg-black">Book Now</a>
+      </div>
+    </div>
+
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-transform">
+      <img src="file:///E:/HTML%20project/Exploria/js/images/NEW%20YORK.jpg" alt="New York" class="w-full h-40 object-cover" loading="lazy">
+      <div class="p-4">
+        <h2 class="text-lg font-semibold">New York, USA</h2>
+        <p class="text-gray-600 text-sm mb-2">The city that never sleeps</p>
+        <p class="font-bold text-blue-600 mb-3">$1585</p>
+        <a href="#booking" class="px-3 py-2 bg-blue-700 text-white rounded hover:bg-black">Book Now</a>
+      </div>
+    </div>
+
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-transform">
+      <img src="file:///E:/HTML%20project/Exploria/js/images/Rome.jpg" alt="Rome" class="w-full h-40 object-cover" loading="lazy">
+      <div class="p-4">
+        <h2 class="text-lg font-semibold">Rome, Italy</h2>
+        <p class="text-gray-600 text-sm mb-2">History & culture everywhere</p>
+        <p class="font-bold text-blue-600 mb-3">$1349</p>
+        <a href="#booking" class="px-3 py-2 bg-blue-700 text-white rounded hover:bg-black">Book Now</a>
+      </div>
+    </div>
+
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-transform">
+      <img src="file:///E:/HTML%20project/Exploria/js/images/waterfall.jpg" alt="Waterfall class="w-full h-40 object-cover" loading="lazy">
+      <div class="p-4">
+        <h2 class="text-lg font-semibold">Biausevu Waterfall, Maldives</h2>
+        <p class="text-gray-600 text-sm mb-2">Relex on pretine beaches</p>
+        <p class="font-bold text-blue-600 mb-3">$1649</p>
+        <a href="#booking" class="px-3 py-2 bg-blue-700 text-white rounded hover:bg-black">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="booking" class="max-w-lg mx-auto mt-16 mb-20 bg-white p-8 rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-6 text-center text-black">Book Your Trip</h2>
+    <form id="booking-form" class="space-y-4">
+      <input type="text" id="name" placeholder="Full Name" class="w-full border rounded p-3" required>
+      <input type="email" id="email" placeholder="Email" class="w-full border rounded p-3" required>
+      <input type="text" id="phone" placeholder="Phone" class="w-full border rounded p-3" required>
+      <input type="text" id="destination" placeholder="Destination" class="w-full border rounded p-3" required>
+      <input type="date" id="date" class="w-full border rounded p-3" required>
+      <input type="number" id="travelers" placeholder="Number of Travelers" class="w-full border rounded p-3" required>
+      <button type="submit" class="w-full bg-blue-700 text-white py-3 rounded hover:bg-black">Confirm Booking</button>
+    </form>
+  </section>
+
+  
+  <footer class="bg-gray-900 text-center py-8 mt-12 text-gray-300">
+  <div class="flex justify-center space-x-6 mb-4">
+    <a href="https://www.facebook.com/Exploria" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Visit our Facebook">
+      <img src="file:///E:/HTML%20project/Exploria/js/images/facebook.svg" alt="Facebook" class="w-6 h-6 hover:opacity-80 transition" loading="lazy">
+    </a>
+
+    <a href="https://www.youtube.com/Exploria" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Visit our YouTube">
+      <img src="file:///E:/HTML%20project/Exploria/js/images/youtube.svg" alt="YouTube" class="w-6 h-6 hover:opacity-80 transition" loading="lazy">
+    </a>
+
+    <a href="https://www.instagram.com/Exploria" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Visit our Instagram">
+      <img src="file:///E:/HTML%20project/Exploria/js/images/instagram.svg" alt="Instagram" class="w-6 h-6 hover:opacity-80 transition" loading="lazy">
+    </a>
+  </div>
+
+  <p>45 Autobhan Street, Hyderabad, Pakistan</p>
+  <p>&copy; 2025 Exploria Travel Agency. All Rights Reserved.</p>
+</footer>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>

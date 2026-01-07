@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>OpulenX — Luxury 3D Brand Landing Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OpulenX — Explore luxury products and immersive 3D experiences.">
+  <meta name="keywords" content="Luxury, 3D, Brand, OpulenX, Business, Landing Page">
+  <meta name="author" content="Osama Zia">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container-fluid" aria-label="Primary">
+      <a class="brand" href="#hero">
+        <img src="images/logo.png" alt="OpulenX logo" loading="lazy">
+        <span>OpulenX</span>
+      </a>
+      <button id="navToggle" class="nav-toggle" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <ul id="navMenu" class="nav-menu" role="menubar">
+        <li role="none"><a role="menuitem" href="#hero" data-scroll>Home</a></li>
+        <li role="none"><a role="menuitem" href="#products" data-scroll>Products</a></li>
+        <li role="none"><a role="menuitem" href="#about" data-scroll>About</a></li>
+        <li role="none"><a role="menuitem" href="#gallery" data-scroll>Gallery</a></li>
+        <li role="none"><a role="menuitem" href="#contact" data-scroll>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="site-main">
+    <section id="hero" class="hero-section container-fluid d-flex align-items-center justify-content-center">
+      <div class="hero-inner text-center">
+        <img src="images/logo.png" alt="OpulenX logo" class="hero-logo" loading="lazy">
+        <h1 class="hero-title">OpulenX</h1>
+        <p class="hero-subtitle">Luxury 3D craftsmanship — tactile, visual, unforgettable.</p>
+        <div class="hero-ctas">
+          <a href="#products" class="btn primary-btn" data-scroll>Explore Products</a>
+          <a href="#contact" class="btn ghost-btn" data-scroll>Contact Sales</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section container py-6">
+      <div class="container-lg">
+        <h2 class="section-title">Products & Features</h2>
+        <p class="section-sub">High-fidelity 3D visuals with interactive previews.</p>
+        <div class="product-grid">
+          <article class="product-card" tabindex="0" aria-label="Aurora Sculpture">
+            <div class="product-viewport" data-rotate>
+              <img src="images/product1.png" alt="Aurora Sculpture" loading="lazy" class="product-img">
+            </div>
+            <h3 class="product-title">Aurora Sculpture</h3>
+            <p class="product-desc">Limited edition 3D-printed sculpture in brushed titanium finish.</p>
+            <a class="product-cta" href="#contact" data-scroll>Enquire</a>
+          </article>
+
+          <article class="product-card" tabindex="0" aria-label="Nocturne Watch">
+            <div class="product-viewport" data-rotate>
+              <img src="images/product2.png" alt="Nocturne Watch" loading="lazy" class="product-img">
+            </div>
+            <h3 class="product-title">Nocturne Watch</h3>
+            <p class="product-desc">Precision mechanical watch with 3D-etched dial and sapphire case.</p>
+            <a class="product-cta" href="#contact" data-scroll>Enquire</a>
+          </article>
+
+          <article class="product-card" tabindex="0" aria-label="Helios Speaker">
+            <div class="product-viewport" data-rotate>
+              <img src="images/product3.png" alt="Helios Speaker" loading="lazy" class="product-img">
+            </div>
+            <h3 class="product-title">Helios Speaker</h3>
+            <p class="product-desc">Acoustic sculpture with resonant chamber and premium drivers.</p>
+            <a class="product-cta" href="#contact" data-scroll>Enquire</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section bg-contrast py-6">
+      <div class="container-lg">
+        <h2 class="section-title">About OpulenX</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>OpulenX blends advanced 3D craftsmanship with timeless design. Our studio focuses on limited-run luxury objects crafted with industrial precision and hand-finished details. We prioritize materials, performance, and emotional resonance.</p>
+            <ul class="about-list">
+              <li>Design-led product development</li>
+              <li>High-precision 3D fabrication</li>
+              <li>Sustainable, premium materials</li>
+            </ul>
+          </div>
+          <div class="about-visual" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section container py-6">
+      <div class="container-lg">
+        <h2 class="section-title">Gallery</h2>
+        <p class="section-sub">Hand-picked visuals and product previews.</p>
+        <div class="gallery-grid">
+          <img src="images/product1.png" alt="Gallery image 1" loading="lazy" class="gallery-item">
+          <img src="images/product2.png" alt="Gallery image 2" loading="lazy" class="gallery-item">
+          <img src="images/product3.png" alt="Gallery image 3" loading="lazy" class="gallery-item">
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section bg-contrast py-6">
+      <div class="container-lg">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-sub">Inquiries and bespoke commissions.</p>
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn primary-btn">Send Message</button>
+          </div>
+          <div id="formSuccess" class="form-success" role="status" aria-live="polite" hidden>Message sent. Thank you.</div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner container-fluid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="OpulenX logo" loading="lazy">
+        <div class="footer-text">
+          <strong>OpulenX</strong>
+          <div class="small">123 Atelier Lane, Design District</div>
+        </div>
+      </div>
+      <div class="footer-social" aria-label="Social links">
+        <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/icons/facebook.png" alt="Facebook" loading="lazy"></a>
+        <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/icons/github.png" alt="GitHub" loading="lazy"></a>
+        <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/icons/linkedin.png" alt="LinkedIn" loading="lazy"></a>
+        <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/icons/whatsapp.png" alt="WhatsApp" loading="lazy"></a>
+        <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/icons/instagram.png" alt="Instagram" loading="lazy"></a>
+      </div>
+      <div class="footer-copy small">© 2025 OpulenX. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>
