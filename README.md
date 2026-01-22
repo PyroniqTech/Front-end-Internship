@@ -2,7 +2,7 @@
 
 > ⚠️ **Usage Notice**  
 > This repository belongs to **PyroniqTech**, founded by **Muhammad Umair Mustafa**.  
-> It documents the **Front-End Internship Program** — including candidate tasks, submissions, reports, and evaluation records.  
+> It documents the **Front-End Internship Program** including candidate tasks, submissions, reports, and evaluation records.  
 >
 > This project is **for transparency and educational viewing only**.  
 > No reuse, copying, forking, or modification is allowed.  
